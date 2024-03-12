@@ -1,0 +1,182 @@
+@mixin font-gradient
+  background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+  -webkit-background-clip: text
+  background-clip: text
+  color: transparent
+
+.animate
+  animation: jump .7s ease-in-out
+  
+  &1
+    animation: jump .7s ease-in-out
+
+  &2
+    animation: jump 1.4s ease-in-out
+
+  &3
+    animation: jump 3.7s ease-in-out
+
+  &4
+    animation: jump 5s ease-in-out
+
+@keyframes jump
+  from 
+    transform: translateY(40%)
+    opacity: 0.1
+  
+  to 
+    transform: translateY(0)
+    opacity: 1
+
+
+@keyframes shimmerBackground
+  0% 
+    transform: translateX(70%)
+
+  20%
+    transform: translateX(130%)
+    opacity: 0
+
+  100% 
+    transform: translateX(130%)
+    opacity: 0
+
+.plate
+  position: relative
+  margin-bottom: 80px
+  padding: 14px 0
+  width: 100%
+  height: 82px
+  border-radius: 8px
+  background: rgba(255, 255, 255, 0.1)
+  cursor: pointer
+
+  &Container
+    position: relative
+    z-index: 1
+    margin: 0 auto
+    max-width: 1180px
+    width: 100%
+    padding: 0 20px
+
+  &__mainWrapper
+    background-image: url(../../../../static/img/ru.svg)
+    background-position: 23px 3px
+
+  &__container
+    padding: 0 33px 0 63px
+    justify-content: space-between
+
+  &__title
+    font-size: 16px
+    font-weight: 600
+    line-height: 28px
+
+  &__descr
+    color: rgb(197, 209, 240)
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+
+  &:hover::after
+    content: ''
+    position: absolute
+    top: 0
+    left: -100%
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%)
+    animation: shimmerBackground 6s linear infinite
+  
+  &:hover .link_src-components-Link-styles-module::after
+    transform: scaleX(1)
+    transform-origin: bottom left
+
+@media (max-width: 1100px)
+
+  .plate
+    
+    margin-bottom: 79px
+    height: 84px
+
+    &Container
+      max-width: 970px
+
+    &__container
+      padding: 0 32px 0 64px
+
+    &__mainWrapper
+      background-position: 24px 3px
+
+    &__title
+      max-width: 556px
+
+    &__descr
+      display: none
+
+    &__wrapperImg
+      max-width: 446px
+      height: 461px
+
+@media (max-width: 880px)
+  .plate
+    margin: 0 auto
+    margin-bottom: 80px
+    max-width: 700px
+    width: 100%
+    min-height: 83px
+    background-size: cover
+    background-position-y: 0px
+    background-position-x: 50%
+    border-radius: 8px
+
+    &__mainWrapper
+      background-position: 24px 3px
+
+    &__container
+      padding-top: 2px
+      line-height: 175%
+      flex-direction: row
+      align-items: flex-center
+
+    &Container
+      max-width: 728px
+
+    &__wrapper
+      max-width: 431px
+      width: 100%
+      
+    &__title
+      max-width: 397px
+      width: 100%
+      font-size: 16px
+      font-weight: 600
+      line-height: 170%
+
+    &__descr
+      display: none
+
+
+@media (max-width: 700px)
+
+  .plate
+    margin: 0 auto
+    margin-bottom: 57px
+    max-width: 550px
+    height: 127px
+
+    &Container
+      padding: 0 9px
+
+    &__container
+      flex-direction: column
+      align-items: flex-start
+      padding: 0 27px 0 60px
+
+    &__title
+      margin-bottom: 7px
+      font-size: 14px
+      line-height: 160%
+
+    
+

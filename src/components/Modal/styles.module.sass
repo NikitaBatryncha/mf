@@ -1,0 +1,139 @@
+@mixin font-gradient
+  background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+  -webkit-background-clip: text
+  background-clip: text
+  color: transparent
+
+.gradient
+
+  &__modal
+    position: absolute
+    top: 0
+    left: 0
+    
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100vw
+  height: 100vh
+  background: rgb(12, 19, 40, 0.9)
+  opacity: 0
+  pointer-events: none
+  transition: 0.5s all
+
+  &__container
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    
+  &__box  
+    position: relative
+    margin: auto
+    padding: 31px 43px
+    width: 440px
+    height: 591px
+    background-color: #050711
+    background-image: url(../../../static/img/cover.png)
+    border-radius: 8px
+    transform: scale(1)
+    transition: 0.4s all
+
+    &:active
+      transform: scale(1)
+
+  &__wrapper
+    position: relative
+    z-index: 11
+    display: flex
+    align-items: center
+    
+  &__img
+    margin-bottom: 13px
+    width: 74px
+    height: 67px
+
+  &__title
+    margin-bottom: 19px
+    max-width: 353px
+    font-weight: 800
+    font-size: 32px
+    line-height: 108%
+    letter-spacing: -0.03em
+    color: #fffffe
+
+    span
+      margin-left: 3px
+      @include font-gradient
+      letter-spacing: -0.01em
+
+  &__descr
+    margin-bottom: 10px
+    font-weight: 800
+    font-size: 12px
+    line-height: 229%
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    color: #fffffe
+
+  &__submit
+    border-radius: 8px
+    margin-top: 25px
+    padding: 13px 26px 15px 26px
+    width: 348px
+    height: 52px
+    background: #fff
+    font-weight: 800
+    font-size: 15px
+    line-height: 160%
+    color: #141936
+
+  &__button
+    position: absolute
+    width: 24px
+    height: 24px
+    top: 5px
+    right: 5px
+
+.active
+  opacity: 1
+  pointer-events: all
+  transition: 0.5s all
+
+@media (max-width: 520px)
+  .modal
+    width: 100vw
+    min-height: 608px
+    background: rgb(12, 19, 40, 0.9)
+      
+    &__box 
+      width: 370px
+      height: 591px
+      margin: auto
+      transform: translateY(0%)
+      padding: 43px 17.5px
+      border-radius: 0px
+
+    &__submit
+      width: 333px
+
+    &__img
+      margin-left: 20px
+
+    &__title
+      font-size: 29px
+      margin-left: 5px
+      margin-bottom: 14px
+
+    &__descr
+      margin-left: 20px
+
+    &__button 
+      top: 17px
+      right: 19px
+
+      svg
+        width: 22px
+        height: 22px
