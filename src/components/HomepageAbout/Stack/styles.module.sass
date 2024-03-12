@@ -6,7 +6,7 @@
 
 .animate
   animation: jump .7s ease-in-out
-  
+
   &1
     animation: jump .7s ease-in-out
 
@@ -20,11 +20,11 @@
     animation: jump 5s ease-in-out
 
 @keyframes jump
-  from 
+  from
     transform: translateY(40%)
     opacity: 0.1
-  
-  to 
+
+  to
     transform: translateY(0)
     opacity: 1
 
@@ -38,7 +38,7 @@
     z-index: 0
     border-radius: 100%
     width: 1000px
-    
+
     &Tablet
       display: none
 
@@ -68,7 +68,8 @@
   &__img
     margin-top: -1px
     width: 481px
-    height: 486px
+    height: 100%
+    object-fit: contain
 
   &__title
     color: #fff
@@ -102,7 +103,7 @@
 
   &__link
     margin: 0
-    padding: 11px 26px 15px 23px
+    padding: 11px 18px 11px 23px
     width: 254px
     height: 52px
     border-radius: 41px
@@ -111,10 +112,13 @@
     line-height: 160%
     color: #141936
 
+    img
+      margin-left: 7px
+
   &__img
     right: 20px
     top: 14px
-    
+
     &768
       display: none
 
@@ -164,7 +168,6 @@
     &__img
       max-width: 468px
       width: 100%
-      height: 476px
 
     &__list
       margin-bottom: 28px
@@ -192,7 +195,7 @@
 
       &::after
         margin-left: 5px
-        
+
     &__list
       max-width: 900px
       width: 100%
@@ -209,7 +212,6 @@
         display: block
         max-width: 713px
         width: 100%
-        min-height: 569px
         margin-bottom: 30px
 
 
@@ -237,8 +239,8 @@
         right: 50%
         border-radius: 0
         transform: translatex(50%)
-        width: 100%   
-        height: 1000px    
+        width: 100%
+        height: 1000px
 
   .stack
     max-width: 370px

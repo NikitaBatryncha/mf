@@ -13,8 +13,8 @@ export default function About ({ openModal }) {
     }
   };
   return (
-      <VisibilitySensor onChange={onChange} partialVisibility> 
-          <div className={clsx("flex", styles.about__wrapper, styles.about__wrapper1)}> 
+      <VisibilitySensor onChange={onChange} partialVisibility>
+          <div className={clsx("flex", styles.about__wrapper, styles.about__wrapper1)}>
             <img src={'img/ellipse-2-tablet.png'} className={clsx(styles.ellipse, styles.ellipse2, styles.ellipse2Tablet)}/>
             <div className={clsx(styles.about__wrapperContent, isVisible ? styles.animate1 : '')}>
               <h2 className={styles.about__title}>
@@ -30,10 +30,10 @@ export default function About ({ openModal }) {
               <Link name="Узнать подробнее" path="/" />
             </div>
             <div className={clsx(styles.about__wrapperImg, isVisible ? styles.animate2 : '')}>
-              <img rel="preload" src="img/div.early-access-image-holder.svg" alt="" className={clsx(styles.about__img, styles.about__imgDesktop)}/>
+              <img src="img/div.early-access-image-holder.svg" alt="" className={clsx(styles.about__img, styles.about__imgDesktop)}/>
               <img src="img/about-tablet.png" alt="" className={clsx(styles.about__img, styles.about__imgTablet)}/>
             </div>
-          </div> 
+          </div>
       </VisibilitySensor>
   );
 }

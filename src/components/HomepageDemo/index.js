@@ -38,7 +38,7 @@ export default function HomepageDemo() {
                   perSlideOffset: 1,
                   perSlideRotate: 1,
                 }
-              }, 
+              },
               520: {
                 slidesPerView: 1,
                 cardsEffect: {
@@ -47,16 +47,23 @@ export default function HomepageDemo() {
                 }
               },
               521: {
-                slidesPerView: 'auto', 
+                slidesPerView: 'auto',
                 cardsEffect: {
                   perSlideOffset: 9,
                   perSlideRotate: 0,
                 }
               },
               1100: {
-                slidesPerView: 'auto', 
+                slidesPerView: 'auto',
                 cardsEffect: {
                   perSlideOffset: 9,
+                  perSlideRotate: 0,
+                }
+              },
+              1101: {
+                slidesPerView: 'auto',
+                cardsEffect: {
+                  perSlideOffset: 17,
                   perSlideRotate: 0,
                 }
               },

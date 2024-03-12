@@ -9,7 +9,7 @@ export default function HomepageHeader ({ openBurger, closeBurger }) {
         <div className={clsx(styles.nav, "flex")}>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper1, "flex")}>
             <a href="#about" className={clsx(styles.nav__link)}>О нас</a>
-            <a href="/docs/tempo/md-install" className={clsx(styles.nav__link)}>Документация</a>
+            <a href="/mf/docs/tempo/md-install" className={clsx(styles.nav__link)}>Документация</a>
             <a href="tel:+1234567890" className={clsx(styles.nav__link)}>+7 499 444 08 82</a>
           </div>
           <a href="" className={clsx("linkButton", styles.header__linkButton)} >
@@ -17,7 +17,7 @@ export default function HomepageHeader ({ openBurger, closeBurger }) {
           </a>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper2, "flex")}>
             <a href="#" className={clsx(styles.nav__link, styles.logo)}>
-              <img src="/img/logo.svg" alt="logo" className={styles.header__logo} />
+              <img src="img/logo.svg" alt="logo" className={styles.header__logo} />
             </a>
             <a href="#" className={clsx(styles.nav__link, styles.nav__linkMini, 'flex')}>
               Подключить
@@ -29,7 +29,7 @@ export default function HomepageHeader ({ openBurger, closeBurger }) {
                   <path d="M6.7583 17.2426L12.0009 12M12.0009 12L17.2435 6.75732M12.0009 12L6.7583 6.75732M12.0009 12L17.2435 17.2426" stroke="white" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
                 </g>
               </svg>
-            </button>     
+            </button>
           </div>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper3, 'flex')}>
             <a href="telegramm" className={clsx(styles.nav__link, styles.nav__linkTg)}>Подписаться</a>

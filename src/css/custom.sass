@@ -187,6 +187,7 @@ $admonition-descr: var(--ifm-h5-font-color)
   --ifm-toc-border-color: 1px solid rgb(218, 221, 225)
   --blog-body-color: (--menu-color)
   --border: #fff
+  --sidebar-logo: url(/img/MultiDirectory-White-BG-logo-1.svg)
 
 [data-theme='dark']
   --ifm-color-primary: #fff
@@ -211,6 +212,8 @@ $admonition-descr: var(--ifm-h5-font-color)
   --ifm-toc-border-color: 1px solid rgba(226, 231, 239, 0.12)
   --blog-body-color: #242932
   --border: #0C1327
+  --sidebar-logo: url(/img/MultiDirectory-Dark-BG-logo.svg)
+
 
 
 html
@@ -313,7 +316,7 @@ button, a
 
   &__items
     height: 100%
-  
+
   &__item
     color: white
     font-weight: 800
@@ -331,7 +334,7 @@ button, a
 .footer
   background: #21293e
 
-a 
+a
   color: var(--h2-color)
 
 a:hover
@@ -351,9 +354,10 @@ a:hover
   color: #c8d4ee
 
 .linkButton
-  position: relative
-  display: block
-  padding: 12px 32px 16px 29px
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 12px 28px
   width: 303px
   height: 60px
   color: #141936
@@ -367,12 +371,10 @@ a:hover
   cursor: pointer
 
   img
-    position: absolute
     stroke: #141936
-    right: 28px
-    top: 17px 
     width: 20px
     height: 20px
+    margin-left: 10px
 
   &:hover
     background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
@@ -430,8 +432,8 @@ a:hover
     &:hover,
     &:focus
       content: url(/img/navigation-prev-hover.svg)
-    
-  div.swiper-button-next 
+
+  div.swiper-button-next
     content: url(/img/next-arrow.svg)
     width: 40px
     top: 196px
@@ -472,12 +474,12 @@ swiper-container > swiper-slide
   height: 306px !important
 
 swiper-container > swiper-slide > swiper-slide-active
-  width: 750px !important 
+  width: 750px !important
   height: 390px !important
 
-.swiper-slide 
-  max-width: 750px 
-  width: 100% 
+.swiper-slide
+  max-width: 750px
+  width: 100%
   margin: 0 auto
   height: 390px
   position: relative
@@ -488,7 +490,7 @@ swiper-container > swiper-slide > swiper-slide-active
     display: block
     user-select: none
 
-@media (max-width: 1100px)  
+@media (max-width: 1100px)
   .swiper
     max-width: 966px
     padding: 0 20px
@@ -498,7 +500,7 @@ swiper-container > swiper-slide > swiper-slide-active
 
   .swiper div.swiper-button-prev
     left: 18px
-  
+
   .swiper div.swiper-button-next
     right: 19px
 
@@ -512,10 +514,10 @@ swiper-container > swiper-slide > swiper-slide-active
     max-width: 632px
     height: 328px
 
-  .swiper__slide  
+  .swiper__slide
     max-width: 632px
-    width: 100%  
-    height: 328px 
+    width: 100%
+    height: 328px
 
   div.swiper-button-prev
     display: none
@@ -535,18 +537,18 @@ swiper-container > swiper-slide > swiper-slide-active
       display: none
 
     &::after
-      content: url(/img/return.svg) 
+      content: url(/img/return.svg)
       margin-left: 9px
       margin-top: 2px
 
   #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > .mySwiper > div.swiper-wrapper > div.swiper-slide.swiper__slide > img
     max-width: 100%
     min-height: 100%
-    
+
 @media (max-width: 700px)
   .title
     font-size: 40px
-    
+
   .swiper
     height: 400px
     margin-top: 0px
@@ -554,10 +556,10 @@ swiper-container > swiper-slide > swiper-slide-active
 
   div.swiper-wrapper
     width: 500px
-    height: 290px 
+    height: 290px
     margin-top: 30px
 
-  div.swiper-button-prev 
+  div.swiper-button-prev
     width: 28px !important
     height: 28px !important
     top: auto !important
@@ -571,9 +573,9 @@ swiper-container > swiper-slide > swiper-slide-active
     bottom: 0 !important
     right: 50px !important
 
-  .swiper__slide 
-    box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22) 
-    height: 290px 
+  .swiper__slide
+    box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22)
+    height: 290px
 
 
 @media (max-width: 600px)
@@ -591,7 +593,7 @@ swiper-container > swiper-slide > swiper-slide-active
   #__docusaurus > div > main > section.features_src-components-HomepageFeatures-styles-module > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android.Swiper_src-components-HomepageFeatures-styles-module > div.swiper-wrapper
     height: 333px
 
-@media (max-width: 520px) 
+@media (max-width: 520px)
   .container
     max-width: 370px
     padding: 0 16px
@@ -599,7 +601,7 @@ swiper-container > swiper-slide > swiper-slide-active
   .title
     font-size: 30px
     font-weight: 800
-    line-height: 108.02%  
+    line-height: 108.02%
     letter-spacing: -3%
 
   .linkButton
@@ -636,12 +638,12 @@ swiper-container > swiper-slide > swiper-slide-active
   .mySwiper
     max-width: 335px
     height: 262px
-    
+
   .mySwiper div.swiper-slide
     height: 175px
 
   .mySwiper div.swiper-wrapper
-    margin-top: 0 
+    margin-top: 0
     height: 175px
 
   div.swiper-button-prev
@@ -660,7 +662,7 @@ swiper-container > swiper-slide > swiper-slide-active
     img
       object-fit: cover
 
-/* 
+/*
  *  ----БУРГЕР МЕНЮ----
  */
 
@@ -691,7 +693,7 @@ swiper-container > swiper-slide > swiper-slide-active
       width: 24px
       height: 24px
       margin-left: 10px
-   
+
   a
     display: flex
     justify-content: center
@@ -719,9 +721,9 @@ swiper-container > swiper-slide > swiper-slide-active
 
 #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
   max-width: 100%
-  width: 100% 
-  flex-direction: column 
-  
+  width: 100%
+  flex-direction: column
+
 #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
   max-width: 480px
   height: 528px
@@ -745,7 +747,7 @@ swiper-container > swiper-slide > swiper-slide-active
   height: 154px
   text-align: center
   align-self: center
-  
+
 #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
   align-self: flex-start
   justify-content: start
@@ -754,7 +756,7 @@ swiper-container > swiper-slide > swiper-slide-active
   width: 100%
   height: 61px
   margin-bottom: 30px
-  
+
 #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
   display: flex
   flex-direction: column-reverse
@@ -802,7 +804,7 @@ swiper-container > swiper-slide > swiper-slide-active
 #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.nav__linkMini_src-components-HomepageHeader-styles-module.flex
   margin-left: 6px
 
-@media (min-width: 541px) 
+@media (min-width: 541px)
   #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
     height: 420px
 
@@ -817,8 +819,8 @@ swiper-container > swiper-slide > swiper-slide-active
   #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
     max-width: 990px
     width: 100%
-    
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a 
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
     width: auto
     text-align: start
 
@@ -832,7 +834,7 @@ swiper-container > swiper-slide > swiper-slide-active
     width: 100%
     height: 36px
 
-@media (min-width: 690px) 
+@media (min-width: 690px)
   #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > span
     display: none
 
@@ -856,16 +858,22 @@ swiper-container > swiper-slide > swiper-slide-active
     margin-bottom: 15px
 
 
-/* 
+/*
  *  ----ДОКУМЕНТАЦИЯ----
  */
+
+#__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__items > div:nth-child(1) > ul > div:nth-child(4) > img
+  content: var(--sidebar-logo)
+
+.breadcrumbs__link:hover
+  color: var(--h2-color)
 
 #__docusaurus_skipToContent_fallback
   background: linear-gradient(90deg, #4fa7dd 0%, #2ec0c0 100%)
 
 .margin-vert--lg
-  margin: 0 !important 
-  max-width: 100% !important 
+  margin: 0 !important
+  max-width: 100% !important
   width: 100%
   border-radius: 15px 15px 0 0
 
@@ -939,7 +947,7 @@ swiper-container > swiper-slide > swiper-slide-active
     border: 1px solid var(--ifm-color-primary-dark)
     color: var(--ifm-color-primary-dark)
 
-.markdown 
+.markdown
   body
     overflow-x: hidden
 
@@ -960,7 +968,7 @@ swiper-container > swiper-slide > swiper-slide-active
     letter-spacing: 0em
     color: var(--h2-color)
     text-align: start
-  
+
   h3
     padding: 0 35px
     font-weight: 700
@@ -973,7 +981,7 @@ swiper-container > swiper-slide > swiper-slide-active
   h4
     padding: 0 35px
     color: var(--h2-color)
-  
+
   p
     padding: 0 35px
     font-weight: 400
@@ -1020,7 +1028,7 @@ swiper-container > swiper-slide > swiper-slide-active
 #__docusaurus_skipToContent_fallback > div
   background-color: var(--body-color)
   border-radius: 15px 15px 0 0
- 
+
 #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
   max-width: 73% !important
 
@@ -1033,11 +1041,11 @@ swiper-container > swiper-slide > swiper-slide-active
   line-height: 100%
   letter-spacing: 0em
   text-align: start
-  
+
 #__docusaurus_skipToContent_fallback > div > div > aside > div > div > nav > ul > li > div
   background: transparent
 
-#__docusaurus_skipToContent_fallback > div > div > aside > div > div 
+#__docusaurus_skipToContent_fallback > div > div > aside > div > div
   background: transparent
 
 #__docusaurus_skipToContent_fallback > div > div > aside > div
@@ -1078,7 +1086,7 @@ swiper-container > swiper-slide > swiper-slide-active
 
     &--active
       color: var(--ifm-color-primary-dark)
-      
+
     &--sublist
       padding-left: 14px
       font-weight: 800
@@ -1101,7 +1109,7 @@ swiper-container > swiper-slide > swiper-slide-active
         transform: rotate(270deg)
         filter: none
 
-.theme-doc-sidebar-item-category 
+.theme-doc-sidebar-item-category
   margin-bottom: 10px
 
 .menu__list-item--collapsed .menu__link--sublist:after, .menu__list-item--collapsed .menu__caret:before
@@ -1113,7 +1121,7 @@ swiper-container > swiper-slide > swiper-slide-active
     font-size: 12px
     line-height: 187%
     letter-spacing: -0.01em
-  
+
   &__item:not(:last-child):after
     width: 10px
     height: 10px
@@ -1156,7 +1164,7 @@ swiper-container > swiper-slide > swiper-slide-active
   &__link:hover
     color: var(--ifm-menu-color-hover)
 
-div.navbar__inner > div.navbar__items.navbar__items--right 
+div.navbar__inner > div.navbar__items.navbar__items--right
   div:nth-child(1)
     margin: 0
     margin-right: 9px
@@ -1166,7 +1174,7 @@ div.navbar__inner > div.navbar__items.navbar__items--right
     margin: 0
     margin-right: 7px
     padding: 0
-  
+
 div.navbar__inner > div:nth-child(1) > div
   margin: 0 auto
 
@@ -1179,7 +1187,7 @@ div.navbar__inner > div:nth-child(1) > div
 .table
   &-of-contents
     padding-left: 24px
-  
+
     &__link
       font-weight: 600
       font-size: 12px
@@ -1236,14 +1244,14 @@ div.navbar__inner > div:nth-child(1) > div
 
 .theme-admonition
   padding: 17px 18px 19px 22px
-  border-left-width: 5px 
+  border-left-width: 5px
   border-left-style: solid
   border-radius: 6px !important
   max-width: 823px
-  
+
   margin-left: 30px
-  
-  &-info 
+
+  &-info
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1)
     border-left-color: #4cb3d4
     background-color: var(--ifm-color-info-contrast-background)
@@ -1267,9 +1275,9 @@ div.navbar__inner > div:nth-child(1) > div
     border-color: var(--ifm-color-primary-dark)
 
   &__label
-    color: var(--ifm-color-primary-dark) 
+    color: var(--ifm-color-primary-dark)
 
-.theme-doc-toc-desktop  
+.theme-doc-toc-desktop
   top: calc(var(--ifm-navbar-height) + 4rem) !important
 
 #__docusaurus > footer > div
@@ -1279,7 +1287,7 @@ div.navbar__inner > div:nth-child(1) > div
   margin: 0
   &__link
     margin-left: 0
-    margin-bottom: 16px 
+    margin-bottom: 16px
     margin-right: 0
 
 .footer
@@ -1289,7 +1297,7 @@ div.navbar__inner > div:nth-child(1) > div
     align-items: flex-start
     max-width: 1140px
     padding: 0
-  
+
   &__bottom
     width: 100%
 
@@ -1345,7 +1353,7 @@ div.navbar__inner > div:nth-child(1) > div
       margin-right: 10px
 
   &__link
-    
+
 
     &-item
       margin-bottom: 12px
@@ -1493,7 +1501,7 @@ div.navbar__inner > div:nth-child(1) > div
   .navbar-sidebar
     transform: translate3d(0, 0, 0)
     width: auto
-  
+
     &__item
       flex-direction: row
 
@@ -1566,7 +1574,7 @@ div.navbar__inner > div:nth-child(1) > div
       div
         display: none
 
-      ul 
+      ul
         padding-top: 24px
         border-top: 1px solid #2f364a
         display: flex
@@ -1601,7 +1609,7 @@ div.navbar__inner > div:nth-child(1) > div
             img
               content: url(/img/author-768.svg)
 
-        div.footer__socials.footer__socials  
+        div.footer__socials.footer__socials
           padding-top: 5px
           display: flex
           max-width: 136px
@@ -1673,18 +1681,18 @@ div.navbar__inner > div:nth-child(1) > div
 
     h2
       padding: 0
-  
+
     h3
       padding: 0
 
     h4
       padding: 0
-    
+
     p
-      padding: 0 
+      padding: 0
 
     ol, ul
-      padding: 0 
+      padding: 0
 
     li
       padding-left: 0
@@ -1698,10 +1706,10 @@ div.navbar__inner > div:nth-child(1) > div
   #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > div.theme-doc-markdown.markdown > header > h1
     padding: 0
 
-  .language-shell 
+  .language-shell
     margin: 0
 
-  .theme-admonition 
+  .theme-admonition
     margin-left: 0
 
   .footer
@@ -1717,15 +1725,15 @@ div.navbar__inner > div:nth-child(1) > div
 
     &__title
       align-self: center
-      max-width: 100% 
+      max-width: 100%
       width: 100%
       margin: 0 auto
       margin-bottom: 15px
-      font-size: 14px 
+      font-size: 14px
       text-align: center
 
   #__docusaurus > footer > div > div.row.footer__links
-    max-width: 100% 
+    max-width: 100%
     width: 100%
 
     div
@@ -1738,7 +1746,7 @@ div.navbar__inner > div:nth-child(1) > div
     div:nth-child(1)
       order: 1 !important
       flex-direction: column
-      
+
 
       ul
         border-top: none
@@ -1747,10 +1755,10 @@ div.navbar__inner > div:nth-child(1) > div
           flex-wrap: nowrap
           flex-direction: column
           align-items: center
-        
+
 
         div.\{author\}
-          order: 2 
+          order: 2
           a
             max-width: 688px
             width: 100%
@@ -1758,7 +1766,7 @@ div.navbar__inner > div:nth-child(1) > div
               content: url(/img/author-mobile.svg)
 
 
-        div.footer__socials.footer__socials  
+        div.footer__socials.footer__socials
           padding-top: 5px
           display: flex
           max-width: 136px
@@ -1779,11 +1787,11 @@ div.navbar__inner > div:nth-child(1) > div
   .legal
     display: column
     &__wrapper
-      margin-bottom: 15px   
-      
+      margin-bottom: 15px
+
     &__link:not(first-child)
       margin-top: 15px
-    
+
   .dot
     display: none
 
@@ -1800,7 +1808,7 @@ div.navbar__inner > div:nth-child(1) > div
 
   #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > nav
     padding: 0 !important
-    
+
   .markdown
 
     h1
@@ -1808,13 +1816,13 @@ div.navbar__inner > div:nth-child(1) > div
 
     h2
       font-size: 26px !important
-  
+
     h3
       padding: 0
 
     h4
       padding: 0
-    
+
     p
       font-size: 14px !important
 

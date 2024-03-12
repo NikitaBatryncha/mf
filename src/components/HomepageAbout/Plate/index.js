@@ -26,7 +26,7 @@ export default function Plate() {
     <VisibilitySensor onChange={onChange} partialVisibility>
       <a
         className={clsx(styles.plateContainer, isVisible ? styles.animate : '', isHovered && styles.plateHovered)}
-        href="/docs/tempo/md-install"
+        href="/mf/docs/tempo/md-install"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -41,7 +41,7 @@ export default function Plate() {
                   Разработан на Python 3.0 и PostgreSQL. Разворачивается за несколько минут, используя Docker.
                 </p>
               </div>
-              <Link name="Документация" path="/docs/tempo/md-install.md" isHovered={isHovered} />
+              <Link name="Документация" path="/mf/docs/tempo/md-install.md" isHovered={isHovered} />
             </div>
           </div>
         </div>

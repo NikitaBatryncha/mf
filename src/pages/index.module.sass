@@ -1,51 +1,47 @@
 @media (max-width: 1920px)
-.body__container
-  position: relative
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  max-width: 3600px
-  width: 100%
-  margin: 0 auto
-  background-image: url(/img/gradient-1.svg), url(/img/gradient-2.png)
-  background-repeat: no-repeat
-  background-size: 1920px, 1920px, cover
-  background-position-x: 50%
+  .body__container
+    position: relative
+    max-width: 3600px
+    width: 100%
+    margin: 0 auto
+    background-image: url(/img/gradient-1.svg), url(/img/gradient-2.png)
+    background-repeat: no-repeat
+    background-size: 1920px, 1920px, cover
+    background-position-x: 50%
 
-.gradient
-  position: absolute
-  top: 0
+  .gradient
+    position: absolute
+    top: 0
 
-  &1
-    z-index: -1
-    width: 1920px
-    object-fit: cover
-    
+    &1
+      z-index: -1
+      width: 1920px
+      object-fit: cover
 
-    &Tablet 
-      display: none
 
-  &2
-    z-index: -2
-    
-    &Tablet
-      display: none
+      &Tablet
+        display: none
 
-    &Mobile
-      display: none
+    &2
+      z-index: -2
 
-.ellipse
-  position: absolute
+      &Tablet
+        display: none
 
-  &1
-    top: 83px
-    left: 50%
-    transform: translateX(-50%)
-    z-index: 1
+      &Mobile
+        display: none
 
-    &Tablet
-      display: none
+  .ellipse
+    position: absolute
+
+    &1
+      top: 83px
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 1
+
+      &Tablet
+        display: none
 
 @media (max-width: 1100px)
   .gradient
@@ -54,8 +50,8 @@
       top: 0
       max-width: 1575px
       width: 100%
-    
-      &Tablet 
+
+      &Tablet
         display: block
 
     &2
@@ -66,7 +62,7 @@
         display: block
         width: 1440px
         height: 803px
-        
+
   .ellipse
     &1
       display: none
@@ -77,14 +73,14 @@
 @media (max-width: 520px)
   .gradient
     &1
-    
-      &Tablet 
+
+      &Tablet
         display: none
 
     &2
       display: none
 
-      &Tablet 
+      &Tablet
         display: none
 
       &Mobile
@@ -94,7 +90,7 @@
         height: 552px
         left: 0px
 
-      
+
 @media (min-width: 1920px)
   .body__container
     background-size: 100%

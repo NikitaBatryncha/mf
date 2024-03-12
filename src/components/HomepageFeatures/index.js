@@ -68,14 +68,14 @@ export default function HomepageFeatures() {
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
     <section className={styles.features}>
-      <img src={'/img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
+      <img src={'img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
       <img src={'img/gradient-4.png'} className={clsx(styles.gradient, styles.gradient4)}/>
       <div className={clsx("container", "column", styles.features__container)}>
         <h2 className={clsx("title", styles.features__title, isVisible ? styles.animate : '')}>
           Функциональные<br/><span>возможности</span>
         </h2>
 
-        
+
         <Swiper
           loop={true}
           slidesPerView={1}
@@ -202,7 +202,7 @@ export default function HomepageFeatures() {
         <div className={styles.grid__container}>
           <img src={'img/ellipse-4.png'} className={clsx(styles.ellipse, styles.ellipse4)}/>
           <img src={'img/ellipse-4-tablet.png'} className={clsx(styles.ellipse, styles.ellipse4, styles.ellipse4Tablet)}/>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item1, isVisible ? styles.animate : '')}> 
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item1, isVisible ? styles.animate : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_1.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -217,7 +217,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item2, isVisible ? styles.animate1 : '')}>
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item2, isVisible ? styles.animate1 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -229,7 +229,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item3, isVisible ? styles.animate2 : '')}>
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item3, isVisible ? styles.animate2 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_3.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -244,7 +244,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate3 : '')}>
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate3 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_4.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -256,7 +256,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate4 : '')}>
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate4 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_5.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -268,7 +268,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate5 : '')}>
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate5 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_6.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -280,7 +280,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate6 : '')}>
+        <a href="/mf/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate6 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_7.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
