@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmf=self.webpackChunkmf||[]).push([[1653],{1212:e=>{e.exports=JSON.parse('{"permalink":"/mf/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
