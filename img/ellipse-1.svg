@@ -1,0 +1,23 @@
+<svg width="722" height="482" viewBox="0 0 722 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse opacity="0.05" cx="361" cy="241" rx="361" ry="241" fill="url(#paint0_radial_253_6167)"/>
+<defs>
+<radialGradient id="paint0_radial_253_6167" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(361 241) rotate(90) scale(241 361)">
+<stop stop-color="#87D1F1"/>
+<stop offset="0.117896" stop-color="#87D0F1" stop-opacity="0.991615"/>
+<stop offset="0.213837" stop-color="#87CFF1" stop-opacity="0.967585"/>
+<stop offset="0.2912" stop-color="#87CCF1" stop-opacity="0.9296"/>
+<stop offset="0.353363" stop-color="#87C9F1" stop-opacity="0.879348"/>
+<stop offset="0.403704" stop-color="#87C4F1" stop-opacity="0.818519"/>
+<stop offset="0.4456" stop-color="#87C0F1" stop-opacity="0.7488"/>
+<stop offset="0.48243" stop-color="#87BAF1" stop-opacity="0.671881"/>
+<stop offset="0.51757" stop-color="#87B4F1" stop-opacity="0.589452"/>
+<stop offset="0.5544" stop-color="#87AEF1" stop-opacity="0.5032"/>
+<stop offset="0.596296" stop-color="#87A8F1" stop-opacity="0.414815"/>
+<stop offset="0.646637" stop-color="#87A2F1" stop-opacity="0.325985"/>
+<stop offset="0.7088" stop-color="#879CF1" stop-opacity="0.2384"/>
+<stop offset="0.786163" stop-color="#8796F1" stop-opacity="0.153748"/>
+<stop offset="0.882104" stop-color="#8791F1" stop-opacity="0.0737185"/>
+<stop offset="1" stop-color="#878CF1" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
