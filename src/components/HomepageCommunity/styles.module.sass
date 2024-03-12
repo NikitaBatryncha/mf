@@ -1,0 +1,306 @@
+@mixin font-gradient
+  background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+  -webkit-background-clip: text
+  background-clip: text
+  color: transparent
+
+@keyframes shimmerBackground
+  0% 
+    transform: translateX(-150%)
+
+  20%
+    transform: translateX(150%)
+    opacity: 0
+
+  100% 
+    transform: translateX(150%)
+    opacity: 0
+
+.community
+  margin-bottom: 144px
+  position: relative
+  
+
+  &__container
+    justify-content: center
+    position: relative
+    max-width: 1143px
+    width: 100%
+    min-height: 336px
+    border: 1px solid rgba(255, 255, 255, 0.05)
+    border-radius: 21px
+    background: #0a0e22
+    overflow: hidden
+    
+    &:hover::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0%
+      width: 100%
+      height: 200%
+      background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%)
+      animation: shimmerBackground 6s linear infinite
+      transition: opacity 0.3s ease-in-out
+  
+    &:hover .community__link
+      background-image: url(../../../static/img/nav-link-tg-hover.svg)
+      color: #141963
+      background-color: #fff
+      transition: 0.5s all
+  
+  &__title
+    margin-bottom: 26px
+    max-width: 661px
+    width: 100%
+    font-weight: 800
+    font-size: 42px
+    line-height: 108%
+    letter-spacing: -0.019em
+    text-align: left
+    color: #e9edfa
+
+  &__descr
+    margin-bottom: 29px
+    max-width: 484px
+    width: 100%
+    color: rgb(200, 212, 238)
+    font-family: "Inter"
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0%
+    text-align: left
+
+  &__wrapper
+    margin-left: 3px
+    height: 185px
+
+  &__wrapperMain
+    justify-content: space-between
+    max-width: 1009px
+    width: 100%
+    position: relative
+    z-index: 2
+
+  &__link
+    align-items: center
+    padding: 0 16px 
+    padding-top: 2px
+    padding-left: 45px
+    width: 163px
+    height: 36px
+    border-radius: 35px
+    background: rgba(255, 255, 255, 0.08)
+    color: rgb(255, 255, 255)
+    font-size: 15px
+    font-weight: 800
+    line-height: 24px
+    letter-spacing: 0%
+    background-image: url(../../../static/img/tg-icon.svg)
+    background-repeat: no-repeat
+    background-position: 15px 50%
+
+    &:hover
+      background-image: url(../../../static/img/nav-link-tg-hover.svg)
+      color: #141963
+      background-color: #fff
+      transition: 0.5s all
+
+  &__qr
+    margin-right: 18px
+
+.gradient
+  min-width: 1920px
+  position: absolute
+  object-fit: cover
+
+  &6
+    top: 33px
+    left: 50%
+    transform: translateX(-50%)
+    height: auto
+
+    &Tablet
+      display: none
+
+@media (max-width: 1250px)
+    
+  .community
+    margin: 0 20px
+    margin-bottom: 123px
+    border-radius: 25px
+
+    &__container
+      margin: 0 auto
+      max-width: 935px
+      height: 338px
+      background-image: url(../../../static/img/gradient-7.svg)
+      background-position: 0 71px
+      background-repeat: no-repeat
+
+    &__wrapper
+      margin-left: 2px
+      max-width: 534px
+
+    &__title
+      width: 100%
+      margin-bottom: 27px
+
+    &__qr
+      margin-top: 2px
+      margin-right: -3px
+
+    &__wrapperMain
+      max-width: 836px
+
+    .gradient
+      position: absolute
+
+      &6
+        top: 102px
+        z-index: -1
+        display: none
+
+        &Tablet
+          display: block
+          display: block
+          top: 94px
+          margin-left: -76px
+          min-width: 1019px
+
+@media (max-width: 880px)
+  .community
+    margin: 0 auto
+    margin-bottom: 66px
+    max-width: 688px
+
+    &__container
+      padding: 0 27px
+
+    &__wrapper
+      height: 226px
+
+    &__title
+      margin-bottom: 10px
+    
+    &__descr
+      max-width: 330px
+      margin-bottom: 17px
+
+    &__qr
+      margin: 0
+      margin-right: 6px
+      margin-top: 0px
+
+@media (max-width: 620px)
+  .community
+
+    &__container
+      min-height: 338px
+      height: 100%
+
+    &__wrapper
+      min-height: 190px
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+
+    &__descr
+      display: inline-block
+      text-align: center
+
+    &__link
+      max-width: 335px
+      width: 100%
+      height: 52px
+      padding: 11px 26px 13px
+      justify-content: center
+      background: rgb(255, 255, 255, 0)
+      border: 2px solid rgb(255, 255, 255, 0.2)
+      border-radius: 43px
+
+    &__qr
+      display: none
+
+@media (max-width: 520px)
+  .gradient
+    &6
+      display: none
+
+  .community
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0
+    margin-bottom: 10px
+    min-width: 520px
+    min-height: 325px
+
+    &__container
+      margin: 0
+      padding: 0
+      padding-top: 17px
+      
+      width: 100%
+      min-height: 326px
+      height: 100%
+      border-radius: 0
+      border: none
+      background-image: none
+
+    &__wrapper
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-left: 0
+      max-width: 335px
+      width: 100%
+      height: 100%
+
+      &Main
+        justify-content: center
+        align-items: center
+
+    &__title
+      margin-bottom: 16px
+      max-width: 335px
+      width: 100%
+      font-family: "Inter"
+      font-weight: 700
+      font-size: 28px
+      line-height: 114%
+      letter-spacing: -0.01em
+      text-align: center
+
+    &__descr
+      max-width: 335px
+      width: 100%
+      margin-bottom: 26px
+      text-align: center
+      font-size: 16px
+      font-weight: 400
+      line-height: 25px
+      letter-spacing: -0.041em
+
+    &__link
+      max-width: 335px
+      width: 100%
+      height: 52px
+      padding: 11px 26px 13px
+      justify-content: center
+      background: rgb(255, 255, 255, 0)
+      border: 2px solid rgb(255, 255, 255, 0.2)
+      border-radius: 43px
+
+      img 
+        margin-left: -5px
+
+      span
+        letter-spacing: -0.01em
+
+    &__qr
+      display: none
+
+

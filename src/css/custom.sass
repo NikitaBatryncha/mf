@@ -1,0 +1,1833 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap')
+/* Document
+ * ========================================================================== */
+
+:where(html)
+  line-height: 1.15 /* 1 */
+
+/* Sections
+ * ========================================================================== */
+
+:where(h1)
+  font-size: 2em
+  margin-block-end: 0.67em
+  margin-block-start: 0.67em
+
+/* Grouping content
+ * ========================================================================== */
+
+:where(dl, ol, ul) :where(dl, ol, ul)
+  margin-block-end: 0
+  margin-block-start: 0
+
+:where(hr)
+  box-sizing: content-box /* 1 */
+  color: inherit /* 2 */
+  height: 0 /* 1 */
+
+:where(pre)
+  font-family: monospace, monospace /* 1 */
+  font-size: 1em /* 2 */
+
+/* Text-level semantics
+ * ========================================================================== */
+
+:where(abbr[title])
+  text-decoration: underline
+  text-decoration: underline dotted
+
+:where(b, strong)
+  font-weight: bolder
+
+:where(code, kbd, samp)
+  font-family: monospace, monospace /* 1 */
+  font-size: 1em /* 2 */
+
+:where(small)
+  font-size: 80%
+
+/* Tabular data
+ * ========================================================================== */
+
+:where(table)
+  border-color: currentColor /* 1 */
+  text-indent: 0 /* 2 */
+
+/* Forms
+ * ========================================================================== */
+
+:where(button, input, select)
+  margin: 0
+
+:where(button)
+  text-transform: none
+
+:where(button, input:is([type="button" i], [type="reset" i], [type="submit" i]))
+  -webkit-appearance: button
+
+:where(progress)
+  vertical-align: baseline
+
+:where(select)
+  text-transform: none
+
+:where(textarea)
+  margin: 0
+
+:where(input[type="search" i])
+  -webkit-appearance: textfield /* 1 */
+  outline-offset: -2px /* 2 */
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button
+  height: auto
+
+::-webkit-input-placeholder
+  color: inherit
+  opacity: 0.54
+
+::-webkit-search-decoration
+  -webkit-appearance: none
+
+::-webkit-file-upload-button
+  -webkit-appearance: button /* 1 */
+  font: inherit /* 2 */
+
+:where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focus-inner
+  border-style: none
+  padding: 0
+
+:where(button, input:is([type="button" i], [type="color" i], [type="reset" i], [type="submit" i]))::-moz-focusring
+  outline: 1px dotted ButtonText
+
+:where(:-moz-ui-invalid)
+  box-shadow: none
+
+/* Interactive
+ * ========================================================================== */
+
+/*
+ * Add the correct styles in Safari.
+ */
+
+:where(dialog)
+  background-color: white
+  border: solid
+  color: black
+  height: -moz-fit-content
+  height: fit-content
+  left: 0
+  margin: auto
+  padding: 1em
+  position: absolute
+  right: 0
+  width: -moz-fit-content
+  width: fit-content
+
+:where(dialog:not([open]))
+  display: none
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+:where(summary)
+  display: list-item
+
+@mixin font-gradient
+  background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+  -webkit-background-clip: text
+  background-clip: text
+  color: transparent
+
+$ifm-color-primary: #fff
+$ifm-color-primary-dark: #447db3
+$ifm-color-primary-darker: #277148
+$ifm-color-primary-darkest: #000
+$ifm-color-primary-light: #f0f4f7
+$ifm-color-primary-lighter: #359962
+$ifm-color-primary-lightest: #3cad6e
+$ifm-code-font-size: 95%
+$docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1)
+$ifm-footer-background-color: #21293e
+$admonition-descr: var(--ifm-h5-font-color)
+
+:root
+  --ifm-color-primary: #fff
+  --ifm-color-primary-dark: #{$ifm-color-primary-dark}
+  --ifm-color-primary-darker: #{$ifm-color-primary-darker}
+  --ifm-color-primary-darkest: #{$ifm-color-primary-darkest}
+  --ifm-color-primary-light: #{$ifm-color-primary-light}
+  --ifm-color-primary-lighter: #{$ifm-color-primary-lighter}
+  --ifm-color-primary-lightest: #{$ifm-color-primary-lightest}
+  --ifm-code-font-size: #{$ifm-code-font-size}
+  --docusaurus-highlighted-code-line-bg: #{$docusaurus-highlighted-code-line-bg}
+  --ifm-footer-background-color: #{$ifm-footer-background-color}
+  --first-font-family: "Manrope", "Arial", "san-serif"
+  --swiper-theme-color: #5e6668
+  --swiper-navigation-size: 20px
+  --ifm-heading-color: #0c1327
+  --ifm-link-color: #fff
+  --ifm-menu-color-hover: #ececec
+  --ifm-menu-color-active: #ececec
+  --ifm-menu-color-background-active: rgba(69, 110, 149, 0.09)
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary-dark)
+  --ifm-breadcrumb-item-background-active: rgba(68, 125, 179, 0.09)
+  --ifm-menu-link-sublist-icon: url(/img/nav-sublist-arrow.svg)
+  --menu-color: #f0f4f7
+  --body-color: #fff
+  --h1-color: #0c1327
+  --h2-color: var(--h1-color)
+  --menu-title-color: #000
+  --menu-link-color: #606770
+  --table-left-border: border-left: 1px solid #dadde1
+  --toggle-img: url(/img/toggle-light.svg)
+  --ifm-color-info-contrast-background: rgba(238, 249, 253)!important
+  --ifm-toc-border-color: 1px solid rgb(218, 221, 225)
+  --blog-body-color: (--menu-color)
+  --border: #fff
+
+[data-theme='dark']
+  --ifm-color-primary: #fff
+  --ifm-color-primary-dark: #61cffa
+  --ifm-color-primary-darker: #1fa588
+  --ifm-color-primary-darkest: #fff
+  --ifm-color-primary-light: #29d5b0
+  --ifm-color-primary-lighter: #32d8b4
+  --ifm-color-primary-lightest: #4fddbf
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3)
+  --ifm-footer-background-color: #21293e
+  --ifm-menu-link-sublist-icon: url(/img/nav-sublist-arrow-dark.svg)
+  --menu-color: #21293e
+  --body-color: #3F475B
+  --h1-color: #fff
+  --h2-color: var(--h1-color)
+  --menu-title-color: #fff
+  --menu-link-color: #fff
+  --table-left-border: border-left: 1px solid rgba(226, 231, 239, 0.12)
+  --toggle-img: url(/img/toggle-dark.svg)
+  --ifm-color-info-contrast-background: rgba(238, 249, 253, 0.2)!important
+  --ifm-toc-border-color: 1px solid rgba(226, 231, 239, 0.12)
+  --blog-body-color: #242932
+  --border: #0C1327
+
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+  scroll-padding: 3vmax
+  overflow-x: hidden
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+:focus
+  border: none
+  outline: none
+
+a
+  color: #fff
+  text-decoration: none
+
+ul
+  list-style: none
+
+img
+  max-width: 100%
+
+body
+  box-sizing: border-box
+  min-width: 320px
+  max-width: 3600px
+  margin: 0 auto
+  font-family: var(--first-font-family)
+  background-color: #050711
+  overflow-x: hidden
+  position: relative
+  z-index: -10
+
+body::-webkit-scrollbar
+  width: 0
+  overflow-x: hidden
+
+section, div, li, span, button
+  background-repeat: no-repeat
+
+ul, li, h1, h2, h3, h4, p
+  padding: 0
+  margin: 0
+  font-family: var(--first-font-family)
+  list-style: none
+  color: #fff
+  font-size: 15px
+  font-weight: 800
+  line-height: 24px
+
+h1, h2
+  font-size: 48px
+  line-height: 59px
+  font-size: 68px
+  font-weight: 800
+  line-height: 108.02%
+  text-align: center
+
+button, a
+  cursor: pointer
+  padding: 0
+  border: none
+  outline: none
+  background-color: transparent
+  font-family: var(--first-font-family)
+  color: #fff
+
+.container
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  align-items: center
+  margin: 0 auto
+  padding: 0 20px
+  max-width: 1180px
+  width: 100%
+  height: 100%
+  margin: 0 auto
+
+.column
+  flex-direction: column
+
+.flex
+  display: flex
+  align-items: center
+
+.title
+  @include font-gradient
+  text-shadow: 0 4px 21px 0 rgba(188, 217, 248, 0.08)
+
+.navbar
+  height: 63px
+  padding: 8px
+  background: linear-gradient(90deg, #4fa7dd 0%, #2ec0c0 100%)
+
+  &__items
+    height: 100%
+  
+  &__item
+    color: white
+    font-weight: 800
+    font-size: 15px
+    line-height: 160%
+
+  &__item
+
+    button
+      color: white
+      font-weight: 800
+      font-size: 15px
+      line-height: 160%
+
+.footer
+  background: #21293e
+
+a 
+  color: var(--h2-color)
+
+a:hover
+  text-decoration: none
+  transition: none
+  -webkit-font-smoothing: antialiased
+
+.li
+  padding-left: 32px
+  width: 100%
+  background-image: url(../../static/img/list-item.svg)
+  background-position-y: -0.5px
+  font-family: "Inter", sans-serif
+  font-weight: 400
+  font-size: 15px
+  line-height: 160%
+  color: #c8d4ee
+
+.linkButton
+  position: relative
+  display: block
+  padding: 12px 32px 16px 29px
+  width: 303px
+  height: 60px
+  color: #141936
+  font-size: 17.6px
+  font-weight: 800
+  line-height: 28.15px
+  letter-spacing: 0%
+  border: 3px solid rgb(98, 228, 249)
+  border-radius: 41.06px
+  background-color: #fff
+  cursor: pointer
+
+  img
+    position: absolute
+    stroke: #141936
+    right: 28px
+    top: 17px 
+    width: 20px
+    height: 20px
+
+  &:hover
+    background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+    color: #141936
+
+    img
+      content: url(/img/return-hover.svg)
+
+
+  &:focus
+    background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+    color: #141936
+
+    img
+      content: url(/img/return-hover.svg)
+
+  &:active
+    background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+    color: #141936
+
+    img
+      content: url(/img/return-hover.svg)
+
+.link
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  font-weight: 800
+  font-size: 15px
+  @include font-gradient
+
+  &:hover
+    @include font-gradient
+
+.mySwiper
+  margin-top: 55px
+  max-width: 1098px
+  padding: 0 20px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 100%
+  height: 467px
+  position: relative
+
+.swiper
+  div.swiper-button-prev
+    content: url(/img/prev-arrow.svg)
+    width: 40px
+    top: 196px
+    left: 0
+
+    &:hover,
+    &:focus
+      content: url(/img/navigation-prev-hover.svg)
+    
+  div.swiper-button-next 
+    content: url(/img/next-arrow.svg)
+    width: 40px
+    top: 196px
+    right: 0
+
+    &:hover,
+    &:focus
+      content: url(/img/navigation-next-hover.svg)
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    top: auto
+    width: 200px
+    bottom: -3px
+    left: 50%
+    transform: translateX(-50%)
+    height: 28px
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active
+    width: 16px
+    height: 8px
+    background: linear-gradient(90deg, #61bff9 0%, #61f9f9 100%)
+    border-radius: 32px
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span
+    width: 8px
+    height: 8px
+    border-radius: 100%
+    background: #5e6668
+    margin: 0 3px
+
+div.swiper-wrapper
+  max-width: 750px
+  height: 390px
+  margin: 0 auto
+
+swiper-container > swiper-slide
+  width: 580px !important
+  height: 306px !important
+
+swiper-container > swiper-slide > swiper-slide-active
+  width: 750px !important 
+  height: 390px !important
+
+.swiper-slide 
+  max-width: 750px 
+  width: 100% 
+  margin: 0 auto
+  height: 390px
+  position: relative
+  border-radius: 3px
+
+
+  img
+    display: block
+    user-select: none
+
+@media (max-width: 1100px)  
+  .swiper
+    max-width: 966px
+    padding: 0 20px
+
+  .swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    transform: translateX(-48%)
+
+  .swiper div.swiper-button-prev
+    left: 18px
+  
+  .swiper div.swiper-button-next
+    right: 19px
+
+@media (max-width: 990px)
+  .mySwiper
+    margin-top: 25px
+    max-width: 688px
+    height: 416px
+
+  div.swiper-wrapper
+    max-width: 632px
+    height: 328px
+
+  .swiper__slide  
+    max-width: 632px
+    width: 100%  
+    height: 328px 
+
+  div.swiper-button-prev
+    display: none
+
+  div.swiper-button-next
+    display: none
+
+@media (max-width: 880px)
+  .linkButton
+    margin-left: -3px
+    display: flex
+    max-width: 688px
+    width: 100%
+    justify-content: center
+
+    img
+      display: none
+
+    &::after
+      content: url(/img/return.svg) 
+      margin-left: 9px
+      margin-top: 2px
+
+  #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > .mySwiper > div.swiper-wrapper > div.swiper-slide.swiper__slide > img
+    max-width: 100%
+    min-height: 100%
+    
+@media (max-width: 700px)
+  .title
+    font-size: 40px
+    
+  .swiper
+    height: 400px
+    margin-top: 0px
+    position: static
+
+  div.swiper-wrapper
+    width: 500px
+    height: 290px 
+    margin-top: 30px
+
+  div.swiper-button-prev 
+    width: 28px !important
+    height: 28px !important
+    top: auto !important
+    bottom: 0 !important
+    left: 50px !important
+
+  div.swiper-button-next
+    width: 28px !important
+    height: 28px !important
+    top: auto !important
+    bottom: 0 !important
+    right: 50px !important
+
+  .swiper__slide 
+    box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22) 
+    height: 290px 
+
+
+@media (max-width: 600px)
+
+  div.swiper-wrapper
+    margin-left: auto
+    margin-right: auto
+
+  div.swiper-button-prev
+    display: inline-block
+
+  div.swiper-button-next
+    display: inline-block
+
+  #__docusaurus > div > main > section.features_src-components-HomepageFeatures-styles-module > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android.Swiper_src-components-HomepageFeatures-styles-module > div.swiper-wrapper
+    height: 333px
+
+@media (max-width: 520px) 
+  .container
+    max-width: 370px
+    padding: 0 16px
+
+  .title
+    font-size: 30px
+    font-weight: 800
+    line-height: 108.02%  
+    letter-spacing: -3%
+
+  .linkButton
+    padding-left: 66px
+    max-width: 335px
+    width: 100%
+    height: 52px
+    font-size: 15px
+    line-height: 24px
+    background-position: 250px 50%
+
+  .li
+    max-width: 336px
+    font-weight: 400
+    font-size: 14px
+
+  #__docusaurus > div > main > section.features_src-components-HomepageFeatures-styles-module > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android.Swiper_src-components-HomepageFeatures-styles-module > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    top: auto
+    width: 200px
+    bottom: -3px
+    left: 48%
+    transform: translateX(-47%)
+    height: 28px
+    margin: 3px
+
+  #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > div.swiper.swiper-cards.swiper-3d.swiper-initialized.swiper-horizontal.swiper-android.swiper-watch-progress.mySwiper > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    bottom: 0
+    left: 50%
+    transform: translateX(-51%)
+
+  #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > div > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    bottom: 0px
+
+  .mySwiper
+    max-width: 335px
+    height: 262px
+    
+  .mySwiper div.swiper-slide
+    height: 175px
+
+  .mySwiper div.swiper-wrapper
+    margin-top: 0 
+    height: 175px
+
+  div.swiper-button-prev
+    z-index: 11
+    left: 0 !important
+
+  div.swiper-button-next
+    z-index: 11
+    right: 0 !important
+
+  .swiper__slide
+    border: 1px solid rgba(255, 255, 255, 0.12) !important
+    border-radius: 1px !important
+    box-shadow: none
+
+    img
+      object-fit: cover
+
+/* 
+ *  ----БУРГЕР МЕНЮ----
+ */
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
+  min-width: 335px
+  max-width: 100%
+  width: 100%
+
+  button
+    display: flex
+    justify-content: center
+    border-radius: 41px
+    margin-bottom: 15px
+    padding: 15px 32px
+    max-width: 768px
+    width: inherit
+    height: 60px
+    background-image: none
+    text-align: start
+    font-size: 17px
+
+    &::after
+      content: ''
+      display: block
+      background-image: url(/img/download.svg)
+      background-repeat: no-repeat
+      background-size: 24px
+      width: 24px
+      height: 24px
+      margin-left: 10px
+   
+  a
+    display: flex
+    justify-content: center
+    margin-bottom: 21px
+    padding: 15px 32px
+    width: inherit
+    height: 60px
+    text-align: center
+    background-image: none
+    font-size: 17px
+    border-radius: 41px
+
+    &::after
+      content: ''
+      display: block
+      background-image: url(/img/tg-icon.svg)
+      background-repeat: no-repeat
+      background-size: 24px
+      width: 24px
+      height: 24px
+      margin-left: 10px
+
+    &:hover::after
+      background-image: url(/img/nav-link-tg-hover.svg)
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
+  max-width: 100%
+  width: 100% 
+  flex-direction: column 
+  
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
+  max-width: 480px
+  height: 528px
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > header > div > div > button
+  display: none
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > button
+  display: none
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div
+  flex-direction: column
+  align-items: center
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
+  display: flex
+  flex-direction: column
+  top: 0
+  margin: 0
+  margin-bottom: 36px
+  height: 154px
+  text-align: center
+  align-self: center
+  
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
+  align-self: flex-start
+  justify-content: start
+  align-items: center
+  max-width: 100%
+  width: 100%
+  height: 61px
+  margin-bottom: 30px
+  
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
+  display: flex
+  flex-direction: column-reverse
+  min-width: 335px
+  width: 100%
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
+  position: static
+  width: 234px
+  font-weight: 800
+  font-size: 25px
+  line-height: 96%
+  color: #fff
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > a
+  display: flex
+  justify-content: center
+  order: 3
+  margin-bottom: 15px
+  padding: 15px 32px
+  min-width: 335px
+  width: 100%
+  height: 60px
+  font-weight: 800
+  font-size: 17px
+  letter-spacing: -0.03em
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
+  margin-bottom: 16px
+  order: 3
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.footer__socials_src-components-HomepageFooter-styles-module.footer__socials_src-components-HomepageFooter-styles-module
+  order: 4
+  margin-bottom: 47px
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > a
+  order: 5
+  margin-bottom: 15px
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > button
+  display: block
+  margin-top: 6px
+  margin-left: auto
+
+#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.nav__linkMini_src-components-HomepageHeader-styles-module.flex
+  margin-left: 6px
+
+@media (min-width: 541px) 
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
+    height: 420px
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.logo_src-components-HomepageHeader-styles-module
+    display: block
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
+    position: relative
+    max-width: 990px
+    margin-bottom: 45px
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
+    max-width: 990px
+    width: 100%
+    
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a 
+    width: auto
+    text-align: start
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
+    flex-direction: row
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
+    padding: 0
+    margin-bottom: 39px
+    max-width: 100%
+    width: 100%
+    height: 36px
+
+@media (min-width: 690px) 
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > span
+    display: none
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper1_src-components-HomepageFooter-styles-module
+    padding: 0
+    height: 150px
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
+    margin-bottom: 16px
+    order: 3
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.footer__socials_src-components-HomepageFooter-styles-module.footer__socials_src-components-HomepageFooter-styles-module
+    order: 4
+    margin-bottom: 47px
+
+  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > a
+    order: 5
+    margin-bottom: 15px
+
+
+/* 
+ *  ----ДОКУМЕНТАЦИЯ----
+ */
+
+#__docusaurus_skipToContent_fallback
+  background: linear-gradient(90deg, #4fa7dd 0%, #2ec0c0 100%)
+
+.margin-vert--lg
+  margin: 0 !important 
+  max-width: 100% !important 
+  width: 100%
+  border-radius: 15px 15px 0 0
+
+#__docusaurus_skipToContent_fallback > div > div
+  max-width: 100%
+  width: 100%
+
+#__docusaurus_skipToContent_fallback > div > div > main
+  width: 100%
+  padding: 40px 20px
+
+#__docusaurus_skipToContent_fallback > div > div > main > article > header > h2
+  margin-top: 30px
+
+  a
+    color: var(--h2-color)
+
+    &:hover
+      color: var(--ifm-color-primary-dark)
+
+#__docusaurus_skipToContent_fallback > div > div > main > article > header > div.margin-top--md.margin-bottom--sm.row > div > div > div > div > a
+
+  &:hover span
+    color: var(--ifm-color-primary-dark)
+
+
+.sidebarItemLinkActive_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module
+  color: white
+
+.sidebarItemLink_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module
+  padding: 9px 12px
+  font-weight: 500
+  font-size: 14px
+  line-height: 102%
+
+  &:hover
+    color: var(--ifm-color-primary-dark)
+
+.theme-edit-this-page
+  &:hover
+    color: var(--ifm-color-primary-dark)
+
+.token-line .token
+  color: #fff
+
+#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li:nth-child(1) > a.sidebarItemLinkActive
+  color: var(--ifm-color-primary-dark) !important
+
+
+#__docusaurus_skipToContent_fallback > div > div > main > article > header > h1
+  color: var(--h1-color)
+
+#__blog-post-container > div > div.admonitionContent_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module > button:hover
+  color: var(--ifm-color-primary-dark)
+
+#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li
+  a:active
+    @include font-gradient
+
+#__docusaurus_skipToContent_fallback > div > div > aside > nav
+  padding-left: 10px
+
+#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li > a
+  background: var(--ifm-menu-color-background-active)
+  border-radius: 4px
+
+.tag_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-Tag-styles-module
+  border: 1px solid var(--border)
+
+  &:hover
+    border: 1px solid var(--ifm-color-primary-dark)
+    color: var(--ifm-color-primary-dark)
+
+.markdown 
+  body
+    overflow-x: hidden
+
+  h1
+    color: var(--h1-color)
+    font-weight: 800
+    font-size: 32px
+    line-height: 100%
+    letter-spacing: 0em
+    text-align: start
+    padding: 0 10.24px
+
+  h2
+    padding: 0 35px
+    font-weight: 600
+    font-size: 22px
+    line-height: 109%
+    letter-spacing: 0em
+    color: var(--h2-color)
+    text-align: start
+  
+  h3
+    padding: 0 35px
+    font-weight: 700
+    font-size: 16px
+    line-height: 125%
+    letter-spacing: 0em
+    color: var(--h2-color)
+    text-align: start
+
+  h4
+    padding: 0 35px
+    color: var(--h2-color)
+  
+  p
+    padding: 0 35px
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+    letter-spacing: 0em
+    color: var(--h2-color)
+    text-align: start
+
+  ol, ul
+    padding: 0 35px
+    margin-left: 20px
+
+  li
+    list-style: disc
+    padding-left: 10px
+    color: var(--h2-color)
+    font-weight: 500
+    font-size: 15px
+    padding: 0
+
+    &::marker
+      font-size: 13px
+
+  button
+    color: #141936
+
+  a
+    color: var(--h2-color)
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  iframe
+    margin-left: 30px
+    width: 100%
+    height: 100%
+
+  span
+    color: var(--h2-color)
+
+#__docusaurus_skipToContent_fallback > div
+  background-color: var(--body-color)
+  border-radius: 15px 15px 0 0
+ 
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+  max-width: 73% !important
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module > div > article > div.theme-doc-markdown.markdown > header > h1
+  padding: 0 35.24px
+  margin-bottom: 12px
+  color: var(--h1-color)
+  font-weight: 800
+  font-size: 32px
+  line-height: 100%
+  letter-spacing: 0em
+  text-align: start
+  
+#__docusaurus_skipToContent_fallback > div > div > aside > div > div > nav > ul > li > div
+  background: transparent
+
+#__docusaurus_skipToContent_fallback > div > div > aside > div > div 
+  background: transparent
+
+#__docusaurus_skipToContent_fallback > div > div > aside > div
+  background: transparent
+
+#__docusaurus_skipToContent_fallback > div > div > aside > div > div > nav
+  padding: 26px 0 0 20px
+
+#__docusaurus_skipToContent_fallback > div > div > aside > div > div > nav > ul > li:nth-child(1) > ul > li
+  margin-top: 0
+
+#__docusaurus > nav > div.navbar__inner > div:nth-child(1) > button > svg
+  stroke: white !important
+
+.menu
+  max-width: 300px
+  background-color: var(--menu-color)
+  border-radius: 15px 0 0 0
+
+  &::-webkit-scrollbar
+    width: 0
+    overflow-x: hidden
+
+  &__list
+
+    .menu__list
+      padding-left: 0
+
+  &__link
+    padding-left: 25px
+    max-width: 273px
+    height: 30px
+    font-weight: 500
+    font-size: 14px
+    line-height: 102%
+    color: var(--menu-link-color)
+    background-color: transparent
+
+    &--active
+      color: var(--ifm-color-primary-dark)
+      
+    &--sublist
+      padding-left: 14px
+      font-weight: 800
+      font-size: 18px
+      line-height: 111%
+      color: var(--menu-title-color)
+      background: none
+
+      &:hover
+        color: var(--menu-title-color)
+
+      &-caret
+        background: var(--menu-color)
+
+      &-caret:after
+        margin-left: 3px
+        background-repeat: no-repeat
+        background-size: 12px 9px
+        background-position-y: 5px
+        transform: rotate(270deg)
+        filter: none
+
+.theme-doc-sidebar-item-category 
+  margin-bottom: 10px
+
+.menu__list-item--collapsed .menu__link--sublist:after, .menu__list-item--collapsed .menu__caret:before
+  transform: rotateZ(360deg)
+
+.breadcrumbs
+  &__link
+    font-weight: 400
+    font-size: 12px
+    line-height: 187%
+    letter-spacing: -0.01em
+  
+  &__item:not(:last-child):after
+    width: 10px
+    height: 10px
+    margin: 0 5px
+
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module > div > article > nav
+  margin-top: 9px
+  margin-bottom: 1.3rem
+  padding-left: 26px
+
+.navbar
+  width: 100%
+  height: 50px
+  box-shadow: none
+
+  &__item
+    margin-right: 12px
+
+    button
+      color: #141936
+
+  &__items
+    &--right
+      margin-right: 3px
+
+    button
+      svg
+        path
+          stroke: white
+
+  &__link
+    &:nth-child(5)
+      width: 172px
+      padding-left: 37px
+      background-image: url(/img/phone.svg)
+      background-repeat: no-repeat
+      background-size: 18px, 18px
+      background-position: 12px 6px
+
+  &__link:hover
+    color: var(--ifm-menu-color-hover)
+
+div.navbar__inner > div.navbar__items.navbar__items--right 
+  div:nth-child(1)
+    margin: 0
+    margin-right: 9px
+    padding: 0
+
+  div:nth-child(2)
+    margin: 0
+    margin-right: 7px
+    padding: 0
+  
+div.navbar__inner > div:nth-child(1) > div
+  margin: 0 auto
+
+  img
+    margin-top: 5px
+    margin-left: 76px
+    width: 173px
+    height: 34px
+
+.table
+  &-of-contents
+    padding-left: 24px
+  
+    &__link
+      font-weight: 600
+      font-size: 12px
+      line-height: 156%
+      letter-spacing: -0.01em
+      color: var(--menu-link-color)
+
+      &:hover
+        color: var(--ifm-color-primary-dark)
+        text-decoration: underline
+
+      &--active
+        color: var(--ifm-color-primary-dark)
+
+      &__left-border
+        border-left: 1px solid var(--table-left-border)
+
+#__docusaurus_skipToContent_fallback > div > div > aside > div > div
+  padding-top: 0
+  margin-top: 60px
+
+.nav
+  &__link
+
+    &--tg
+      display: inline-block
+      width: 163px
+      height: 36px
+      padding: 7px 18px 6px 44px
+      border-radius: 35px
+      background: rgba(255, 255, 255, 0.2)
+      background-image: url(/img/tg-icon.svg)
+      background-repeat: no-repeat
+      background-position: 15px, 8px
+      color: white
+
+    &--download
+      padding: 7px 38px 6px 16px
+      width: 287px
+      height: 36px
+      background-image: url(/img/download.svg)
+      background-repeat: no-repeat
+      background-position: 256px, 12px
+      font-size: 15px
+      font-weight: 800
+      line-height: 24px
+      border-radius: 35px
+      background-color: #fff
+      color: #141936
+
+#__docusaurus > nav > div.navbar__inner > div.navbar__items.navbar__items--right > div > .clean-btn
+  content: var(--toggle-img)
+  background: transparent
+
+.theme-admonition
+  padding: 17px 18px 19px 22px
+  border-left-width: 5px 
+  border-left-style: solid
+  border-radius: 6px !important
+  max-width: 823px
+  
+  margin-left: 30px
+  
+  &-info 
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1)
+    border-left-color: #4cb3d4
+    background-color: var(--ifm-color-info-contrast-background)
+
+  div
+    margin-bottom: 13px
+
+  p
+    color: #{$admonition-descr}
+    padding: 0
+
+.language-shell
+  margin-left: 30px
+
+.theme-doc-footer
+  display: none
+
+.pagination-nav
+
+  &__link:hover
+    border-color: var(--ifm-color-primary-dark)
+
+  &__label
+    color: var(--ifm-color-primary-dark) 
+
+.theme-doc-toc-desktop  
+  top: calc(var(--ifm-navbar-height) + 4rem) !important
+
+#__docusaurus > footer > div
+  flex-direction: column
+
+.logo
+  margin: 0
+  &__link
+    margin-left: 0
+    margin-bottom: 16px 
+    margin-right: 0
+
+.footer
+  max-width: 100%
+
+  .container
+    align-items: flex-start
+    max-width: 1140px
+    padding: 0
+  
+  &__bottom
+    width: 100%
+
+  &__copyright
+    display: flex
+    padding: 14px 0 0px 0
+    margin-left: -2px
+    max-width: 1140px
+    width: 100%
+    min-height: 16px
+    align-items: center
+    justify-content: space-between
+    border-top: 1px solid #2f364a
+
+  &__col
+    margin-top: 11px
+    padding: 0
+
+  &__links
+    max-width: 1140px
+    width: 100%
+    min-height: 200px
+    justify-content: space-between
+    margin-left: .03em
+
+  &__title
+    margin-top: 13px
+    margin-bottom: 29px
+    max-width: 227px
+    width: 100%
+    font-size: 14px
+    font-weight: 800
+    line-height: 17.5px
+    letter-spacing: 0%
+    color: #fff
+
+  &__item
+    margin-bottom: 7px
+
+  &__socials
+    display: flex
+
+  &__social
+    width: 32px
+    height: 32px
+    background-size: contain
+    background-repeat: no-repeat
+
+    &Tg
+      margin-right: 10px
+
+    &Vk
+      margin-right: 10px
+
+  &__link
+    
+
+    &-item
+      margin-bottom: 12px
+      font-size: 14px
+      font-weight: 500
+      line-height: 20px
+      letter-spacing: 0%
+      color: rgb(164, 174, 200)
+
+      &:hover
+        @include font-gradient
+
+      &:focus
+        @include font-gradient
+
+      &:active
+        @include font-gradient
+
+.author
+  &__link
+    display: inline-block
+    width: auto
+    height: 37px
+    margin-bottom: 19px
+
+  &__img
+
+    &Mobile
+      display: none
+
+.legal
+
+  &__wrapper
+    margin-right: 70px
+    width: 100%
+    justify-content: end
+    flex-wrap: wrap
+
+  &__copyrights
+    color: rgb(164, 174, 200)
+    font-size: 12px
+    font-weight: 600
+    line-height: 16px
+    letter-spacing: 0%
+    text-align: left
+    max-width: 280px
+    width: 100%
+
+  &__link
+    margin-right: 13px
+    font-size: 12px
+    font-weight: 600
+    line-height: 16px
+    letter-spacing: 0%
+    color: rgb(164, 174, 200, 0.6)
+
+    &:nth-child(1)
+      width: 220px
+
+    &:nth-child(2)
+      width: 180px
+
+    &:nth-child(3)
+      width: 257px
+
+.dot
+  display: inline-block
+  margin-right: 12px
+  font-size: 12px
+  font-weight: 600
+  line-height: 16px
+  color: rgb(164, 174, 200, 0.6)
+
+#__docusaurus > footer > div > div.row.footer__links > div:nth-child(1) > div
+  margin: 0
+
+#__docusaurus > footer > div > div.row.footer__links > div:nth-child(1)
+  max-width: 300px
+
+#__docusaurus > footer > div > div.row.footer__links > div:nth-child(4) > ul > li
+  margin-bottom: 10px
+
+  a
+    margin-right: -4px
+    margin-bottom: 10px
+    font-size: 20px
+    font-weight: 700
+    line-height: 27px
+    letter-spacing: 0.01em
+    @include font-gradient
+
+    &:hover
+      @include font-gradient
+
+    &:focus
+      @include font-gradient
+
+    &:active
+      @include font-gradient
+
+  svg
+    display: none
+
+#__docusaurus > footer > div > div.row.footer__links
+  div:nth-child(1)
+    max-width: 306px
+  div:nth-child(2)
+    max-width: 223px
+  div:nth-child(3)
+    max-width: 257px
+  div:nth-child(4)
+    max-width: 257px
+    margin-left: -4px
+
+@media (max-width: 1350px)
+
+  #__docusaurus > footer > div > div.row.footer__links
+    div:nth-child(1)
+      max-width: 250px !important
+      width: 100%
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+    max-width: 100% !important
+
+  .tocCollapsibleButton_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-CollapseButton-styles-module::after
+    background-size: 1rem !important
+    filter: none !important
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.col--3 > div
+    position: static
+    display: none
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div
+    flex-direction: column-reverse
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > div.tocCollapsible_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-styles-module.theme-doc-toc-mobile.tocMobile_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-TOC-Mobile-styles-module
+    display: block
+
+  #__docusaurus > nav > div.navbar__inner > div:nth-child(1) > div
+    display: none
+
+  #__docusaurus > nav > div.navbar-sidebar__backdrop
+    display: flex
+
+  .navbar-sidebar
+    transform: translate3d(0, 0, 0)
+    width: auto
+  
+    &__item
+      flex-direction: row
+
+    &__items--show-secondary
+      transform: none
+
+    .menu
+      border-radius: 0
+
+      &__list
+        width: 100%
+        display: flex
+        flex-direction: column
+        height: 300px
+        gap: 15px
+
+  .nav__link--tg
+    background-color: rgba(0, 0, 0, 0.3)
+    color: white
+
+  #__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__items.navbar-sidebar__items--show-secondary > div:nth-child(1)
+    display: none
+
+  #__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__items.navbar-sidebar__items--show-secondary > div:nth-child(2)
+    width: 100%
+
+  .markdown
+    iframe
+      width: 96%
+
+  .row
+    width: 100%
+
+  .legal
+    &__wrapper
+      margin-right: 0
+
+@media (max-width: 1150px)
+  .footer
+    .container
+      align-items: center
+      max-width: 900px
+      padding: 0 20px
+
+    &__links
+      justify-content: sopace-between
+
+    &__copyright
+      flex-direction: column-reverse
+      border-top: none
+      padding-top: 0
+
+    &__title
+      justify-content: start
+
+  #__docusaurus > footer > div > div.row.footer__links > div:nth-child > div
+    width: 270px !important
+
+  #__docusaurus > footer > div > div.row.footer__links
+    flex-wrap: wrap
+
+    div:nth-child(1)
+      display: flex
+      order: 4
+      flex-basis: 100%
+      width: 100%
+      max-width: 1200px!important
+      width: 100% !important
+
+      div
+        display: none
+
+      ul 
+        padding-top: 24px
+        border-top: 1px solid #2f364a
+        display: flex
+        max-width: 100vw
+        width: 100%
+
+        li
+          width: 100%
+          padding: 0 20px
+          display: flex
+          justify-content: space-between
+          flex-wrap: wrap
+
+        a
+          margin-bottom: 0
+          max-width: 227px
+          margin-bottom: 24px
+
+        div.\{author\}
+          margin: 0 auto
+          display: block
+          order: 3
+          flex-basis: 100%
+          margin-bottom: 0
+          max-width: 688px
+          width: 100%
+          height: 48px
+
+          a
+            max-width: 688px
+            width: 100%
+            img
+              content: url(/img/author-768.svg)
+
+        div.footer__socials.footer__socials  
+          padding-top: 5px
+          display: flex
+          max-width: 136px
+          height: 32px
+          justify-content: space-between
+
+    div:nth-child(2)
+      max-width: 150px
+      width: 227px
+      margin-bottom: 24px
+
+    div:nth-child(3)
+      max-width: 220px
+      width: 227px
+
+    div:nth-child(4)
+      max-width: 230px
+      width: 240px
+
+  .footer__links
+    margin: 0
+
+  #__docusaurus > footer > div > div.row.footer__links div
+    max-width: 50%
+
+  .legal
+    &__wrapper
+      justify-content: center
+      margin-bottom: 24px
+
+    &__copyrights
+      text-align: center
+
+    &__link
+      margin-right: 4px
+  .dot
+    margin-right: 4px
+
+@media (max-width: 600px)
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+    max-width: 100% !important
+    padding: 0
+
+  .padding-top--md
+    padding: 0
+
+  .navbar-sidebar
+    max-width: 370px
+    width: 370px
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div
+    padding: 0 20px
+    margin: 0 auto
+
+  #__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__items.navbar-sidebar__items--show-secondary > div
+
+    button
+      border-radius: .25em
+
+  #__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__items > div
+    max-width: 370px
+    width: 370px
+    padding: 20px
+
+  .markdown
+
+    h1
+      padding: 0
+
+    h2
+      padding: 0
+  
+    h3
+      padding: 0
+
+    h4
+      padding: 0
+    
+    p
+      padding: 0 
+
+    ol, ul
+      padding: 0 
+
+    li
+      padding-left: 0
+
+    iframe
+      margin: 0
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > nav
+    padding: 0
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > div.theme-doc-markdown.markdown > header > h1
+    padding: 0
+
+  .language-shell 
+    margin: 0
+
+  .theme-admonition 
+    margin-left: 0
+
+  .footer
+    margin-left: 1px
+    max-width: 370px
+    width: 100%
+    min-height: 895px
+    height: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    padding: 36px 0 22px
+
+    &__title
+      align-self: center
+      max-width: 100% 
+      width: 100%
+      margin: 0 auto
+      margin-bottom: 15px
+      font-size: 14px 
+      text-align: center
+
+  #__docusaurus > footer > div > div.row.footer__links
+    max-width: 100% 
+    width: 100%
+
+    div
+      max-width: 100% !important
+      width: 100% !important
+      display: flex
+      flex-direction: column-reverse
+      text-align: center
+
+    div:nth-child(1)
+      order: 1 !important
+      flex-direction: column
+      
+
+      ul
+        border-top: none
+
+        li
+          flex-wrap: nowrap
+          flex-direction: column
+          align-items: center
+        
+
+        div.\{author\}
+          order: 2 
+          a
+            max-width: 688px
+            width: 100%
+            img
+              content: url(/img/author-mobile.svg)
+
+
+        div.footer__socials.footer__socials  
+          padding-top: 5px
+          display: flex
+          max-width: 136px
+          height: 32px
+          flex-direction: row
+          justify-content: center
+
+
+    div:nth-child(2)
+      order: 2 !important
+
+    div:nth-child(3)
+      order: 2 !important
+
+    div:nth-child(4)
+      order: 2 !important
+
+  .legal
+    display: column
+    &__wrapper
+      margin-bottom: 15px   
+      
+    &__link:not(first-child)
+      margin-top: 15px
+    
+  .dot
+    display: none
+
+
+@media (max-width: 520px)
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div
+    padding: 0
+
+  div > div > article > div.theme-doc-markdown.markdown > header > h1
+    padding: 0 !important
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div
+    padding: 0
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > nav
+    padding: 0 !important
+    
+  .markdown
+
+    h1
+      font-size: 30px !important
+
+    h2
+      font-size: 26px !important
+  
+    h3
+      padding: 0
+
+    h4
+      padding: 0
+    
+    p
+      font-size: 14px !important
+
+    ol, ul
+      font-size: 14px !important
+
+
+    li
+      font-size: 14px !important
+
+    iframe
+      margin: 0
+
+  .theme-admonition
+    max-width: 100%
+    width: 100%

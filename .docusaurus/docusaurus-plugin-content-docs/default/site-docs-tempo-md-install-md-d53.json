@@ -1,0 +1,21 @@
+{
+  "id": "tempo/md-install",
+  "title": "Установка и настройка MultiDirectory",
+  "description": "Общая информация",
+  "source": "@site/docs/tempo/md-install.md",
+  "sourceDirName": "tempo",
+  "slug": "/tempo/md-install",
+  "permalink": "/docs/tempo/md-install",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tempo/md-install.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "md-install",
+    "title": "Установка и настройка MultiDirectory",
+    "sidebar_label": "Установка MultiDirectory",
+    "discription": "Установка и настройка MultiDirectory + видео"
+  },
+  "sidebar": "tutorialSidebar"
+}
