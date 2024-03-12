@@ -1,43 +1,47 @@
+import React, {useState, useEffect} from 'react'
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import styles from './index.module.sass';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import HomepageHero from '../components/HomepageHero';
+import HomepageAbout from '../components/HomepageAbout';
+import HomepageRoadmap from '../components/HomepageRoadmap';
+import HomepageHeader from '../components/HomepageHeader';
+import HomepageCommunity from '../components/HomepageCommunity';
+import HomepageDemo from '../components/HomepageDemo';
+import HomepageFooter from '../components/HomepageFooter';
+import Modal from '../components/Modal';
+import BurgerMenu from '../components/Burger';
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const [modalActive, setModalActive] = useState(false);
+  const [burgerActive, setBurgerActive] = useState(false);
+
+  const openModal = () => {
+    setModalActive(true);
+  };
+
+  const openBurger = () => {
+    setBurgerActive(true);
+  };
+
+  const closeBurger = () => {
+    setBurgerActive(false);
+  };
+
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+    <div className={styles.body__container}>
+      <Modal active={modalActive} setActive={setModalActive} />
+      <BurgerMenu active={burgerActive} closeBurger={closeBurger}/>
+      <HomepageHeader openBurger={openBurger}/>
       <main>
+        <HomepageHero openModal={openModal}/>
+        <HomepageAbout openModal={openModal}/>
         <HomepageFeatures />
+        <HomepageRoadmap openModal={openModal}/>
+        <HomepageDemo/>
+        <HomepageCommunity/>
       </main>
-    </Layout>
+      <HomepageFooter />
+    </div>
   );
 }
