@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com',
+  url: ' https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/mf/',
@@ -22,7 +22,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'NikitaBatryncha', // Usually your GitHub org/user name.
   projectName: 'mf', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'deployment',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
