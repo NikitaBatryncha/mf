@@ -3,7 +3,7 @@ const config = {
   tagline: 'Готовое решение для аутентификации и авторизации',
   favicon: 'img/favicon.ico',
   url: 'https://github.com',
-  baseUrl: '/mf/',
+  baseUrl: '/',
 
   organizationName: 'NikitaBatryncha',
   projectName: 'mf',
