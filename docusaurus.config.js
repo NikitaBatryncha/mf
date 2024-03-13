@@ -3,10 +3,10 @@ const config = {
   tagline: 'Готовое решение для аутентификации и авторизации',
   favicon: 'img/favicon.ico',
   url: 'https://github.com',
-  baseUrl: '/',
+  baseUrl: '/mf/',
 
   organizationName: 'NikitaBatryncha',
-  projectName: 'mf',
+  projectName: '/mf/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   deploymentBranch: 'deployment',
@@ -54,7 +54,7 @@ const config = {
           {to: 'tel:+74994440882', label: '+7 499 444 08 82', position: 'left'},
           {
             type: 'html',
-            value: '<img src="/img/logo-documents.png"/>',
+            value: '<img src="mf/img/logo-documents.png"/>',
           },
           {
             type: 'html',
@@ -75,7 +75,7 @@ const config = {
             items: [
               {
                 html: `<a href="#" class="link logo__link">
-                <img src="/img/footer-logo.svg" alt="logo" class="logo footer__logo" />
+                <img src="mf/img/footer-logo.svg" alt="logo" class="logo footer__logo" />
               </a>
               <div class={author}>
                 <a href="https://multifactor.ru" target="_blank" class="link author__link">
@@ -133,11 +133,11 @@ const config = {
             items: [
               {
                 label: 'O нас',
-                to: '/docs/intro',
+                to: '/docs/tempo/md-install',
               },
               {
                 label: 'История создания',
-                to: '/docs/intro',
+                to: '/docs/tempo/md-install',
               },
               {
                 label: 'Документация',
@@ -145,7 +145,7 @@ const config = {
               },
               {
                 label: 'Контакты и реквизиты',
-                to: '/docs/intro',
+                to: '/docs/tempo/md-install',
               },
             ],
           },
@@ -154,15 +154,15 @@ const config = {
             items: [
               {
                 label: 'Оферта',
-                to: '/docs/intro',
+                to: '/docs/tempo/md-install',
               },
               {
                 label: 'Политика конфиденциальности',
-                to: '/docs/intro',
+                to: '/docs/tempo/md-install',
               },
               {
                 label: 'Оплата и возврат',
-                to: '/docs/intro',
+                to: '/docs/tempo/md-install',
               },
             ],
           },
