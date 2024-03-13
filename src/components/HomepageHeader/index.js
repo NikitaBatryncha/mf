@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './styles.module.sass';
 
-export default function HomepageHeader ({ openBurger, closeBurger }) {
+export default function HomepageHeader ({ openBurger, closeBurger, openModal }) {
 
   return (
     <header className={styles.header}>
@@ -12,7 +12,7 @@ export default function HomepageHeader ({ openBurger, closeBurger }) {
             <a href="/docs/tempo/md-install" className={clsx(styles.nav__link)}>Документация</a>
             <a href="tel:+1234567890" className={clsx(styles.nav__link)}>+7 499 444 08 82</a>
           </div>
-          <a href="" className={clsx("linkButton", styles.header__linkButton)} >
+          <a href="" className={clsx("linkButton", styles.header__linkButton)} onClick={(e)=> {e.preventDefault(); openModal();}}>
             Подключить бесплатно
           </a>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper2, "flex", 'nav__wrapper2_src-components-HomepageHeader-styles-module')}>
