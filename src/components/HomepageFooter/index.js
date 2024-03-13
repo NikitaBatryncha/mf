@@ -114,7 +114,7 @@ export default function HomepageFooter () {
             <h3 className={styles.footer__title}>Компания</h3>
             <a href="" className={styles.footer__link}>О нас</a>
             <a href="" className={styles.footer__link}>История создания</a>
-            <a href="/docs/intro/md-install" className={styles.footer__link}>Документация</a>
+            <a href="docs/tempo/md-install" className={styles.footer__link}>Документация</a>
             <a href="" className={styles.footer__link}>Контакты и реквизиты</a>
           </div>
           <div className={clsx("flex", "column", styles.footer__wrapper, styles.footer__wrapper3)}>

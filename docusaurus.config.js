@@ -6,7 +6,7 @@ const config = {
   baseUrl: '/mf/',
 
   organizationName: 'NikitaBatryncha',
-  projectName: '/mf/',
+  projectName: 'mf',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   deploymentBranch: 'deployment',
@@ -47,14 +47,14 @@ const config = {
         items: [
           {to: '/blog', label: 'О нас', position: 'left'},
           {
-            to: '/docs/tempo/md-install',
+            to: 'docs/tempo/md-install',
             position: 'left',
             label: 'Документация',
           },
           {to: 'tel:+74994440882', label: '+7 499 444 08 82', position: 'left'},
           {
             type: 'html',
-            value: '<img src="mf/img/logo-documents.png"/>',
+            value: '<img src="../../img/logo-documents.png"/>',
           },
           {
             type: 'html',
@@ -75,12 +75,11 @@ const config = {
             items: [
               {
                 html: `<a href="#" class="link logo__link">
-                <img src="mf/img/footer-logo.svg" alt="logo" class="logo footer__logo" />
+                <img src="../../img/footer-logo.svg" alt="logo" class="logo footer__logo" />
               </a>
               <div class={author}>
                 <a href="https://multifactor.ru" target="_blank" class="link author__link">
-                  <img src="/img/creator.svg" alt="" class="author__img author__imgDesktop" />
-
+                  <img src="../../img/creator.svg" alt="" class="author__img author__imgDesktop" />
                 </a>
               </div>
               <div class="footer__socials footer__socials">
@@ -133,19 +132,19 @@ const config = {
             items: [
               {
                 label: 'O нас',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
               {
                 label: 'История создания',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
               {
                 label: 'Документация',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
               {
                 label: 'Контакты и реквизиты',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
             ],
           },
@@ -154,15 +153,15 @@ const config = {
             items: [
               {
                 label: 'Оферта',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
               {
                 label: 'Политика конфиденциальности',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
               {
                 label: 'Оплата и возврат',
-                to: '/docs/tempo/md-install',
+                to: 'docs/tempo/md-install',
               },
             ],
           },

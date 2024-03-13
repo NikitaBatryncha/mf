@@ -5,21 +5,21 @@
   color: transparent
 
 @keyframes shimmerBackground
-  0% 
+  0%
     transform: translateX(-150%)
 
   20%
     transform: translateX(150%)
     opacity: 0
 
-  100% 
+  100%
     transform: translateX(150%)
     opacity: 0
 
 .community
   margin-bottom: 144px
   position: relative
-  
+
 
   &__container
     justify-content: center
@@ -31,7 +31,7 @@
     border-radius: 21px
     background: #0a0e22
     overflow: hidden
-    
+
     &:hover::after
       content: ''
       position: absolute
@@ -42,13 +42,13 @@
       background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%)
       animation: shimmerBackground 6s linear infinite
       transition: opacity 0.3s ease-in-out
-  
+
     &:hover .community__link
       background-image: url(../../../static/img/nav-link-tg-hover.svg)
       color: #141963
       background-color: #fff
       transition: 0.5s all
-  
+
   &__title
     margin-bottom: 26px
     max-width: 661px
@@ -57,7 +57,6 @@
     font-size: 42px
     line-height: 108%
     letter-spacing: -0.019em
-    text-align: left
     color: #e9edfa
 
   &__descr
@@ -85,7 +84,7 @@
 
   &__link
     align-items: center
-    padding: 0 16px 
+    padding: 0 16px
     padding-top: 2px
     padding-left: 45px
     width: 163px
@@ -125,7 +124,7 @@
       display: none
 
 @media (max-width: 1250px)
-    
+
   .community
     margin: 0 20px
     margin-bottom: 123px
@@ -183,7 +182,7 @@
 
     &__title
       margin-bottom: 10px
-    
+
     &__descr
       max-width: 330px
       margin-bottom: 17px
@@ -242,7 +241,7 @@
       margin: 0
       padding: 0
       padding-top: 17px
-      
+
       width: 100%
       min-height: 326px
       height: 100%
@@ -294,7 +293,7 @@
       border: 2px solid rgb(255, 255, 255, 0.2)
       border-radius: 43px
 
-      img 
+      img
         margin-left: -5px
 
       span

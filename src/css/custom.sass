@@ -860,8 +860,16 @@ swiper-container > swiper-slide > swiper-slide-active
  *  ----ДОКУМЕНТАЦИЯ----
  */
 
+.hash-link
+  color: var(--h2-color)
+  opacity: 1 !important
+
+  &:hover
+    color: var(--ifm-color-primary-dark)
+
+
 .breadcrumbs__link:hover
-  color: white
+  color: var(--h2-color)
 
 #__docusaurus_skipToContent_fallback
   background: linear-gradient(90deg, #4fa7dd 0%, #2ec0c0 100%)
@@ -914,9 +922,14 @@ swiper-container > swiper-slide > swiper-slide-active
 .token-line .token
   color: #fff
 
-#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li:nth-child(1) > a.sidebarItemLinkActive
-  color: var(--ifm-color-primary-dark) !important
+#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li > a
+  color: var(--h2-color)
+  padding: 6px 10px
+  font-weight: 500
+  font-size: 14px
 
+#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li > a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module
+  color: var(--ifm-color-primary-dark) !important
 
 #__docusaurus_skipToContent_fallback > div > div > main > article > header > h1
   color: var(--h1-color)
@@ -1428,6 +1441,10 @@ div.navbar__inner > div:nth-child(1) > div
 #__docusaurus > footer > div > div.row.footer__links > div:nth-child(1)
   max-width: 300px
 
+#__docusaurus > footer > div > div.row.footer__links > div:nth-child(4)
+  max-width: 250px
+  width: 100%
+
 #__docusaurus > footer > div > div.row.footer__links > div:nth-child(4) > ul > li
   margin-bottom: 10px
 
@@ -1464,6 +1481,9 @@ div.navbar__inner > div:nth-child(1) > div
     margin-left: -4px
 
 @media (max-width: 1350px)
+
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+    max-width: 100% !important
 
   #__docusaurus > footer > div > div.row.footer__links
     div:nth-child(1)
@@ -1535,6 +1555,14 @@ div.navbar__inner > div:nth-child(1) > div
       margin-right: 0
 
 @media (max-width: 1150px)
+
+  #__docusaurus > footer > div > div.row.footer__links > div:nth-child(4)
+    max-width: 250px
+    width: 100%
+
+  .tocCollapsibleButton_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-CollapseButton-styles-module::after
+    background: var(--ifm-menu-link-sublist-icon) 50% 50% / 1rem 1rem no-repeat !important
+
   .footer
     .container
       align-items: center
@@ -1621,8 +1649,8 @@ div.navbar__inner > div:nth-child(1) > div
       width: 227px
 
     div:nth-child(4)
-      max-width: 230px
-      width: 240px
+      max-width: 250px
+      width: 250px
 
   .footer__links
     margin: 0
