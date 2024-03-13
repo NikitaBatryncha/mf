@@ -5,7 +5,7 @@ export default function HomepageFooter () {
   return (
     <footer>
       <div className={clsx("container", "column", styles.footer__container)}>
-        <div className={clsx("flex", styles.footer)}>
+        <div className={clsx("flex", styles.footer, "footer_src-components-HomepageFooter-styles-module")}>
           <a href="#" className={clsx(styles.link, styles.logo__link)}>
             <img src="img/footer-logo.svg" alt="logo" className={clsx(styles.logo, styles.footer__logo)} />
           </a>
@@ -114,7 +114,7 @@ export default function HomepageFooter () {
             <h3 className={styles.footer__title}>Компания</h3>
             <a href="" className={styles.footer__link}>О нас</a>
             <a href="" className={styles.footer__link}>История создания</a>
-            <a href="docs/tempo/md-install" className={styles.footer__link}>Документация</a>
+            <a href="/docs/intro/md-install" className={styles.footer__link}>Документация</a>
             <a href="" className={styles.footer__link}>Контакты и реквизиты</a>
           </div>
           <div className={clsx("flex", "column", styles.footer__wrapper, styles.footer__wrapper3)}>

@@ -23,27 +23,31 @@
   &__wrapper
     width: 621px
     height: 306px
-    justify-content: space-between
     margin-bottom: 23px
+
+    &Mini
+      flex-direction: column-reverse
 
   &__title
     font-weight: 800
     font-size: 68px
     line-height: 122%
     letter-spacing: -0.03em
-
-  &__link
-    width: 192px
+    margin-bottom: 22px
 
   &__descr
     max-width: 537px
     margin: -1px 0 1px 1px
+    margin-bottom: 32px
     font-family: "Inter"
     font-weight: 400
     font-size: 16px
     line-height: 150%
     text-align: center
     color: #c8d4ee
+
+  &__link
+    width: 192px
 
 @keyframes orbit
   from
@@ -110,7 +114,7 @@
     animation: orbit 2s ease-in-out
 
 .support
-  max-width: 1210px
+  max-width: 1140px
   width: 100%
   margin: 0 auto
   display: flex
@@ -169,7 +173,7 @@
     margin-top: -1px
     margin-right: -2px
     width: 557px
-    height: 505px
+    object-fit: contain
 
     &Tablet
       display: none
@@ -203,10 +207,10 @@
 
   &5
     &Desktop
-      top: -270px
+      top: -621px
       left: 50%
       transform: translateX(-50%)
-      width: 1920px
+      min-width: 1920px
 
     &Tablet
       display: none
@@ -407,12 +411,10 @@
     &__img
       &768
         object-fit: cover
+        height: auto
 
   .roadmap
     background-image: none
-
-    &__wrapperMini
-      max-width: 480px
 
   .orbit
     position: relative

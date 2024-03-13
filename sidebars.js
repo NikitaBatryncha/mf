@@ -4,7 +4,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Введение',
-      items: ['tempo/md-install'],
+      items: ['tempo/md-install'], 
     }
   ]
 };

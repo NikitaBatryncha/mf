@@ -67,20 +67,19 @@ export default function HomepageFeatures() {
 
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
-    <section className={styles.features}>
-      <img src={'img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
+    <section className={clsx(styles.features, "features_src-components-HomepageFeatures-styles-module")}>
+      <img src={'/img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
       <img src={'img/gradient-4.png'} className={clsx(styles.gradient, styles.gradient4)}/>
       <div className={clsx("container", "column", styles.features__container)}>
         <h2 className={clsx("title", styles.features__title, isVisible ? styles.animate : '')}>
           Функциональные<br/><span>возможности</span>
         </h2>
 
-
         <Swiper
           loop={true}
           slidesPerView={1}
           spaceBetween={10}
-          className={clsx(styles.Swiper, isVisible ? styles.animate1 : '')}
+          className={clsx(styles.Swiper, isVisible ? styles.animate1 : '', "Swiper_src-components-HomepageFeatures-styles-module")}
           pagination={{el:'.swiper-pagination', clickable: true}}
           navigation = {
             {
@@ -202,7 +201,7 @@ export default function HomepageFeatures() {
         <div className={styles.grid__container}>
           <img src={'img/ellipse-4.png'} className={clsx(styles.ellipse, styles.ellipse4)}/>
           <img src={'img/ellipse-4-tablet.png'} className={clsx(styles.ellipse, styles.ellipse4, styles.ellipse4Tablet)}/>
-        <a href="docs/tempo/md-install" className={clsx(styles.item, styles.item1, isVisible ? styles.animate : '')}>
+        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item1, isVisible ? styles.animate : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_1.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
@@ -217,7 +216,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
         </a>
-        <a href="docs/tempo/md-install" className={clsx(styles.item, styles.item2, isVisible ? styles.animate1 : '')}>
+        <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item2, isVisible ? styles.animate1 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
             <img src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>

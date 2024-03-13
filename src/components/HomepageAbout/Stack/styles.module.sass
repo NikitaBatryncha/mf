@@ -66,9 +66,8 @@
     margin-left: -2px
 
   &__img
-    max-width: 486px
-    object-fit: contain
     margin-top: -1px
+    width: 481px
 
   &__title
     color: #fff
@@ -101,9 +100,8 @@
     margin-bottom: 5px
 
   &__link
-    display: flex
     margin: 0
-    padding: 11px 17px 11px 23px
+    padding: 11px 18px 15px 23px
     width: 254px
     height: 52px
     border-radius: 41px
@@ -113,13 +111,13 @@
     color: #141936
 
     img
-      position: static
-      margin-left: 6px
-      margin-top: 1px
+      margin-top: 3px
+      margin-left: 3px
 
   &__img
     right: 20px
     top: 14px
+    object-fit: contain
 
     &768
       display: none
@@ -168,6 +166,7 @@
       width: 100%
 
     &__img
+      max-width: 468px
       width: 100%
 
     &__list
@@ -211,8 +210,10 @@
 
       &768
         display: block
+        max-width: 713px
         width: 100%
         margin-bottom: 30px
+        object-fit: contain
 
 
 @media (max-width: 700px)
@@ -244,20 +245,20 @@
 
   .stack
     max-width: 370px
+    margin-bottom: 0
+
 
     &__container
       flex-direction: column
-
-    &__container img
-      margin: 0 0 0 4px
-      max-width: 337px
-      width: 100%
-      height: 340px
 
     &__wrapper
       margin-bottom: 21px
       padding: 0
       margin-right: -3px
+
+    &__link
+      margin: 0
+      height: 57px
 
     &__title
       margin-bottom: 20px
@@ -270,6 +271,7 @@
     &__list
       margin-bottom: 26px
       margin-left: 2px
+      order: 2
 
     &__li
       font-weight: 400
@@ -277,22 +279,17 @@
       line-height: 157%
 
     &__link
-      margin-left: -11px
-      padding-left: 65px
-      padding-top: 13px
-      max-width: 340px
-      width: 100%
-      height: 56px
-      font-size: 15px
-      line-height: 24px
-      background-position: 249px 47%
-      background-size: 21px 20px
-      border: 2px solid rgb(98, 228, 249)
-      justify-content: flex-start
+      order: 3
+      padding: 12px 18px 15px 16px
+      margin-bottom: 20px
 
     &__img
-      display: block
+      display: none
 
       &768
-        display: none
+        display: block
+        order: 4
+        width: 335px
+        height: 345px
+        margin-bottom: 0
 

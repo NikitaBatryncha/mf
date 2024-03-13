@@ -9,7 +9,7 @@ import styles from './styles.module.sass';
 
 export default function HomepageDemo() {
   return (
-    <section className={styles.demo}>
+    <section className={clsx(styles.demo, "demo_src-components-HomepageDemo-styles-module")}>
       <img src={'img/ellipse-5.png'} className={clsx(styles.ellipse, styles.ellipse5)}/>
       <img src={'img/ellipse-5-tablet.png'} className={clsx(styles.ellipse, styles.ellipse5, styles.ellipse5Tablet)}/>
       <img src={'img/ellipse-6.png'} className={clsx(styles.ellipse, styles.ellipse6)}/>
@@ -63,7 +63,7 @@ export default function HomepageDemo() {
               1101: {
                 slidesPerView: 'auto',
                 cardsEffect: {
-                  perSlideOffset: 16,
+                  perSlideOffset: 17,
                   perSlideRotate: 0,
                 }
               },
