@@ -31,8 +31,8 @@ export default function Home() {
   return (
     <div className={styles.body__container}>
       <Modal active={modalActive} setActive={setModalActive} />
-      <BurgerMenu active={burgerActive} closeBurger={closeBurger}/>
-      <HomepageHeader openBurger={openBurger}/>
+      <BurgerMenu active={burgerActive} closeBurger={closeBurger} openModal={openModal}/>
+      <HomepageHeader openBurger={openBurger}  closeBurger={closeBurger} openModal={openModal}/>
       <main>
         <HomepageHero openModal={openModal}/>
         <HomepageAbout openModal={openModal}/>
