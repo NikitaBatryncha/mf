@@ -33,7 +33,7 @@ export default function About ({ openModal }) {
             </div>
             <div className={clsx(styles.about__wrapperImg, isVisible ? styles.animate2 : '')}>
               <img src="img/div.early-access-image-holder.svg" alt="" className={clsx(styles.about__img, styles.about__imgDesktop)}/>
-              <img src="img/about-tablet.png" alt="" className={clsx(styles.about__img, styles.about__imgTablet)}/>
+              <img src="img/webp/about-tablet.webp" alt="" className={clsx(styles.about__img, styles.about__imgTablet)}/>
             </div>
           </div>
       </VisibilitySensor>

@@ -71,9 +71,9 @@ export default function HomepageRoadmap ({ openModal }) {
             </ul>
             <Link name="Узнать подробнее"/>
           </div>
-          <img src="/img/support-img.svg" alt="" className={clsx(styles.support__img, styles.support__imgDesktop, isVisible ? styles.animate1 : '')}/> 
-          <img src="/img/support-img-tablet.svg" alt="" className={clsx(styles.support__img, styles.support__imgTablet)}/>
-          <img src="/img/support-img-mobile.png" alt="" className={clsx(styles.support__img, styles.support__imgMobile)}/>
+          <img src="/img/webp/support-img.webp" alt="" className={clsx(styles.support__img, styles.support__imgDesktop, isVisible ? styles.animate1 : '')}/> 
+          <img src="/img/webp/support-img-tablet.webp" alt="" className={clsx(styles.support__img, styles.support__imgTablet)}/>
+          <img src="/img/webp/support-img-mobile.webp" alt="" className={clsx(styles.support__img, styles.support__imgMobile)}/>
         </div>
       </div>
     </section>
