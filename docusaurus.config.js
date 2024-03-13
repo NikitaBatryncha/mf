@@ -54,7 +54,7 @@ const config = {
           {to: 'tel:+74994440882', label: '+7 499 444 08 82', position: 'left'},
           {
             type: 'html',
-            value: '<img src="../../img/logo-documents.png"/>',
+            value: '<img src="img/logo-documents.png"/>',
           },
           {
             type: 'html',
@@ -75,11 +75,11 @@ const config = {
             items: [
               {
                 html: `<a href="#" class="link logo__link">
-                <img src="../../img/footer-logo.svg" alt="logo" class="logo footer__logo" />
+                <img src="img/footer-logo.svg" alt="logo" class="logo footer__logo" />
               </a>
               <div class={author}>
                 <a href="https://multifactor.ru" target="_blank" class="link author__link">
-                  <img src="../../img/creator.svg" alt="" class="author__img author__imgDesktop" />
+                  <img src="img/creator.svg" alt="" class="author__img author__imgDesktop" />
                 </a>
               </div>
               <div class="footer__socials footer__socials">
