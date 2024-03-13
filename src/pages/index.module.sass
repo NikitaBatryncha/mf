@@ -1,6 +1,10 @@
 @media (max-width: 1920px)
 .body__container
   position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
   max-width: 3600px
   width: 100%
   margin: 0 auto
@@ -17,13 +21,14 @@
     z-index: -1
     width: 1920px
     object-fit: cover
+    
 
-    &Tablet
+    &Tablet 
       display: none
 
   &2
     z-index: -2
-
+    
     &Tablet
       display: none
 
@@ -49,8 +54,8 @@
       top: 0
       max-width: 1575px
       width: 100%
-
-      &Tablet
+    
+      &Tablet 
         display: block
 
     &2
@@ -61,7 +66,7 @@
         display: block
         width: 1440px
         height: 803px
-
+        
   .ellipse
     &1
       display: none
@@ -72,14 +77,14 @@
 @media (max-width: 520px)
   .gradient
     &1
-
-      &Tablet
+    
+      &Tablet 
         display: none
 
     &2
       display: none
 
-      &Tablet
+      &Tablet 
         display: none
 
       &Mobile
@@ -89,7 +94,7 @@
         height: 552px
         left: 0px
 
-
+      
 @media (min-width: 1920px)
   .body__container
     background-size: 100%

@@ -187,6 +187,8 @@ $admonition-descr: var(--ifm-h5-font-color)
   --ifm-toc-border-color: 1px solid rgb(218, 221, 225)
   --blog-body-color: (--menu-color)
   --border: #fff
+  --ifm-container-width-xl: 1440px
+  --ifm-color-emphasis-200: black
 
 [data-theme='dark']
   --ifm-color-primary: #fff
@@ -211,7 +213,7 @@ $admonition-descr: var(--ifm-h5-font-color)
   --ifm-toc-border-color: 1px solid rgba(226, 231, 239, 0.12)
   --blog-body-color: #242932
   --border: #0C1327
-
+  --ifm-color-emphasis-200: white
 
 html
   box-sizing: border-box
@@ -283,6 +285,10 @@ button, a
   font-family: var(--first-font-family)
   color: #fff
 
+main
+  max-width: 1920px
+  width: 100%
+
 .container
   display: -webkit-box
   display: -ms-flexbox
@@ -352,8 +358,9 @@ a:hover
 
 .linkButton
   position: relative
-  display: block
-  padding: 12px 32px 16px 29px
+  display: flex
+  justify-content: center
+  padding: 12px 27px 16px 29px
   width: 303px
   height: 60px
   color: #141936
@@ -367,12 +374,11 @@ a:hover
   cursor: pointer
 
   img
-    position: absolute
     stroke: #141936
-    right: 28px
-    top: 17px
     width: 20px
     height: 20px
+    margin-left: 9px
+    margin-top: 4px
 
   &:hover
     background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
@@ -466,6 +472,7 @@ div.swiper-wrapper
   max-width: 750px
   height: 390px
   margin: 0 auto
+  position: relative
 
 swiper-container > swiper-slide
   width: 580px !important
@@ -491,7 +498,7 @@ swiper-container > swiper-slide > swiper-slide-active
 @media (max-width: 1100px)
   .swiper
     max-width: 966px
-    padding: 0 20px
+   
 
   .swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
     transform: translateX(-48%)
@@ -524,20 +531,6 @@ swiper-container > swiper-slide > swiper-slide-active
     display: none
 
 @media (max-width: 880px)
-  .linkButton
-    margin-left: -3px
-    display: flex
-    max-width: 688px
-    width: 100%
-    justify-content: center
-
-    img
-      display: none
-
-    &::after
-      content: url(/img/return.svg)
-      margin-left: 9px
-      margin-top: 2px
 
   #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > .mySwiper > div.swiper-wrapper > div.swiper-slide.swiper__slide > img
     max-width: 100%
@@ -550,7 +543,7 @@ swiper-container > swiper-slide > swiper-slide-active
   .swiper
     height: 400px
     margin-top: 0px
-    position: static
+    position: relative
 
   div.swiper-wrapper
     width: 500px
@@ -574,7 +567,6 @@ swiper-container > swiper-slide > swiper-slide-active
   .swiper__slide
     box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22)
     height: 290px
-
 
 @media (max-width: 600px)
 
@@ -602,19 +594,14 @@ swiper-container > swiper-slide > swiper-slide-active
     line-height: 108.02%
     letter-spacing: -3%
 
-  .linkButton
-    padding-left: 66px
-    max-width: 335px
-    width: 100%
-    height: 52px
-    font-size: 15px
-    line-height: 24px
-    background-position: 250px 50%
-
   .li
     max-width: 336px
     font-weight: 400
     font-size: 14px
+
+  .linkButton
+    font-size: 15px
+    letter-spacing: -0.02px
 
   #__docusaurus > div > main > section.features_src-components-HomepageFeatures-styles-module > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android.Swiper_src-components-HomepageFeatures-styles-module > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
     top: auto
@@ -664,7 +651,7 @@ swiper-container > swiper-slide > swiper-slide-active
  *  ----БУРГЕР МЕНЮ----
  */
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
   min-width: 335px
   max-width: 100%
   width: 100%
@@ -717,26 +704,26 @@ swiper-container > swiper-slide > swiper-slide-active
     &:hover::after
       background-image: url(/img/nav-link-tg-hover.svg)
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
+#__docusaurus > div > div > div > header > div
   max-width: 100%
   width: 100%
   flex-direction: column
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
+#__docusaurus > div > div > div > header > div
   max-width: 480px
   height: 528px
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > header > div > div > button
+#__docusaurus > div > div > header > div > div > button
   display: none
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > button
+#__docusaurus > div > div > div > header > div > div > button
   display: none
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div
+#__docusaurus > div > div > div > header > div > div
   flex-direction: column
   align-items: center
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
   display: flex
   flex-direction: column
   top: 0
@@ -746,7 +733,7 @@ swiper-container > swiper-slide > swiper-slide-active
   text-align: center
   align-self: center
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
   align-self: flex-start
   justify-content: start
   align-items: center
@@ -755,13 +742,13 @@ swiper-container > swiper-slide > swiper-slide-active
   height: 61px
   margin-bottom: 30px
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
   display: flex
   flex-direction: column-reverse
   min-width: 335px
   width: 100%
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
   position: static
   width: 234px
   font-weight: 800
@@ -769,7 +756,57 @@ swiper-container > swiper-slide > swiper-slide-active
   line-height: 96%
   color: #fff
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > a
+#__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
+  margin-bottom: 16px
+  order: 3
+
+#__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.footer__socials_src-components-HomepageFooter-styles-module.footer__socials_src-components-HomepageFooter-styles-module
+  order: 4
+  margin-bottom: 47px
+
+#__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > a
+  order: 5
+  margin-bottom: 15px
+
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > button
+  display: block
+  margin-top: 6px
+  margin-left: auto
+
+#__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.nav__linkMini_src-components-HomepageHeader-styles-module.flex
+  margin-left: 6px
+
+@media (min-width: 541px)
+  #__docusaurus > div > div > div > header > div
+    height: 420px
+
+  #__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.logo_src-components-HomepageHeader-styles-module
+    display: block
+
+  #__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
+    position: relative
+    max-width: 990px
+    margin-bottom: 45px
+
+  #__docusaurus > div > div > div > header > div
+    max-width: 990px
+    width: 100%
+
+  #__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
+    width: auto
+    text-align: start
+
+  #__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
+    flex-direction: row
+
+  #__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
+    padding: 0
+    margin-bottom: 39px
+    max-width: 100%
+    width: 100%
+    height: 36px
+
+#__docusaurus > div > div > div > header > div > div > a
   display: flex
   justify-content: center
   order: 3
@@ -782,76 +819,28 @@ swiper-container > swiper-slide > swiper-slide-active
   font-size: 17px
   letter-spacing: -0.03em
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
-  margin-bottom: 16px
-  order: 3
 
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.footer__socials_src-components-HomepageFooter-styles-module.footer__socials_src-components-HomepageFooter-styles-module
-  order: 4
-  margin-bottom: 47px
-
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > a
-  order: 5
-  margin-bottom: 15px
-
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > button
-  display: block
-  margin-top: 6px
-  margin-left: auto
-
-#__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.nav__linkMini_src-components-HomepageHeader-styles-module.flex
-  margin-left: 6px
-
-@media (min-width: 541px)
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
-    height: 420px
-
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.logo_src-components-HomepageHeader-styles-module
-    display: block
-
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
-    position: relative
-    max-width: 990px
-    margin-bottom: 45px
-
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div
-    max-width: 990px
-    width: 100%
-
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
-    width: auto
-    text-align: start
-
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
-    flex-direction: row
-
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
-    padding: 0
-    margin-bottom: 39px
-    max-width: 100%
-    width: 100%
-    height: 36px
 
 @media (min-width: 690px)
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > span
+  #__docusaurus > div > div > div > span
     display: none
 
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper1_src-components-HomepageFooter-styles-module
+  #__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper1_src-components-HomepageFooter-styles-module
     padding: 0
     height: 150px
 
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
+  #__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
     border-bottom: 1px solid rgba(255, 255, 255, 0.2)
 
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
+  #__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
     margin-bottom: 16px
     order: 3
 
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.footer__socials_src-components-HomepageFooter-styles-module.footer__socials_src-components-HomepageFooter-styles-module
+  #__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.footer__socials_src-components-HomepageFooter-styles-module.footer__socials_src-components-HomepageFooter-styles-module
     order: 4
     margin-bottom: 47px
 
-  #__docusaurus > div > div.burger_src-components-Burger-styles-module.active_src-components-Burger-styles-module > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > a
+  #__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > a
     order: 5
     margin-bottom: 15px
 
@@ -860,15 +849,10 @@ swiper-container > swiper-slide > swiper-slide-active
  *  ----ДОКУМЕНТАЦИЯ----
  */
 
-.hash-link
-  color: var(--h2-color)
-  opacity: 1 !important
+[aria-label="Scroll back to top"]::after
+  background-size: 20px 10px
 
-  &:hover
-    color: var(--ifm-color-primary-dark)
-
-
-.breadcrumbs__link:hover
+[aria-label="Home page"]:hover
   color: var(--h2-color)
 
 #__docusaurus_skipToContent_fallback
@@ -893,7 +877,6 @@ swiper-container > swiper-slide > swiper-slide-active
 
   a
     color: var(--h2-color)
-
     &:hover
       color: var(--ifm-color-primary-dark)
 
@@ -922,14 +905,9 @@ swiper-container > swiper-slide > swiper-slide-active
 .token-line .token
   color: #fff
 
-#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li > a
-  color: var(--h2-color)
-  padding: 6px 10px
-  font-weight: 500
-  font-size: 14px
-
-#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li > a.sidebarItemLinkActive_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module
+#__docusaurus_skipToContent_fallback > div > div > aside > nav > ul > li:nth-child(1) > a.sidebarItemLinkActive
   color: var(--ifm-color-primary-dark) !important
+
 
 #__docusaurus_skipToContent_fallback > div > div > main > article > header > h1
   color: var(--h1-color)
@@ -1037,10 +1015,10 @@ swiper-container > swiper-slide > swiper-slide-active
   background-color: var(--body-color)
   border-radius: 15px 15px 0 0
 
-#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col
   max-width: 73% !important
 
-#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module > div > article > div.theme-doc-markdown.markdown > header > h1
+#__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col > div > article > div.theme-doc-markdown.markdown > header > h1
   padding: 0 35.24px
   margin-bottom: 12px
   color: var(--h1-color)
@@ -1441,10 +1419,6 @@ div.navbar__inner > div:nth-child(1) > div
 #__docusaurus > footer > div > div.row.footer__links > div:nth-child(1)
   max-width: 300px
 
-#__docusaurus > footer > div > div.row.footer__links > div:nth-child(4)
-  max-width: 250px
-  width: 100%
-
 #__docusaurus > footer > div > div.row.footer__links > div:nth-child(4) > ul > li
   margin-bottom: 10px
 
@@ -1482,18 +1456,15 @@ div.navbar__inner > div:nth-child(1) > div
 
 @media (max-width: 1350px)
 
-  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
-    max-width: 100% !important
-
   #__docusaurus > footer > div > div.row.footer__links
     div:nth-child(1)
       max-width: 250px !important
       width: 100%
 
-  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col
     max-width: 100% !important
 
-  .tocCollapsibleButton_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-CollapseButton-styles-module::after
+  #__docusaurus_skipToContent_fallback > div > div > main > div > div > div > div > article > div > button::after
     background-size: 1rem !important
     filter: none !important
 
@@ -1555,14 +1526,6 @@ div.navbar__inner > div:nth-child(1) > div
       margin-right: 0
 
 @media (max-width: 1150px)
-
-  #__docusaurus > footer > div > div.row.footer__links > div:nth-child(4)
-    max-width: 250px
-    width: 100%
-
-  .tocCollapsibleButton_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-CollapseButton-styles-module::after
-    background: var(--ifm-menu-link-sublist-icon) 50% 50% / 1rem 1rem no-repeat !important
-
   .footer
     .container
       align-items: center
@@ -1649,8 +1612,8 @@ div.navbar__inner > div:nth-child(1) > div
       width: 227px
 
     div:nth-child(4)
-      max-width: 250px
-      width: 250px
+      max-width: 230px
+      width: 240px
 
   .footer__links
     margin: 0
@@ -1737,7 +1700,6 @@ div.navbar__inner > div:nth-child(1) > div
 
   .footer
     margin-left: 1px
-    max-width: 370px
     width: 100%
     min-height: 895px
     height: 100%

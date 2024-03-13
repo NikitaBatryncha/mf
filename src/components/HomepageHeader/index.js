@@ -1,23 +1,24 @@
 import clsx from 'clsx';
 import styles from './styles.module.sass';
 
-export default function HomepageHeader ({ openBurger, closeBurger }) {
+export default function HomepageHeader ({ openBurger, closeBurger, openModal }) {
 
   return (
     <header className={styles.header}>
       <div className={clsx('container', styles.header__container)}>
         <div className={clsx(styles.nav, "flex")}>
-          <div className={clsx(styles.nav__wrapper, styles.nav__wrapper1, "flex")}>
+          <div className={clsx(styles.nav__wrapper, styles.nav__wrapper1, "flex", 'nav__wrapper1_src-components-HomepageHeader-styles-module')}>
             <a href="#about" className={clsx(styles.nav__link)}>О нас</a>
             <a href="docs/tempo/md-install" className={clsx(styles.nav__link)}>Документация</a>
             <a href="tel:+1234567890" className={clsx(styles.nav__link)}>+7 499 444 08 82</a>
           </div>
-          <a href="" className={clsx("linkButton", styles.header__linkButton)} >
+          <a href="" className={clsx("linkButton", styles.header__linkButton, "linkButton-burger")}  onClick={(e) => {e.preventDefault(); openModal()}}>
             Подключить бесплатно
+            <img src="/img/return.svg"/>
           </a>
-          <div className={clsx(styles.nav__wrapper, styles.nav__wrapper2, "flex")}>
+          <div className={clsx(styles.nav__wrapper, styles.nav__wrapper2, "flex", "nav__wrapper2_src-components-HomepageHeader-styles-module")}>
             <a href="#" className={clsx(styles.nav__link, styles.logo)}>
-              <img src="img/logo.svg" alt="logo" className={styles.header__logo} />
+              <img src="/img/logo.svg" alt="logo" className={styles.header__logo} />
             </a>
             <a href="#" className={clsx(styles.nav__link, styles.nav__linkMini, 'flex')}>
               Подключить
@@ -31,7 +32,7 @@ export default function HomepageHeader ({ openBurger, closeBurger }) {
               </svg>
             </button>
           </div>
-          <div className={clsx(styles.nav__wrapper, styles.nav__wrapper3, 'flex')}>
+          <div className={clsx(styles.nav__wrapper, styles.nav__wrapper3, 'flex', 'nav__wrapper3_src-components-HomepageHeader-styles-module')}>
             <a href="telegramm" className={clsx(styles.nav__link, styles.nav__linkTg)}>Подписаться</a>
             <button className={styles.nav__btn}>Загрузить последнюю версию</button>
           </div>

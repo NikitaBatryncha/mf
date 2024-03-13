@@ -1,0 +1,304 @@
+@mixin font-gradient
+  background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+  -webkit-background-clip: text
+  background-clip: text
+  color: transparent
+
+.animate
+  animation: jump .7s ease-in-out
+
+  &1
+    animation: jump .7s ease-in-out
+
+  &2
+    animation: jump 1.1s ease-in-out
+
+@keyframes jump
+  from
+    transform: translateY(40%)
+    opacity: 0.1
+
+  to
+    transform: translateY(0)
+    opacity: 1
+
+.ellipse
+  position: absolute
+
+  &2
+    top: -120px
+    left: -182px
+    z-index: 0
+    border-radius: 100%
+    width: 900px
+
+    &Tablet
+      display: none
+
+    &Mobile
+      display: none
+
+.about
+  &__wrapper
+    position: relative
+    z-index: 1
+
+    &1
+      padding-left: 98px
+      margin-left: -3px
+      margin-bottom: 170px
+
+      &Content
+        margin-top: 54.5px
+
+  &__title
+    margin: -1px 0 18px 0
+    max-width: 443px
+    text-align: start
+    font-weight: 800
+    font-size: 37px
+    line-height: 109%
+    letter-spacing: -0.03em
+
+    span:first-child
+      margin-left: 0px
+
+    &Child
+      @include font-gradient
+
+  &__list
+    align-items: center
+    margin-bottom: 33px
+    max-width: 484px
+    min-height: 206px
+
+  &__li
+    padding-left: 32px
+    width: 100%
+    background-image: url(../../../../static/img/list-item.svg)
+    background-position-y: 1px
+    font-family: "Inter", sans-serif
+    font-weight: 400
+    font-size: 15px
+    line-height: 160%
+    color: #c8d4ee
+
+  &__li:not(:last-child)
+    margin-bottom: 5px
+
+  &__link
+    padding-top: 2px
+    justify-content: space-between
+    width: 166px
+    height: 24px
+    font-weight: 800
+    font-size: 15px
+    line-height: 160%
+    @include font-gradient
+
+    svg
+      margin-top: -2px
+
+  &__wrapperImg
+    max-width: 560px
+    height: 550px
+
+  &__img
+    width: 100%
+    height: 100%
+
+    &Tablet
+      display: none
+
+      &768
+        display: none
+
+  &__tablet
+    display: none
+
+@media (max-width: 1100px)
+  .ellipse
+    &2
+      display: none
+
+      &Tablet
+        display: block
+        width: 650px
+
+  .about
+    margin-bottom: 163px
+
+    &__wrapper
+      padding: 0
+
+      &Content
+        margin: 0
+        margin-top: 3px
+        margin-left: 2px
+
+      &2
+        padding-left: 0
+
+
+    &__wrapperImg
+      max-width: 446px
+      height: 461px
+
+    &__img
+
+      &Tablet
+        display: block
+
+        &768
+          display: none
+
+      &Desktop
+        display: none
+
+    &__title
+      margin-bottom: 19px
+
+      span:first-child
+        margin-left: 0px
+
+    &__list
+      margin-bottom: 32px
+
+@media (max-width: 990px)
+  .about
+    margin-bottom: 85px
+
+    &__wrapper
+      padding: 0 20px
+      max-width: 728px
+      width: 100%
+      margin-bottom: 70px
+
+      &1
+        margin-bottom: 81px
+
+      &Img
+        display: none
+
+      &Content
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        margin: 0
+
+    &__img
+
+      &Tablet
+        display: none
+
+        &768
+          display: block
+          margin-bottom: 32px
+
+      &Desktop
+        display: none
+
+    &__title
+      max-width: 800px
+      width: 100%
+      text-align: center
+      margin-bottom: 31px
+
+    &__list
+      max-width: 900px
+      width: 100%
+      min-height: 90px
+      margin-bottom: 20px
+
+    &__li
+      padding-left: 33px
+
+@media (max-width: 700px)
+  .about
+    &__wrapper
+      &Content
+        margin: 0 auto
+        max-width: 600px
+
+@media (max-width: 520px)
+  .ellipse
+
+    &2
+
+      &Tablet
+        display: none
+
+      &Mobile
+        display: block
+        border-radius: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 900px
+        top: -214px
+        max-width: 540px
+        z-index: -1
+
+  .about
+    margin-bottom: 78px
+
+    &__title
+
+      span:first-child
+        margin-left: 9px
+
+    &__wrapper
+      display: flex
+      flex-direction: column
+      padding: 0
+      margin-bottom: 64px
+
+      &Content
+        display: flex
+        flex-direction: column
+        margin-top: 0
+        margin-bottom: 48px
+        align-items: center
+
+      &Img
+        display: block
+
+    &__title
+      margin-left: -3px
+      max-width: 333px
+      font-size: 26px
+      font-weight: 800
+      line-height: 108.02%
+      letter-spacing: -3%
+      text-align: center
+      margin-bottom: 19px
+
+    &__wrapperImg
+      max-width: 337px
+      height: 334px
+
+    &__list
+      margin-right: -1px
+      margin-bottom: 21px
+      width: 100%
+
+    &__li
+      font-weight: 400
+      font-size: 14px
+
+    &__li:not(:last-child)
+      margin-bottom: 9px
+
+    &__link
+      align-self: center
+
+    &__img
+      margin-left: 2px
+
+      &Tablet
+        display: block
+        width: 336px
+
+        &768
+          display: none
+
