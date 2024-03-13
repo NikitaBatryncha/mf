@@ -1,73 +1,30 @@
 {
-  "/__docusaurus/debug-92d": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    }
-  },
-  "/__docusaurus/debug/config-dfa": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    }
-  },
-  "/__docusaurus/debug/content-a03": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    },
-    "allContent": "allContent---mf-docusaurus-debug-content-246-b45"
-  },
-  "/__docusaurus/debug/globalData-c8d": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    }
-  },
-  "/__docusaurus/debug/metadata-1e6": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    }
-  },
-  "/__docusaurus/debug/registry-4cd": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    }
-  },
-  "/__docusaurus/debug/routes-f75": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---mf-docusaurus-debugce-8-768"
-    }
-  },
   "/docs-bb0": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---mf-docse-58-159"
+      "plugin": "e5888d0c"
     }
   },
   "/docs-c1d": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "version": "version---mf-docs-935-2ba"
+    "__comp": "a7bd4aaa",
+    "version": "935f2afb"
   },
   "/docs-03a": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/docs/tempo/md-install-2db": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mf-docs-tempo-md-installd-53-25c"
+    "__comp": "17896441",
+    "content": "d538132a"
   },
   "/docs/tutorial-basics/markdown-features-f90": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---mf-docs-tutorial-basics-markdown-features-18-c-6f8"
+    "__comp": "17896441",
+    "content": "18c41134"
   },
   "/-cb9": {
-    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__comp": "c4f5d8e4",
     "__context": {
-      "plugin": "plugin---mf-474-6e6"
+      "plugin": "47418893"
     },
-    "config": "config---mf-5-e-9-6eb"
+    "config": "5e9f5e1a"
   }
 }
