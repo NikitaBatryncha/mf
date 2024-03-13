@@ -6,7 +6,7 @@ export default function HomepageCommunity () {
     <section className={styles.community}>
       <img src={'img/gradient-6.svg'} className={clsx(styles.gradient, styles.gradient6)}/>
       <img src={'img/gradient-6-tablet.svg'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
-      <a href="/docs/tempo/md-install" className={clsx("container", styles.community__container)}>
+      <div href="/docs/tempo/md-install" className={clsx("container", styles.community__container)}>
         <div className={clsx("flex", styles.community__wrapperMain)}>
           <div className={styles.community__wrapper}>
             <h2 className={styles.community__title}>
@@ -21,7 +21,7 @@ export default function HomepageCommunity () {
           </div>
           <img src="img/qr.svg" alt="qr" className={styles.community__qr}/>
         </div>
-      </a>
+      </div>
     </section>
   );
 }

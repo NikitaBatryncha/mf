@@ -13,7 +13,7 @@ export default function About ({ openModal }) {
     }
   };
   return (
-      <VisibilitySensor onChange={onChange} partialVisibility>
+      <VisibilitySensor onChange={onChange} partialVisibility='top'>
           <div className={clsx("flex", styles.about__wrapper, styles.about__wrapper1)}>
             <img src={'img/ellipse-2.png'} className={clsx(styles.ellipse, styles.ellipse2, styles.ellipse2Desktop )}/>
             <img src={'img/ellipse-2-mobile.png'} className={clsx(styles.ellipse, styles.ellipse2, styles.ellipse2Mobile )}/>

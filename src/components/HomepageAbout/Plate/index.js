@@ -24,7 +24,7 @@ export default function Plate() {
 
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
-      <a
+      <div
         className={clsx(styles.plateContainer, isVisible ? styles.animate : '', isHovered && styles.plateHovered)}
         href="/docs/tempo/md-install"
         onMouseEnter={handleMouseEnter}
@@ -45,7 +45,7 @@ export default function Plate() {
             </div>
           </div>
         </div>
-      </a>
+      </div>
     </VisibilitySensor>
   );
 }

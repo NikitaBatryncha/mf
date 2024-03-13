@@ -23,7 +23,6 @@ export default function HomepageDemo() {
             effect={'cards'}
             grabCursor={true}
             slidesPerView={'auto'}
-            centredSlides={true}
             loop={true}
             initialSlide={2}
             speed={1000}
