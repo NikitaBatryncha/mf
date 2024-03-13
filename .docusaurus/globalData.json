@@ -1,30 +1,62 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/mf/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/mf/docs",
           "mainDocId": "tempo/md-install",
           "docs": [
             {
+              "id": "intro",
+              "path": "/mf/docs/intro"
+            },
+            {
               "id": "tempo/md-install",
-              "path": "/docs/tempo/md-install",
+              "path": "/mf/docs/tempo/md-install",
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "tutorial-basics/congratulations",
+              "path": "/mf/docs/tutorial-basics/congratulations"
+            },
+            {
+              "id": "tutorial-basics/create-a-blog-post",
+              "path": "/mf/docs/tutorial-basics/create-a-blog-post"
+            },
+            {
+              "id": "tutorial-basics/create-a-document",
+              "path": "/mf/docs/tutorial-basics/create-a-document"
+            },
+            {
+              "id": "tutorial-basics/create-a-page",
+              "path": "/mf/docs/tutorial-basics/create-a-page"
+            },
+            {
+              "id": "tutorial-basics/deploy-your-site",
+              "path": "/mf/docs/tutorial-basics/deploy-your-site"
+            },
+            {
               "id": "tutorial-basics/markdown-features",
-              "path": "/docs/tutorial-basics/markdown-features"
+              "path": "/mf/docs/tutorial-basics/markdown-features"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/mf/docs/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/mf/docs/tutorial-extras/translate-your-site"
             }
           ],
           "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/tempo/md-install",
+                "path": "/mf/docs/tempo/md-install",
                 "label": "tempo/md-install"
               }
             }
