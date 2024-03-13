@@ -23,7 +23,7 @@ export default function Plate() {
   };
 
   return (
-    <VisibilitySensor onChange={onChange} partialVisibility>
+    <VisibilitySensor onChange={onChange} partialVisibility='top'>
       <div
         className={clsx(styles.plateContainer, isVisible ? styles.animate : '', isHovered && styles.plateHovered)}
         href="/docs/tempo/md-install"

@@ -15,7 +15,7 @@ export default function HomepageRoadmap ({ openModal }) {
 
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
-      <section className={styles.roadmap}>
+      <section className={styles.roadmap} style={{opacity: isVisible ? 1 : 0}}>
       <img rel="preload" src={'img/ellipse-roadmap.png'} className={clsx(styles.ellipse_roadmap)}/>
       <img src={'img/ellipse-roadmap-tablet.png'} className={clsx(styles.ellipse_roadmap, styles.ellipse_roadmapTablet)}/>
       <img src={'img/ellipse-roadmap-mobile.png'} className={clsx(styles.ellipse_roadmap, styles.ellipse_roadmapMobile)}/>

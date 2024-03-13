@@ -13,7 +13,7 @@ export default function Stack ({ openModal }) {
   };
   return (
         <VisibilitySensor onChange={onChange} partialVisibility>
-          <div className={clsx("flex", styles.about__wrapper, styles.about__wrapper2)}>
+          <div className={clsx("flex", styles.about__wrapper, styles.about__wrapper2)} style={{opacity: isVisible ? 1 : 0}}>
             <img src={'img/ellipse-3.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Desktop)}/>
             <img src={'img/ellipse-3-tablet.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Tablet)}/>
             <img src={'img/ellipse-3-mobile.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Mobile)}/>

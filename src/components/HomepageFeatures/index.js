@@ -67,7 +67,7 @@ export default function HomepageFeatures() {
 
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
-    <section className={clsx(styles.features, "features_src-components-HomepageFeatures-styles-module")}>
+    <section className={clsx(styles.features, "features_src-components-HomepageFeatures-styles-module")} style={{opacity: isVisible ? 1 : 0}}>
       <img src={'/img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
       <img src={'img/gradient-4.png'} className={clsx(styles.gradient, styles.gradient4)}/>
       <div className={clsx("container", "column", styles.features__container)}>
