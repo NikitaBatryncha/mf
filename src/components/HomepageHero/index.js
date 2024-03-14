@@ -13,7 +13,7 @@ export default function HomepageHero({ openModal }) {
         </p>
         <a href="" className={clsx("linkButton", styles.hero__linkButton)} onClick={(e) => {e.preventDefault(); openModal()}}>
           Подключить бесплатно
-          <img src={'img/return.svg'} />
+          <img rel="preload" src={'img/return.svg'} />
         </a>
       </div>
     </section>

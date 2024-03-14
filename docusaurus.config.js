@@ -1,7 +1,7 @@
 const config = {
   title: 'MULTIDIRECTORY',
   tagline: 'Готовое решение для аутентификации и авторизации',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.ico',
   url: 'https://github.com',
   baseUrl: '/',
 

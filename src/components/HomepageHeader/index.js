@@ -14,14 +14,15 @@ export default function HomepageHeader ({ openBurger, closeBurger, openModal }) 
           </div>
           <a href="" className={clsx("linkButton", styles.header__linkButton)} onClick={(e)=> {e.preventDefault(); openModal();}}>
             Подключить бесплатно
+            <img rel="preload" src={'img/return.svg'} />
           </a>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper2, "flex", 'nav__wrapper2_src-components-HomepageHeader-styles-module')}>
             <a href="#" className={clsx(styles.nav__link, styles.logo)}>
-              <img src="/img/logo.svg" alt="logo" className={styles.header__logo} />
+              <img rel="preload" src="/img/logo.svg" alt="logo" className={styles.header__logo} />
             </a>
             <a href="#" className={clsx(styles.nav__link, styles.nav__linkMini, 'flex')}>
               Подключить
-              <img src={'img/return-mini.svg'} />
+              <img rel="preload" src={'img/return-mini.svg'} />
             </a>
             <button className={styles.burger__button}onClick={(e) => {e.preventDefault(); closeBurger()}}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +30,7 @@ export default function HomepageHeader ({ openBurger, closeBurger, openModal }) 
                   <path d="M6.7583 17.2426L12.0009 12M12.0009 12L17.2435 6.75732M12.0009 12L6.7583 6.75732M12.0009 12L17.2435 17.2426" stroke="white" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" />
                 </g>
               </svg>
-            </button>     
+            </button>
           </div>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper3, 'flex', 'nav__wrapper3_src-components-HomepageHeader-styles-module')}>
             <a href="telegramm" className={clsx(styles.nav__link, styles.nav__linkTg)}>Подписаться</a>

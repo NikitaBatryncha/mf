@@ -189,6 +189,8 @@ $admonition-descr: var(--ifm-h5-font-color)
   --border: #fff
   --ifm-container-width-xl: 1440px
   --ifm-color-emphasis-200: black
+  --to-top-btn: #ececec
+  --sidebar-logo: url(/img/MultiDirectory-White-BG-logo.svg)
 
 [data-theme='dark']
   --ifm-color-primary: #fff
@@ -214,6 +216,9 @@ $admonition-descr: var(--ifm-h5-font-color)
   --blog-body-color: #242932
   --border: #0C1327
   --ifm-color-emphasis-200: white
+  --to-top-btn: #242932
+  --sidebar-logo: url(/img/MultiDirectory-Dark-BG-logo.svg)
+
 
 html
   box-sizing: border-box
@@ -498,7 +503,7 @@ swiper-container > swiper-slide > swiper-slide-active
 @media (max-width: 1100px)
   .swiper
     max-width: 966px
-   
+
 
   .swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
     transform: translateX(-48%)
@@ -626,6 +631,16 @@ swiper-container > swiper-slide > swiper-slide-active
 
   .mySwiper div.swiper-slide
     height: 175px
+    position: relative
+
+    &::after
+      position: absolute
+      top: 64px
+      z-index: -1
+      max-width: 335px
+      width: 100%
+      height: 175px
+      box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22)
 
   .mySwiper div.swiper-wrapper
     margin-top: 0
@@ -739,7 +754,7 @@ swiper-container > swiper-slide > swiper-slide-active
   align-items: center
   max-width: 100%
   width: 100%
-  height: 61px
+  height: 77px
   margin-bottom: 30px
 
 #__docusaurus > div > div > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
@@ -849,8 +864,12 @@ swiper-container > swiper-slide > swiper-slide-active
  *  ----ДОКУМЕНТАЦИЯ----
  */
 
-[aria-label="Scroll back to top"]::after
-  background-size: 20px 10px
+#__docusaurus_skipToContent_fallback > div > button.clean-btn.theme-back-to-top-button
+  background-color: var(--to-top-btn)
+
+  &::after
+    mask: var(--ifm-menu-link-sublist-icon) 50%/ 1rem no-repeat
+
 
 [aria-label="Home page"]:hover
   color: var(--h2-color)
@@ -1227,6 +1246,14 @@ div.navbar__inner > div:nth-child(1) > div
 #__docusaurus > nav > div.navbar__inner > div.navbar__items.navbar__items--right > div > .clean-btn
   content: var(--toggle-img)
   background: transparent
+
+#__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__brand > div > button
+
+  &:hover
+    background: transparent
+
+  &:focus
+    background: transparent
 
 .theme-admonition
   padding: 17px 18px 19px 22px
@@ -1633,6 +1660,10 @@ div.navbar__inner > div:nth-child(1) > div
       margin-right: 4px
   .dot
     margin-right: 4px
+
+@media (max-width: 996px)
+  #__docusaurus > nav > div.navbar-sidebar > div.navbar-sidebar__items > div:nth-child(1) > ul > div:nth-child(4)
+    content: var(--sidebar-logo) !important
 
 @media (max-width: 600px)
   #__docusaurus_skipToContent_fallback > div > div > main > div > div > div.col.docItemCol_node_modules--pnpm-\@docusaurus\+theme-classic\@3-1-1_\@types\+react\@18-2-55_react-dom\@18-2-0_react\@18-2-0_typescript\@5-3-3-node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module

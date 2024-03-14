@@ -10,10 +10,10 @@ import styles from './styles.module.sass';
 export default function HomepageDemo() {
   return (
     <section className={clsx(styles.demo, "demo_src-components-HomepageDemo-styles-module")}>
-      <img src={'img/ellipse-5.png'} className={clsx(styles.ellipse, styles.ellipse5)}/>
-      <img src={'img/ellipse-5-tablet.png'} className={clsx(styles.ellipse, styles.ellipse5, styles.ellipse5Tablet)}/>
-      <img src={'img/ellipse-6.png'} className={clsx(styles.ellipse, styles.ellipse6)}/>
-      <img src={'img/ellipse-6-tablet.png'} className={clsx(styles.ellipse, styles.ellipse6, styles.ellipse6Tablet)}/>
+      <img rel="preload" src={'img/ellipse-5.png'} className={clsx(styles.ellipse, styles.ellipse5)}/>
+      <img rel="preload" src={'img/ellipse-5-tablet.png'} className={clsx(styles.ellipse, styles.ellipse5, styles.ellipse5Tablet)}/>
+      <img rel="preload" src={'img/ellipse-6.png'} className={clsx(styles.ellipse, styles.ellipse6)}/>
+      <img rel="preload" src={'img/ellipse-6-tablet.png'} className={clsx(styles.ellipse, styles.ellipse6, styles.ellipse6Tablet)}/>
       <div className={clsx("container", "column", styles.demo__container)}>
         <h2 className={clsx("title", styles.demo__title)}>
           Примеры интерфейса
@@ -79,13 +79,13 @@ export default function HomepageDemo() {
             modules={[EffectCards, Pagination, Navigation]}
           >
             <SwiperSlide className="swiper__slide">
-              <img src={'img/MD/addGroup_toUser.png'} />
+              <img rel="preload" src={'img/MD/addGroup_toUser.png'} />
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img src={'img/MD/changePassword.png'} />
+              <img rel="preload" src={'img/MD/changePassword.png'} />
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img src={'img/MD/groupProperties.png'} />
+              <img rel="preload" src={'img/MD/groupProperties.png'} />
             </SwiperSlide>
             <span className={styles.swiper__descr} id="slideDescr">
               описание слайда

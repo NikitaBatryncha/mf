@@ -4,8 +4,8 @@ import styles from './styles.module.sass';
 export default function HomepageCommunity () {
   return (
     <section className={styles.community}>
-      <img src={'img/gradient-6.svg'} className={clsx(styles.gradient, styles.gradient6)}/>
-      <img src={'img/gradient-6-tablet.svg'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
+      <img rel="preload" src={'img/gradient-6.svg'} className={clsx(styles.gradient, styles.gradient6)}/>
+      <img rel="preload" src={'img/gradient-6-tablet.svg'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
       <div href="/docs/tempo/md-install" className={clsx("container", styles.community__container)}>
         <div className={clsx("flex", styles.community__wrapperMain)}>
           <div className={styles.community__wrapper}>
@@ -19,7 +19,7 @@ export default function HomepageCommunity () {
               Подписаться
             </a>
           </div>
-          <img src="img/qr.svg" alt="qr" className={styles.community__qr}/>
+          <img rel="preload" src="img/qr.svg" alt="qr" className={styles.community__qr}/>
         </div>
       </div>
     </section>
