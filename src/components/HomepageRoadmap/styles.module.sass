@@ -13,12 +13,10 @@
 
 .roadmap
   margin-bottom: 166px
-  margin-left: -3px
   position: relative
 
-
   &__container
-    padding: 0 20px 0 24px
+    padding: 0 20px 0 20px
 
   &__wrapper
     width: 621px
@@ -47,7 +45,7 @@
     color: #c8d4ee
 
   &__link
-    width: 192px
+    min-width: 192px
 
 @keyframes orbit
   from
@@ -203,7 +201,7 @@
 .gradient
   position: absolute
   z-index: -3
-  fit-object: cover
+  object-fit: cover
 
   &5
     &Desktop
@@ -222,8 +220,7 @@
   .gradient
 
     &5
-      &Dektop
-        display: none
+      display: none
 
       &Tablet
         display: block
@@ -306,6 +303,7 @@
     &__wrapper
       margin-top: 0px
       margin-left: 1px
+      padding-right: 20px
 
     &__list
       margin-bottom: 33px
@@ -316,6 +314,7 @@
         display: block
 
 @media (max-width: 880px)
+
   .ellipse
     &_support
       display: block
@@ -325,9 +324,6 @@
 
   .roadmap
     margin-bottom: 80px
-    background-image: url(../../../static/img/orbit-768.svg)
-    background-repeat: no-repeat
-    background-position: 4px 441px
 
     &__wrapper
       margin-bottom: 95px
@@ -340,33 +336,31 @@
     min-height: 136px
     height: 100%
     margin: 0
-    margin-left: 70px
     margin-bottom: 81px
+    max-width: 636px
+    left: 50%
+    transform: translateX(-52%)
 
     &__img
       display: none
 
+      &768
+        display: block
+        width: 2115px
+        top: 441px
+        object-fit: cover
+
   .gradient
     &5
-
-      &Desktop
-        display: none
-
       &Tablet
-        display: none
-
-      &Mobile
-        display: block
-        top: -240px
-        left: 0
-        width: 376px
-        width: 100%
+        top: -443px
+        z-index: -3
 
   .support
     justify-content: center
 
     &__title
-      margin-bottom: 30px
+      margin-bottom: 33px
 
     &__wrapper
       display: flex
@@ -374,23 +368,32 @@
       align-items: center
       max-width: 700px
       text-align: center
+      margin-left: 3px
+      padding-right: 0
 
     &__img
       display: none
 
       &768
         display: block
-        max-width: 688px
+        max-width: 704px
         width: 100%
-        height: 572px
+        height: auto
+        margin-left: -9px
         margin-bottom: 30px
         overflow: hidden
-        word-wrap: break-word
+        border: 1px solid rgba(255, 255, 255, 5%)
 
     &__descr
       max-width: 690px
       text-align: start
-      margin-bottom: 13px
+      margin-bottom: 10px
+
+      span
+        display: inline
+
+      &2
+        margin-bottom: 17px
 
     &__list
       align-self: flex-start
@@ -411,12 +414,39 @@
     &__wrapper
       margin-bottom: 60px
 
-@media (max-width: 640px)
+  .gradient
+    &5
+      &Tablet
+        top: -400px
+        z-index: -3
+
+  .orbit
+    left: 50%
+    transform: translateX(-50%)
+
+    &__img
+      top: 420px
+
+@media (max-width: 650px)
+
+  .gradient
+    &Tablet
+      display: none
+
+    &Mobile
+      display: block
+      top: -240px
+      left: 0
+      width: 376px
+      width: 100%
+
   .support
     max-width: 600px
     width: 100%
 
     &__img
+      height: auto
+      
       &768
         object-fit: cover
         height: auto
@@ -457,6 +487,8 @@
       line-height: 128%
       letter-spacing: -0.03em
       text-align: start
+      left: 0
+      transform: translateX(0)
 
       &1
         margin: 0
@@ -507,7 +539,7 @@
 
       &Mobile
         display: block
-        z-index: 1
+        z-index: -1
 
     &_support
       display: block
@@ -539,7 +571,7 @@
       text-align: center
 
     &__descr
-      max-width: 335px
+      max-width: 380px
       font-size: 14px
       font-weight: 400
       line-height: 22px
@@ -549,9 +581,8 @@
       display: none
 
     &__wrapper
-      max-width: 335px
       height: auto
-      margin-bottom: 15px
+      margin-bottom: 18px
 
     &__img
       height: auto
@@ -565,6 +596,7 @@
       align-items: center
       margin-bottom: 51px
       margin-left: 0
+      min-height: 0
 
     &__title
       margin-bottom: 20px
@@ -576,7 +608,6 @@
 
     &__descr
       margin-bottom: 19px
-      max-width: 290px
       text-align: center
       font-size: 14px
 
@@ -590,8 +621,6 @@
           display: block
 
     &__img
-      width: 337px
-      height: 306px
       display: none
 
       &Tablet
@@ -607,7 +636,11 @@
 
     li
       margin-bottom: 10px
-      width: 335px
       font-size: 14px
 
-
+@media (max-width: 370px)
+  .about
+    &__wrapper
+      &Img
+        width: 335px
+        height: 338px

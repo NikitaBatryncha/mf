@@ -82,9 +82,9 @@
       @include font-gradient
 
   &__wrapper
-    max-width: 560px
+    max-width: 595px
     width: 100%
-    padding-right: 35px
+    padding: 0 35px
     margin-right: -3px
 
   &__list
@@ -101,9 +101,10 @@
 
   &__link
     margin: 0
-    padding: 11px 18px 15px 23px
-    width: 254px
-    height: 52px
+    padding: 11px 18px 14px 23px
+    min-width: 254px
+    width: fit-content
+    min-height: 50px
     border-radius: 41px
     font-weight: 800
     font-size: 15px
@@ -111,7 +112,7 @@
     color: #141936
 
     img
-      margin-top: 1px
+      margin-top: 0px
       margin-left: 3px
 
   &__img
@@ -184,12 +185,14 @@
       flex-direction: column
       align-items: center
       margin: 0
-      max-width: 900px
+      max-width: 932px
       width: 100%
+      padding: 0 20px
 
     &__link
       width: 100%
-      margin-right: -11px
+      margin-right: -9px
+      padding: 13px 23px 14px 21px
 
       &::after
         margin-left: 5px
@@ -208,7 +211,7 @@
 
       &768
         display: block
-        max-width: 715px
+        max-width: 892px
         border-radius: 17px
         width: 100%
         margin-bottom: 30px
@@ -220,7 +223,6 @@
   .stack
     &__wrapper
       margin: 0 auto
-      max-width: 600px
 
 @media (max-width: 520px)
   .ellipse
@@ -243,17 +245,15 @@
         height: 1000px
 
   .stack
-    max-width: 370px
     margin-bottom: 0
-
 
     &__container
       flex-direction: column
 
     &__wrapper
-      margin-bottom: 21px
+      margin-bottom: 0px
       padding: 0
-      margin-right: -3px
+      margin-right: -2px
 
     &__link
       margin: 0
@@ -269,7 +269,7 @@
 
     &__list
       margin-bottom: 26px
-      margin-left: 2px
+      margin-left: 3px
       order: 2
 
     &__li
@@ -279,16 +279,18 @@
 
     &__link
       order: 3
-      padding: 12px 18px 15px 16px
-      margin-bottom: 20px
+      padding: 13px 18px 15px 19px
+      margin-bottom: 21px
+
+      img
+        margin-left: 5px
 
     &__img
       display: none
 
-      &768
+      &370
         display: block
         order: 4
-        width: 335px
-        height: 345px
         margin-bottom: 0
+        margin-right: -5px
 

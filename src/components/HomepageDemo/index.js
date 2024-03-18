@@ -38,14 +38,14 @@ export default function HomepageDemo() {
                   perSlideRotate: 1,
                 }
               },
-              520: {
+              600: {
                 slidesPerView: 1,
                 cardsEffect: {
                   perSlideOffset: 1,
                   perSlideRotate: 1,
                 }
               },
-              521: {
+              601: {
                 slidesPerView: 'auto',
                 cardsEffect: {
                   perSlideOffset: 9,
@@ -79,13 +79,13 @@ export default function HomepageDemo() {
             modules={[EffectCards, Pagination, Navigation]}
           >
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/addGroup_toUser.png'} />
+              <img rel="preload" src={'img/MD/addGroup_toUser.png'} className="demo__img"/>
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/changePassword.png'} />
+              <img rel="preload" src={'img/MD/changePassword.png'} className="demo__img"/>
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/groupProperties.png'} />
+              <img rel="preload" src={'img/MD/groupProperties.png'} className="demo__img"/>
             </SwiperSlide>
             <span className={styles.swiper__descr} id="slideDescr">
               описание слайда

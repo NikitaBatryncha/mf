@@ -24,6 +24,7 @@ export default function HomepageRoadmap ({ openModal }) {
       <img rel="preload" src={'img/gradient-5-mobile.png'} className={clsx(styles.gradient, styles.gradient5, styles.gradient5Mobile)}/>
       <img rel="preload" src={'img/orbit.png'} className={styles.orbit__img}/>
       <img rel="preload" src={'img/orbit-tablet.svg'} className={clsx(styles.orbit__img, styles.orbit__imgTablet)}/>
+      <img rel="preload" src={'img/orbit-768.svg'} className={clsx(styles.orbit__img, styles.orbit__img768)}/>
       <div className={clsx("container", "column", styles.roadmap__container)}>
         <img rel="preload" src="/img/logo-blue.png" alt="logo" className={clsx(styles.logo, styles.logoDesktop)}/>
         <img rel="preload" src="/img/logo-blue-tablet.png" alt="logo" className={clsx(styles.logo, styles.logoTablet)}/>
@@ -58,7 +59,7 @@ export default function HomepageRoadmap ({ openModal }) {
             <h3 className={styles.support__title}>
               Поддержка <span>2FA</span>
             </h3>
-            <img rel="preload" src="/img/roadmap-img-768.webp" alt="" className={clsx(styles.support__img, styles.support__img768, isVisible ? styles.animate1 : '')}/>
+            <img rel="preload" src="/img/support-img-768.png" alt="" className={clsx(styles.support__img, styles.support__img768, isVisible ? styles.animate1 : '')}/>
             <p className={clsx(styles.support__descr, styles.support__descr1)}>
               Интеграция с MultiFactor. Поддержка многофакторной аутентификации (MFA).
             </p>

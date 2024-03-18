@@ -11,7 +11,7 @@ export default function HomepageAbout ({ openModal }) {
       <Plate/>
       <div className={clsx("flex", "column", "container", styles.about__container)}>
         <About/>
-        <Stack/>
+        <Stack openModal={ openModal }/>
       </div>
     </section>
   );

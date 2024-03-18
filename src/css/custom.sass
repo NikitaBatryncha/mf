@@ -291,8 +291,21 @@ button, a
   color: #fff
 
 main
+  margin: 0 auto
   max-width: 1920px
   width: 100%
+
+@keyframes shimmerBackground
+  0%
+    transform: translateX(-150%)
+
+  20%
+    transform: translateX(150%)
+    opacity: 0
+
+  100%
+    transform: translateX(150%)
+    opacity: 0
 
 .container
   display: -webkit-box
@@ -360,14 +373,16 @@ a:hover
   font-size: 15px
   line-height: 160%
   color: #c8d4ee
+  word-wrap: break-word
 
 .linkButton
   position: relative
   display: flex
   justify-content: center
+  align-items: center
   padding: 12px 27px 16px 29px
-  width: 303px
-  height: 60px
+  min-width: 303px
+  min-height: 60px
   color: #141936
   font-size: 17.6px
   font-weight: 800
@@ -419,22 +434,48 @@ a:hover
   &:hover
     @include font-gradient
 
+
+/*
+ *  ----СВАЙПЕР DEMO----
+ */
+
+div.swiper-wrapper
+  margin: 0 auto
+  position: relative
+  background-color: transparent
+  height: fit-content
+
 .mySwiper
-  margin-top: 55px
-  max-width: 1098px
-  padding: 0 20px
+  position: relative
   display: flex
   justify-content: center
   align-items: center
-
+  margin-top: 55px
+  padding: 0 20px
+  max-width: 1098px
   width: 100%
-  height: 467px
-  position: relative
+  height: auto
 
-.swiper
+  div.swiper-wrapper
+    max-width: 750px
+    height: fit-content
+    margin: 0 auto 73px auto
+
+  div.swiper-slide
+    max-width: 750px
+    width: fit-content
+    margin: 0 auto
+    border-radius: 3px
+    box-shadow: 17px 14px 74px 0 rgba(97, 227, 249, 0.22)
+
+    img
+      display: block
+      user-select: none
+
   div.swiper-button-prev
     content: url(/img/prev-arrow.svg)
     width: 40px
+    height: 40px
     top: 196px
     left: 0
 
@@ -445,8 +486,143 @@ a:hover
   div.swiper-button-next
     content: url(/img/next-arrow.svg)
     width: 40px
+    height: 40px
     top: 196px
     right: 0
+
+    &:hover,
+    &:focus
+      content: url(/img/navigation-next-hover.svg)
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    top: auto
+    width: 200px
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    height: 28px
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active
+    width: 16px
+    height: 8px
+    background: linear-gradient(90deg, #61bff9 0%, #61f9f9 100%)
+    border-radius: 32px
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span
+    width: 8px
+    height: 8px
+    border-radius: 100%
+    background: #5e6668
+    margin: 0 3px
+
+@media (max-width: 1100px)
+  .mySwiper
+    max-width: 966px
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    transform: translateX(-48%)
+
+  div.swiper-button-prev
+    left: 18px
+
+  div.swiper-button-next
+    right: 19px
+
+@media (max-width: 990px)
+  .mySwiper
+    margin-top: 25px
+    max-width: 688px
+
+  .swiper__slide
+    width: 100%
+
+  div.swiper-button-prev
+    display: none
+
+  div.swiper-button-next
+    display: none
+
+@media (max-width: 880px)
+  .mySwiper
+    div.swiper-wrapper
+      max-width: 632px
+
+  .demo__img
+    max-width: 632px
+    width: 100%
+
+@media (max-width: 700px)
+  .mySwiper
+    div.swiper-wrapper
+      max-width: 550px
+
+  .demo__img
+    max-width: 550px
+    width: 100%
+
+@media (max-width: 600px)
+  div.swiper-wrapper
+    margin-left: auto
+    margin-right: auto
+
+
+  div.swiper-button-prev
+    display: inline-block
+
+  div.swiper-button-next
+    display: inline-block
+
+  .mySwiper
+    margin-top: 3px
+    padding: 0 16px !important
+
+    div.swiper-wrapper
+      margin-bottom: 83px
+
+    div.swiper-button-prev
+      z-index: 11
+      left: 16px !important
+      width: 28px
+      height: 28px
+      top: auto
+      bottom: 0
+
+    div.swiper-button-next
+      z-index: 11
+      right: 16px !important
+      width: 28px
+      height: 28px
+      top: auto
+      bottom: 0
+
+/*
+ *  ----СВАЙПЕР FEATURES----
+ */
+
+.Swiper
+  display: none !important
+
+  div.swiper-button-prev
+    display: inline-block
+    content: url(/img/prev-arrow.svg)
+    width: 28px
+    height: 28px
+    top: auto
+    bottom: 0px
+    left: 0px
+
+    &:hover,
+    &:focus
+      content: url(/img/navigation-prev-hover.svg)
+
+  div.swiper-button-next
+    display: inline-block
+    content: url(/img/next-arrow.svg)
+    width: 28px
+    height: 28px
+    top: auto
+    bottom:0px
+    right: 0px
 
     &:hover,
     &:focus
@@ -473,194 +649,95 @@ a:hover
     background: #5e6668
     margin: 0 3px
 
-div.swiper-wrapper
-  max-width: 750px
-  height: 390px
-  margin: 0 auto
-  position: relative
-
-swiper-container > swiper-slide
-  width: 580px !important
-  height: 306px !important
-
-swiper-container > swiper-slide > swiper-slide-active
-  width: 750px !important
-  height: 390px !important
-
-.swiper-slide
-  max-width: 750px
-  width: 100%
-  margin: 0 auto
-  height: 390px
-  position: relative
-  border-radius: 3px
-
-
-  img
-    display: block
-    user-select: none
-
-@media (max-width: 1100px)
-  .swiper
-    max-width: 966px
-
-
-  .swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-    transform: translateX(-48%)
-
-  .swiper div.swiper-button-prev
-    left: 18px
-
-  .swiper div.swiper-button-next
-    right: 19px
-
-@media (max-width: 990px)
-  .mySwiper
-    margin-top: 25px
-    max-width: 688px
-    height: 416px
-
-  div.swiper-wrapper
-    max-width: 632px
-    height: 328px
-
-  .swiper__slide
-    max-width: 632px
+@media (max-width: 650px)
+  .Swiper
+    max-width: 545px
     width: 100%
-    height: 328px
+    display: block !important
 
-  div.swiper-button-prev
-    display: none
+    div.swiper-wrapper
+      height: fit-content
+      margin: 32px auto 59px auto
 
-  div.swiper-button-next
-    display: none
+    .swiper__slide
+      width: calc(100% - 2px) !important
+      min-width: 330px
+      min-height: 332px
+      height: 100%
+      background-color: rgba(126, 162, 227, 0.05)
+      border: 1px solid rgba(255, 255, 255, 0.04)
+      cursor: pointer
+      background-repeat: no-repeat
+      border-radius: 20px
+      padding: 0
 
-@media (max-width: 880px)
+      &1
+        background-image: url(/img/features-hero.svg)
+        background-size: 180px
+        background-position: 100% 0%
 
-  #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > .mySwiper > div.swiper-wrapper > div.swiper-slide.swiper__slide > img
-    max-width: 100%
-    min-height: 100%
+      &2
+        background-image: url(/img/features-hero-2.svg)
+        background-size: 243px, 250px
+        background-position: 100% 0%
 
-@media (max-width: 700px)
-  .title
-    font-size: 40px
+      &Last
+        background-image: url(/img/features-hero-3.svg)
+        background-repeat: no-repeat
+        background-size: 243px, 250px
+        background-position: 100% 0
 
-  .swiper
-    height: 400px
-    margin-top: 0px
-    position: relative
+      &:hover::after
+        content: ''
+        position: absolute
+        top: 0
+        left: -100%
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%)
+        animation: shimmerBackground 6s linear infinite
+        transition: opacity 0.3s ease-in-out
 
-  div.swiper-wrapper
-    width: 500px
-    height: 290px
-    margin-top: 30px
+    .item
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      padding: 78px 22px 24px
+      min-height: 227px
 
-  div.swiper-button-prev
-    width: 28px !important
-    height: 28px !important
-    top: auto !important
-    bottom: 0 !important
-    left: 50px !important
+      &__link
+        display: flex
+        position: relative
+        margin-top: 30px
+        min-width: 100px
+        width: 100%
+        width: fit-content
+        min-height: 21px
+        font-weight: 500
+        font-size: 12px
+        line-height: 175%
+        font-family: "Inter"
+        @include font-gradient
 
-  div.swiper-button-next
-    width: 28px !important
-    height: 28px !important
-    top: auto !important
-    bottom: 0 !important
-    right: 50px !important
+        &::after
+          content: ''
+          position: absolute
+          width: 100%
+          height: 2px
+          bottom: 0
+          left: 0
+          background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+          transform: scaleX(0)
+          transform-origin: bottom right
+          transition: transform .8s ease-out
 
-  .swiper__slide
-    box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22)
-    height: 290px
+        &Item
+          margin: 0
+          margin-left: 8px
 
-@media (max-width: 600px)
-
-  div.swiper-wrapper
-    margin-left: auto
-    margin-right: auto
-
-  div.swiper-button-prev
-    display: inline-block
-
-  div.swiper-button-next
-    display: inline-block
-
-  #__docusaurus > div > main > section.features_src-components-HomepageFeatures-styles-module > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android.Swiper_src-components-HomepageFeatures-styles-module > div.swiper-wrapper
-    height: 333px
-
-@media (max-width: 520px)
-  .container
-    max-width: 370px
-    padding: 0 16px
-
-  .title
-    font-size: 30px
-    font-weight: 800
-    line-height: 108.02%
-    letter-spacing: -3%
-
-  .li
-    max-width: 336px
-    font-weight: 400
-    font-size: 14px
-
-  .linkButton
-    font-size: 15px
-    letter-spacing: -0.02px
-
-  #__docusaurus > div > main > section.features_src-components-HomepageFeatures-styles-module > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android.Swiper_src-components-HomepageFeatures-styles-module > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-    top: auto
-    width: 200px
-    bottom: -3px
-    left: 48%
-    transform: translateX(-47%)
-    height: 28px
-    margin: 3px
-
-  #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > div.swiper.swiper-cards.swiper-3d.swiper-initialized.swiper-horizontal.swiper-android.swiper-watch-progress.mySwiper > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-    bottom: 0
-    left: 50%
-    transform: translateX(-51%)
-
-  #__docusaurus > div > main > section.demo_src-components-HomepageDemo-styles-module > div > div > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-    bottom: 0px
-
-  .mySwiper
-    max-width: 335px
-    height: 262px
-
-  .mySwiper div.swiper-slide
-    height: 175px
-    position: relative
-
-    &::after
-      position: absolute
-      top: 64px
-      z-index: -1
-      max-width: 335px
-      width: 100%
-      height: 175px
-      box-shadow: 8px 6px 33px 0 rgba(97, 227, 249, 0.22)
-
-  .mySwiper div.swiper-wrapper
-    margin-top: 0
-    height: 175px
-
-  div.swiper-button-prev
-    z-index: 11
-    left: 0 !important
-
-  div.swiper-button-next
-    z-index: 11
-    right: 0 !important
-
-  .swiper__slide
-    border: 1px solid rgba(255, 255, 255, 0.12) !important
-    border-radius: 1px !important
-    box-shadow: none
-
-    img
-      object-fit: cover
+    &:hover .item__link::after
+      transform: scaleX(1)
+      transform-origin: bottom left
 
 /*
  *  ----БУРГЕР МЕНЮ----
@@ -725,7 +802,6 @@ swiper-container > swiper-slide > swiper-slide-active
   flex-direction: column
 
 #__docusaurus > div > div > div > header > div
-  max-width: 480px
   height: 528px
 
 #__docusaurus > div > div > header > div > div > button
@@ -754,7 +830,7 @@ swiper-container > swiper-slide > swiper-slide-active
   align-items: center
   max-width: 100%
   width: 100%
-  height: 77px
+  height: 60px
   margin-bottom: 30px
 
 #__docusaurus > div > div > div > header > div > div > div.nav__wrapper3_src-components-HomepageHeader-styles-module.flex
@@ -762,6 +838,7 @@ swiper-container > swiper-slide > swiper-slide-active
   flex-direction: column-reverse
   min-width: 335px
   width: 100%
+  max-width: 608px
 
 #__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex > a
   position: static
@@ -791,7 +868,7 @@ swiper-container > swiper-slide > swiper-slide-active
 #__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex > a.nav__link_src-components-HomepageHeader-styles-module.nav__linkMini_src-components-HomepageHeader-styles-module.flex
   margin-left: 6px
 
-@media (min-width: 541px)
+@media (min-width: 601px)
   #__docusaurus > div > div > div > header > div
     height: 420px
 
@@ -817,7 +894,7 @@ swiper-container > swiper-slide > swiper-slide-active
   #__docusaurus > div > div > div > header > div > div > div.nav__wrapper1_src-components-HomepageHeader-styles-module.flex
     padding: 0
     margin-bottom: 39px
-    max-width: 100%
+    max-width: 550px
     width: 100%
     height: 36px
 
@@ -829,12 +906,11 @@ swiper-container > swiper-slide > swiper-slide-active
   padding: 15px 32px
   min-width: 335px
   width: 100%
+  max-width: 608px
   height: 60px
   font-weight: 800
   font-size: 17px
   letter-spacing: -0.03em
-
-
 
 @media (min-width: 690px)
   #__docusaurus > div > div > div > span
@@ -846,6 +922,7 @@ swiper-container > swiper-slide > swiper-slide-active
 
   #__docusaurus > div > div > div > header > div > div > div.nav__wrapper2_src-components-HomepageHeader-styles-module.flex
     border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    height: 62px
 
   #__docusaurus > div > div > div > footer > div > div.flex.footer_src-components-HomepageFooter-styles-module > div.flex.column.footer__wrapper_src-components-HomepageFooter-styles-module.footer__wrapper4_src-components-HomepageFooter-styles-module
     margin-bottom: 16px
@@ -1026,6 +1103,7 @@ swiper-container > swiper-slide > swiper-slide-active
     margin-left: 30px
     width: 100%
     height: 100%
+    border-radius: 8px
 
   span
     color: var(--h2-color)

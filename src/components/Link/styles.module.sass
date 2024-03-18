@@ -6,27 +6,27 @@
 
 .link
   position: relative
-  justify-content: space-between
   align-items: center
-  padding-top: 3px
+  max-width: 190px
   width: fit-content
-  height: 24px
+  min-height: 24px
+  height: 100%
   font-weight: 800
   font-size: 15px
   @include font-gradient
 
-  &::after 
+  &::after
     content: ''
     position: absolute
     width: 100%
-    height: 2px 
+    height: 2px
     bottom: 0
     left: 0
     background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
-    transform: scaleX(0) 
+    transform: scaleX(0)
     transform-origin: bottom right
-    transition: transform .8s ease-out 
-  
+    transition: transform .8s ease-out
+
   img
     margin-top: -3px
     margin-left: 5px

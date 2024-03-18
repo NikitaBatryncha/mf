@@ -28,7 +28,7 @@
   &2
     top: -120px
     left: -182px
-    z-index: 0
+    z-index: -1
     border-radius: 100%
     width: 900px
 
@@ -41,15 +41,22 @@
 .about
   &__wrapper
     position: relative
+
     z-index: 1
 
     &1
+      justify-content: space-between
       padding-left: 98px
       margin-left: -3px
       margin-bottom: 170px
+      max-width: 1140px
+      width: 100%
 
-      &Content
-        margin-top: 54.5px
+    &Content
+      max-width: 486px
+      width: 100%
+      margin-top: 0px
+      padding-right: 25px
 
   &__title
     margin: -1px 0 18px 0
@@ -113,6 +120,9 @@
       &768
         display: none
 
+    &Mobile
+      display: none
+
   &__tablet
     display: none
 
@@ -135,6 +145,9 @@
         margin: 0
         margin-top: 3px
         margin-left: 2px
+
+      &1
+        max-width: 932px
 
       &2
         padding-left: 0
@@ -170,7 +183,6 @@
 
     &__wrapper
       padding: 0 20px
-      max-width: 728px
       width: 100%
       margin-bottom: 70px
 
@@ -184,11 +196,12 @@
         display: flex
         flex-direction: column
         align-items: center
+        max-width: 900px
+        padding: 0
         width: 100%
         margin: 0
 
     &__img
-
       &Tablet
         display: none
 
@@ -242,11 +255,6 @@
   .about
     margin-bottom: 78px
 
-    &__title
-
-      span:first-child
-        margin-left: 9px
-
     &__wrapper
       display: flex
       flex-direction: column
@@ -264,7 +272,7 @@
         display: block
 
     &__title
-      margin-left: -3px
+      margin-left: -1px
       max-width: 333px
       font-size: 26px
       font-weight: 800
@@ -273,12 +281,15 @@
       text-align: center
       margin-bottom: 19px
 
+      span:first-child
+        margin-left: 9px
+
     &__wrapperImg
-      max-width: 337px
-      height: 334px
+      max-width: 100%
+      height: auto
 
     &__list
-      margin-right: -1px
+      margin-right: -6px
       margin-bottom: 21px
       width: 100%
 
@@ -297,8 +308,19 @@
 
       &Tablet
         display: block
-        width: 336px
 
         &768
           display: none
 
+
+@media (max-width: 370px)
+  .about
+    &__img
+      &Tablet
+        display: none
+
+      &Mobile
+        display: block
+        width: 337px
+        height: 333px
+        margin-right: -1px

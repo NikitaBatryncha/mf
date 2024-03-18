@@ -79,7 +79,7 @@ export default function HomepageFeatures() {
           loop={true}
           slidesPerView={1}
           spaceBetween={10}
-          className={clsx(styles.Swiper, isVisible ? styles.animate1 : '', "Swiper_src-components-HomepageFeatures-styles-module")}
+          className={clsx('Swiper', isVisible ? styles.animate1 : '', "Swiper_src-components-HomepageFeatures-styles-module")}
           pagination={{el:'.swiper-pagination', clickable: true}}
           navigation = {
             {
@@ -90,107 +90,90 @@ export default function HomepageFeatures() {
           }
           modules={[Pagination, Navigation]}
         >
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item, styles.item1)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_1.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
-                {FeatureList[0].title}
-              </h3>
-              <p className={styles.item__descr}>
-                {FeatureList[0].description}
-              </p>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+        <SwiperSlide className={clsx("swiper__slide", "swiper__slide1")}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_2.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
+              {FeatureList[0].title}
+            </h3>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item, styles.item2)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_2.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
+        <SwiperSlide className={clsx("swiper__slide", "swiper__slide2", styles.item)}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_2.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
               {FeatureList[1].title}
-              </h3>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+            </h3>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item, styles.item3)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_3.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
-                {FeatureList[2].title}
-              </h3>
-              <p className={styles.item__descr}>
-                {FeatureList[2].description}
-              </p>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+        <SwiperSlide className={clsx("swiper__slide", "swiper__slide3", styles.item)}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_3.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
+              {FeatureList[2].title}
+            </h3>
+            <p className={styles.item__descr}>
+              {FeatureList[2].description}
+            </p>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_4.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
-                {FeatureList[3].title}
-              </h3>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+        <SwiperSlide className={clsx("swiper__slide", styles.item)}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_4.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
+              {FeatureList[3].title}
+            </h3>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_5.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
-                {FeatureList[4].title}
-              </h3>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+        <SwiperSlide className={clsx("swiper__slide", styles.item)}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_5.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
+              {FeatureList[4].title}
+            </h3>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_6.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
-                {FeatureList[5].title}
-              </h3>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+        <SwiperSlide className={clsx("swiper__slide", styles.item)}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_6.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
+              {FeatureList[5].title}
+            </h3>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className={styles.swiper__slide}>
-          <div className={clsx(styles.item, styles.itemLast)}>
-            <div className={clsx(styles.item__wrapper, "flex", "column")}>
-              <img rel="preload" src="img/grid_item_7.svg" className={styles.item__img}/>
-              <h3 className={styles.item__title}>
+        <SwiperSlide className={clsx("swiper__slide", "swiper__slideLast", styles.item)}>
+          <div className="item">
+            <img rel="preload" src="img/grid_item_7.svg" className={styles.item__img}/>
+            <h3 className={styles.item__title}>
               {FeatureList[6].title}
-              </h3>
-              <div className={clsx(styles.item__link, "flex")}>
-                Документация
-                <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
-              </div>
+            </h3>
+            <div className={clsx(styles.item__link, "flex")}>
+              Документация
+              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
             </div>
           </div>
         </SwiperSlide>

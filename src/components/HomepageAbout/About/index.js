@@ -20,20 +20,21 @@ export default function About ({ openModal }) {
             <img rel="preload" src={'img/ellipse-2-tablet.png'} className={clsx(styles.ellipse, styles.ellipse2, styles.ellipse2Tablet)}/>
             <div className={clsx(styles.about__wrapperContent, isVisible ? styles.animate1 : '')}>
               <h2 className={styles.about__title}>
-              Бесплатный LDAP каталог,<span>&nbsp;разработанный</span> «с нуля»&nbsp;<span className={styles.about__titleChild}> российской компанией</span>
+              Бесплатный LDAP каталог,<span> разработанный</span> &laquo;с&nbsp;нуля&raquo; <span className={styles.about__titleChild}> российской компанией</span>
               </h2>
               <img rel="preload" src="img/div.early-access-image-holder-768.svg" alt="" className={clsx(styles.about__img, styles.about__imgTablet768)}/>
               <ul className={clsx(styles.list, styles.about__list)}>
-                <li className={clsx('li', styles.about__li)}>Продукт для единой аутентификации и авторизации доступа&nbsp;к&nbsp;любым ресурсам</li>
-                <li className={clsx('li', styles.about__li)}>Поставляется в виде коробочного решения с&nbsp;открытым&nbsp;исходным кодом</li>
-                <li className={clsx('li', styles.about__li)}>Не базируется на сторонних проприетарных и открытых продуктах и не несет их рисков и ограничений</li>
-                <li className={clsx('li', styles.about__li)}>Не содержит небезопасных протоколов и функций, таких&nbsp;как&nbsp;MD5 и NTLM</li>
+                <li className={clsx('li', styles.about__li)}>Продукт для единой аутентификации и&nbsp;авторизации доступа к&nbsp;любым ресурсам</li>
+                <li className={clsx('li', styles.about__li)}>Поставляется в&nbsp;виде коробочного решения с&nbsp;открытым исходным кодом</li>
+                <li className={clsx('li', styles.about__li)}>Не&nbsp;базируется на&nbsp;сторонних проприетарных и&nbsp;открытых продуктах и&nbsp;не&nbsp;несет их&nbsp;рисков и&nbsp;ограничений</li>
+                <li className={clsx('li', styles.about__li)}>Не&nbsp;содержит небезопасных протоколов и&nbsp;функций, таких как MD5 и&nbsp;NTLM</li>
               </ul>
-              <Link name="Узнать подробнее" path="/" />
+              <Link name="Узнать&nbsp;подробнее" path="/" />
             </div>
             <div className={clsx(styles.about__wrapperImg, isVisible ? styles.animate2 : '')}>
               <img rel="preload" src="img/div.early-access-image-holder.svg" alt="" className={clsx(styles.about__img, styles.about__imgDesktop)}/>
               <img rel="preload" src="img/webp/about-tablet.webp" alt="" className={clsx(styles.about__img, styles.about__imgTablet)}/>
+              <img rel="preload" src="img/about-mobile.png" alt="" className={clsx(styles.about__img, styles.about__imgMobile)}/>
             </div>
           </div>
       </VisibilitySensor>

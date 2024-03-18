@@ -120,7 +120,7 @@ export default function HomepageFooter () {
           <div className={clsx("flex", "column", styles.footer__wrapper, styles.footer__wrapper3)}>
             <h3 className={styles.footer__title}>Юридическая информация</h3>
             <a href="" className={styles.footer__link}>Оферта</a>
-            <a href="" className={styles.footer__link}>Политика конфиденциальности</a>
+            <a href="" className={clsx(styles.footer__link, styles.footer__link1)}>Политика конфиденциальности</a>
             <a href="" className={styles.footer__link}>Оплата и возврат</a>
           </div>
           <div className={clsx("flex", "column", styles.footer__wrapper, styles.footer__wrapper4)}>

@@ -36,10 +36,10 @@ export default function Plate() {
             <div className={clsx("flex", styles.plate__container)}>
               <div className={styles.plate__wrapper}>
                 <h3 className={styles.plate__title}>
-                  Российский Open-Source LDAP-каталог с современной архитектурой и защитой от санкций
+                Российский Open-Source LDAP-каталог с&nbsp;современной архитектурой и&nbsp;защитой от&nbsp;санкций
                 </h3>
                 <p className={styles.plate__descr}>
-                  Разработан на Python 3.0 и PostgreSQL. Разворачивается за несколько минут, используя Docker.
+                Разработан на&nbsp;Python&nbsp;3.0 и&nbsp;PostgreSQL. Разворачивается за&nbsp;несколько минут, используя Docker.
                 </p>
               </div>
               <Link name="Документация" path="/docs/tempo/md-install.md" isHovered={isHovered} />

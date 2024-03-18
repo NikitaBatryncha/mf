@@ -23,17 +23,17 @@ export default function Stack ({ openModal }) {
                   <h2 className={styles.stack__title}><span>Технологический</span> стек</h2>
                   <img rel="preload" src="/img/div.early-access-image-holder-768.png" alt="" className={clsx(styles.stack__img, styles.stack__img768)}/>
                   <ul className={clsx(styles.list, styles.stack__list)}>
-                    <li className={clsx('li', styles.stack__li)}>Сделан на Python и PostgreSQL</li>
-                    <li className={clsx('li', styles.stack__li)}>По классической трехзвенной архитектуре для горизонтального масштабирования</li>
-                    <li className={clsx('li', styles.stack__li)}>Позволяет штатными средствами масштабировать данные, обеспечивать отказоустойчивость и резервное копирование</li>
-                    <li className={clsx('li', styles.stack__li)}>Поставляется в Docker, разворачивается за несколько минут и&nbsp;сразу готов к использованию</li>
+                    <li className={clsx('li', styles.stack__li)}>Сделан на&nbsp;Python и&nbsp;PostgreSQL</li>
+                    <li className={clsx('li', styles.stack__li)}>По&nbsp;классической трехзвенной архитектуре для горизонтального масштабирования</li>
+                    <li className={clsx('li', styles.stack__li)}>Позволяет штатными средствами масштабировать данные, обеспечивать отказоустойчивость и&nbsp;резервное копирование</li>
+                    <li className={clsx('li', styles.stack__li)}>Поставляется в&nbsp;Docker, разворачивается за&nbsp;несколько минут и&nbsp;сразу готов к&nbsp;использованию</li>
                   </ul>
                   <a href="" className={clsx("linkButton", styles.stack__link)} onClick={(e) => {e.preventDefault(); openModal()}}>
                     Подключить бесплатно
                     <img rel="preload" src={'img/return.svg'} />
                   </a>
                 </div>
-                <img rel="preload" src="img/div.early-access-image-holder-2.webp" alt="" className={styles.stack__img}/>
+                <img rel="preload" src="img/div.early-access-image-holder-2.webp" alt="" className={clsx(styles.stack__img, styles.stack__img370)}/>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@
   color: transparent
 
 .demo
-  margin-bottom: 105px
+  margin-bottom: 104px
   position: relative
 
   &__title
@@ -78,6 +78,16 @@
       width: 100%
       line-height: 112%
 
+@media (max-width: 768px)
+  .demo
+    &__title
+      font-size: clamp(30px, 9vw, 68px)
+
+@media (max-width: 600px)
+  .demo
+    &__title
+      margin-bottom: 28px
+
 @media (max-width: 520px)
   .ellipse
 
@@ -90,9 +100,6 @@
   .demo
     margin: 0 auto
     margin-bottom: 63px
-    max-width: 370px
-    min-height: 324px
-    height: 324px
 
     &__container
       padding: 0
