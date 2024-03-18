@@ -79,7 +79,7 @@ cd MultiDirecory-CI
 * для Windows систем - ./setup.bat
 
 Далее следуйте инструкциям. После создания .env файла сервисы готовы к развертыванию.
-       
+
 3. Запустите сервисы при помощи команды:
 
 ```shell
@@ -88,7 +88,7 @@ cd MultiDirecory-CI
 
 ## Видео с установкой MultiDirectory
 
-<iframe width="728" height="410" src="https://www.youtube.com/watch?v=jHfTEi2q9vU&ab_channel=MultiFactor" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+<iframe  src="https://www.youtube.com/embed/jHfTEi2q9vU" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
 
 ## Обновление сервисов MultiDirectory
 

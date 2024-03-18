@@ -15,10 +15,10 @@ export default function HomepageCommunity () {
             <p className={styles.community__descr}>
               Группа для обсуждения и&nbsp;совместного улучшения первого российского мультиплатформенного LDAP-каталога.
             </p>
-            <a href="Telegramm" className={clsx("flex", styles.community__link)}>
+            <span className={clsx("flex", styles.community__link)}>
               <img src="/img/tg-icon.svg" />
               Подписаться
-            </a>
+            </span>
           </div>
           <img rel="preload" src="img/qr.svg" alt="qr" className={styles.community__qr}/>
         </div>
