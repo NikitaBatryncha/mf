@@ -96,6 +96,15 @@ $gap-maxi: 19.73px
     animation: shimmerBackground 6s linear infinite
     transition: opacity 0.3s ease-in-out
 
+  &:hover .item__link::after
+    transform: scaleX(1)
+    transform-origin: bottom left
+
+  &:hover .item__linkItem
+    content: url(../../../static/img/arrow-blue.svg)
+    width: 6px
+    height: 9px
+
   &__title
     margin-bottom: $gap-midi
     max-width: 318px
@@ -114,6 +123,34 @@ $gap-maxi: 19.73px
     font-family: "Inter"
     color: #bfd3ee
     word-wrap: wrap
+
+  &__link
+    position: relative
+    @include font-gradient
+    display: flex
+    align-items: center
+    main-width: 100px
+    font-weight: 500
+    font-size: 12px
+    line-height: 175%
+    font-family: 'Inter'
+
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 2px
+      bottom: 0
+      left: 0
+      background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
+      transform: scaleX(0)
+      transform-origin: bottom right
+      transition: transform 0.8s ease-out
+
+    img
+      margin-left: 9px
+
+
 
   &__img
     margin-bottom: $gap-midi
