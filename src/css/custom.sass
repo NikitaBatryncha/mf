@@ -660,6 +660,8 @@ div.swiper-wrapper
       margin: 32px auto 59px auto
 
     .swiper__slide
+      position: relative
+      overflow: hidden
       width: calc(100% - 2px) !important
       min-width: 330px
       min-height: 332px
@@ -705,39 +707,19 @@ div.swiper-wrapper
       padding: 78px 22px 24px
       min-height: 227px
 
-      &__link
-        display: flex
-        position: relative
-        margin-top: 30px
-        min-width: 100px
-        width: 100%
-        width: fit-content
-        min-height: 21px
-        font-weight: 500
-        font-size: 12px
-        line-height: 175%
-        font-family: "Inter"
-        @include font-gradient
+      
 
-        &::after
-          content: ''
-          position: absolute
-          width: 100%
-          height: 2px
-          bottom: 0
-          left: 0
-          background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
-          transform: scaleX(0)
-          transform-origin: bottom right
-          transition: transform .8s ease-out
-
-        &Item
-          margin: 0
-          margin-left: 8px
-
-      &:hover .item__link::after
-        transform: scaleX(1)
-        transform-origin: bottom left
+@media (max-width: 520px)
+  .item
+    &__link
+      border-radius: 34px
+      padding: 4px 16px
+      min-width: 288px
+      width: 100%
+      height: 33px
+      font-weight: 500
+      font-size: 14px
+      line-height: 175%
 
 /*
  *  ----БУРГЕР МЕНЮ----

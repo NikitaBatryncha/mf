@@ -129,7 +129,7 @@ $gap-maxi: 19.73px
     @include font-gradient
     display: flex
     align-items: center
-    main-width: 100px
+    min-width: 100px
     font-weight: 500
     font-size: 12px
     line-height: 175%
@@ -147,10 +147,8 @@ $gap-maxi: 19.73px
       transform-origin: bottom right
       transition: transform 0.8s ease-out
 
-    img
+    &Item
       margin-left: 9px
-
-
 
   &__img
     margin-bottom: $gap-midi
@@ -468,11 +466,26 @@ $gap-maxi: 19.73px
       max-width: 300px
 
     &__link
+      justify-content: center
       margin-top: auto
       min-width: 288px
       width: 100%
       height: clamp(33px, 9vw, 45px)
-      content: url(../../../static/img/features-link-mobile.svg)
+      font-weight: 500
+      font-size: 14px
+      line-height: 175%
+      border: 1px solid #61F9FA
+      border-radius: 34px
+      color: #61F9FA
+
+
+      &Item
+        content: url(../../../static/img/arrow-blue.svg)
+        width: 5px
+        height: 10px
+
+      &::after
+        display: none
 
 @media (max-width: 520px)
   .gradient

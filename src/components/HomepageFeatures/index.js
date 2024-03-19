@@ -125,7 +125,7 @@ export default function HomepageFeatures() {
             </p>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
@@ -173,7 +173,7 @@ export default function HomepageFeatures() {
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
