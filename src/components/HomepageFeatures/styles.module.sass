@@ -70,10 +70,10 @@ $gap-maxi: 19.73px
 .grid__container
   position: relative
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  grid-auto-flow: row
   max-width: 1140px
   min-height: 820px
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-flow: row
   grid-gap: 20px
 
 .item
@@ -138,10 +138,10 @@ $gap-maxi: 19.73px
     &::after
       content: ""
       position: absolute
+      left: 0
       width: 100%
       height: 2px
       bottom: 0
-      left: 0
       background: linear-gradient(90deg, rgb(97, 191, 249), rgb(97, 249, 249))
       transform: scaleX(0)
       transform-origin: bottom right
@@ -220,7 +220,6 @@ $gap-maxi: 19.73px
 
   &4
     top: -230px
-    right: 0
     z-index: -2
     right: -83px
 
@@ -228,10 +227,10 @@ $gap-maxi: 19.73px
   position: absolute
 
   &4
-    width: 1000px
     z-index: -1
     top: -600px
     left: -420px
+    width: 1000px
 
     &Tablet
       display: none
@@ -249,11 +248,11 @@ $gap-maxi: 19.73px
       display: none
 
       &Tablet
+        top: -444px
+        left: -83px
         display: block
         width: 646px
         height: 871px
-        left: -83px
-        top: -444px
 
   .features
     min-height: 1032px
@@ -324,11 +323,11 @@ $gap-maxi: 19.73px
 
     &__descr
       max-width: 318px
-      color: rgb(191, 211, 238)
       font-family: "Inter"
       font-size: 15px
       font-weight: 400
       line-height: 150%
+      color: rgb(191, 211, 238)
 
 @media (max-width: 980px)
   .features
@@ -346,16 +345,16 @@ $gap-maxi: 19.73px
     padding: 0 20px
 
     .item
+      padding: 31px 29px
+      max-width: none
       width: 100%
       height: 100%
-      max-width: none
       grid-row: auto
-      padding: 31px 29px
 
       &__wrapper
+        justify-content: flex-end
         max-width: 285px
         width: 100%
-        justify-content: flex-end
 
       &__img
         margin: 0
@@ -414,12 +413,12 @@ $gap-maxi: 19.73px
           margin-top: 7px
 
       &__mini
-        width: 100%
-        grid-row: span 1
-        min-height: 190px
-        heigh: fit-content
         padding-top: 24px
         padding-bottom: 24px
+        width: 100%
+        min-height: 190px
+        heigh: fit-content
+        grid-row: span 1
 
         .item__wrapper
           justify-content: start
@@ -477,7 +476,6 @@ $gap-maxi: 19.73px
       border: 1px solid #61F9FA
       border-radius: 34px
       color: #61F9FA
-
 
       &Item
         content: url(../../../static/img/arrow-blue.svg)

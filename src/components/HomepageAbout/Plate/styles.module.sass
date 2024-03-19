@@ -55,17 +55,17 @@
     position: relative
     z-index: 2
     margin: 0 auto
+    padding: 0 20px
     max-width: 1180px
     width: 100%
-    padding: 0 20px
 
   &__mainWrapper
     background-image: url(../../../../static/img/ru.svg)
     background-position: 23px 3px
 
   &__container
-    padding: 0 33px 0 63px
     justify-content: space-between
+    padding: 0 33px 0 63px
 
   &__title
     font-size: 16px
@@ -79,10 +79,10 @@
     line-height: 25px
 
   &:hover::after
-    content: ''
     position: absolute
     top: 0
     left: -100%
+    content: ''
     width: 100%
     height: 100%
     background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%)
@@ -134,11 +134,11 @@
       background-position: 24px 3px
 
     &__container
-      padding-top: 2px
-      line-height: 175%
       flex-direction: row
       align-items: flex-center
+      padding-top: 2px
       height: 100%
+      line-height: 175%
 
     &Container
       max-width: 728px

@@ -36,8 +36,8 @@
     bottom: -180px
     right: 77px
     z-index: 0
-    border-radius: 100%
     width: 1000px
+    border-radius: 100%
 
     &Tablet
       display: none
@@ -54,38 +54,38 @@
 
 .stack
   position: relative
+  z-index: 1
   max-width: 1137px
   width: 100%
-  z-index: 1
 
   &__container
     flex-direction: row-reverse
-    max-width: 1440px
-    width: 100%
     justify-content: space-between
     margin-left: -2px
+    max-width: 1440px
+    width: 100%
 
   &__img
     margin-top: -1px
     width: 481px
 
   &__title
-    color: #fff
+    margin-bottom: 20px
     font-weight: 800
     font-size: 37px
     line-height: 108%
     letter-spacing: -0.03em
     text-align: start
-    margin-bottom: 20px
+    color: #fff
 
     span
       @include font-gradient
 
   &__wrapper
+    margin-right: -3px
+    padding: 0 35px
     max-width: 595px
     width: 100%
-    padding: 0 35px
-    margin-right: -3px
 
   &__list
     margin-bottom: 27px
@@ -116,8 +116,8 @@
       margin-left: 3px
 
   &__img
-    right: 20px
     top: 14px
+    right: 20px
     object-fit: contain
 
     &768
@@ -138,12 +138,12 @@
         display: none
 
       &Tablet
+        top: 700px
+        right: 0
         display: block
         width: 600px
         height: 600px
         border-radius: 0
-        right: 0
-        top: 700px
 
   .about
     &__wrapper
@@ -181,26 +181,26 @@
       flex-direction: row
 
     &__wrapper
+      padding: 0 20px
       display: flex
       flex-direction: column
       align-items: center
       margin: 0
       max-width: 932px
       width: 100%
-      padding: 0 20px
 
     &__link
-      width: 100%
       margin-right: -9px
       padding: 13px 23px 14px 21px
+      width: 100%
 
       &::after
         margin-left: 5px
 
     &__list
+      margin-bottom: 20px
       max-width: 900px
       width: 100%
-      margin-bottom: 20px
 
     &__li
       max-width: 900px
@@ -210,11 +210,11 @@
       display: none
 
       &768
+        margin-bottom: 30px
         display: block
         max-width: 892px
         border-radius: 17px
         width: 100%
-        margin-bottom: 30px
         object-fit: contain
 
 
@@ -289,8 +289,8 @@
       display: none
 
       &370
-        display: block
-        order: 4
         margin-bottom: 0
         margin-right: -5px
+        display: block
+        order: 4
 
