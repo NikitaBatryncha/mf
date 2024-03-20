@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -7,11 +8,12 @@ import 'swiper/css/pagination';
 import clsx from 'clsx';
 import styles from './styles.module.sass';
 
-export default function HomepageDemo() {
-  function openImage(e) {
-    var src = e.target.src;
-    window.open(src, '_blank');
-}
+export default function HomepageDemo({ openModal, setModalImageUrl }) {
+
+  const openImage = (e, src) => {
+    setModalImageUrl(src);
+    openModal();
+  };
 
   return (
     <section className={clsx(styles.demo, "demo_src-components-HomepageDemo-styles-module")}>
@@ -84,13 +86,13 @@ export default function HomepageDemo() {
             modules={[EffectCards, Pagination, Navigation]}
           >
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/addGroup_toUser.png'} className="demo__img" onClick={(event) => openImage(event)}/>
+              <img rel="preload" src={'img/MD/addGroup_toUser.png'} className="demo__img" onClick={(event) => openImage(event, event.target.src)} />
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/changePassword.png'} className="demo__img" onClick={(event) => openImage(event)}/>
+              <img rel="preload" src={'img/MD/changePassword.png'} onClick={(event) => openImage(event, event.target.src)}/>
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/groupProperties.png'} className="demo__img" onClick={(event) => openImage(event)}/>
+              <img rel="preload" src={'img/MD/groupProperties.png'} onClick={(event) => openImage(event, event.target.src)}/>
             </SwiperSlide>
             <span className={styles.swiper__descr} id="slideDescr">
               описание слайда
