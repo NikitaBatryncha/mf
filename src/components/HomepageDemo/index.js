@@ -8,6 +8,11 @@ import clsx from 'clsx';
 import styles from './styles.module.sass';
 
 export default function HomepageDemo() {
+  function openImage(e) {
+    var src = e.target.src;
+    window.open(src, '_blank');
+}
+
   return (
     <section className={clsx(styles.demo, "demo_src-components-HomepageDemo-styles-module")}>
       <img rel="preload" src={'img/ellipse-5.png'} className={clsx(styles.ellipse, styles.ellipse5)}/>
@@ -79,13 +84,13 @@ export default function HomepageDemo() {
             modules={[EffectCards, Pagination, Navigation]}
           >
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/addGroup_toUser.png'} className="demo__img"/>
+              <img rel="preload" src={'img/MD/addGroup_toUser.png'} className="demo__img" onClick={(event) => openImage(event)}/>
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/changePassword.png'} className="demo__img"/>
+              <img rel="preload" src={'img/MD/changePassword.png'} className="demo__img" onClick={(event) => openImage(event)}/>
             </SwiperSlide>
             <SwiperSlide className="swiper__slide">
-              <img rel="preload" src={'img/MD/groupProperties.png'} className="demo__img"/>
+              <img rel="preload" src={'img/MD/groupProperties.png'} className="demo__img" onClick={(event) => openImage(event)}/>
             </SwiperSlide>
             <span className={styles.swiper__descr} id="slideDescr">
               описание слайда
