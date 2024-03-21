@@ -17,7 +17,7 @@ export default function ModalImage ({ active, setActive, imageUrl }) {
   }, [active]);
 
   return (
-    <div className={active? clsx(styles.modal, styles.active) : styles.modal} onClick={closeImage}>
+    <div className={active? styles.active : styles.modal} onClick={closeImage}>
       <img src={imageUrl} alt="Modal" className={styles.modalImage} />
     </div>
   );

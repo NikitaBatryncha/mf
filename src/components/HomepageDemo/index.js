@@ -33,6 +33,7 @@ export default function HomepageDemo({ openModal, setModalImageUrl }) {
             loop={true}
             initialSlide={2}
             speed={1000}
+            centeredSlides={true}
             cardsEffect={{
               perSlideOffset: 16,
               perSlideRotate: 0,
