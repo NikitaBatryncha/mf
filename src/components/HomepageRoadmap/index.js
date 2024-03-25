@@ -61,20 +61,20 @@ export default function HomepageRoadmap ({ openModal }) {
             </h3>
             <img rel="preload" src="/img/support-img-768.png" alt="" className={clsx(styles.support__img, styles.support__img768, isVisible ? styles.animate1 : '')}/>
             <p className={clsx(styles.support__descr, styles.support__descr1)}>
-              Интеграция с MultiFactor. Поддержка многофакторной аутентификации (MFA).
+              Интеграция с&nbsp;MULTIFACTOR. Поддержка многофакторной аутентификации (MFA).
             </p>
             <p className={clsx(styles.support__descr, styles.support__descr2)}>
-              Продукт нативно интегрирован с лучшем в классе поставщиком многофакторной аутентификации — Мультифактором, что позволяет отказаться от дополнительных модулей и адаптеров. <span>Все что нужно — уже внутри!</span>
+            Продукт нативно интегрирован с&nbsp;лучшим в&nbsp;классе поставщиком многофакторной аутентификации&nbsp;&mdash; MULTIFACTOR, что позволяет отказаться от&nbsp;дополнительных модулей и&nbsp;адаптеров. <span>Все что нужно&nbsp;&mdash; уже внутри!</span>
             </p>
             <ul className={clsx(styles.list, styles.support__list)}>
-              <li className="li">Поддержка пуш-уведомлений в&nbsp;мобильном приложении</li>
-              <li className="li">Гранулированная настройка включения второго фактора по сетевым правилам и группам</li>
+              <li className="li">Поддержка push-уведомлений в&nbsp;мобильном приложении</li>
+              <li className="li">Гранулированная настройка включения второго фактора по&nbsp;сетевым правилам и&nbsp;группам</li>
             </ul>
             <Link name="Узнать подробнее"/>
           </div>
-          <img rel="preload" src="/img/webp/support-img.webp" alt="" className={clsx(styles.support__img, styles.support__imgDesktop, isVisible ? styles.animate1 : '')}/>
-          <img rel="preload" src="/img/webp/support-img-tablet.webp" alt="" className={clsx(styles.support__img, styles.support__imgTablet)}/>
-          <img rel="preload" src="/img/webp/support-img-mobile.webp" alt="" className={clsx(styles.support__img, styles.support__imgMobile)}/>
+          <img rel="preload" src="/img/support-img.svg" alt="" className={clsx(styles.support__img, styles.support__imgDesktop, isVisible ? styles.animate1 : '')}/>
+          <img rel="preload" src="/img/support-img-tablet.svg" alt="" className={clsx(styles.support__img, styles.support__imgTablet)}/>
+          <img rel="preload" src="/img/support-img-mobile.png" alt="" className={clsx(styles.support__img, styles.support__imgMobile)}/>
         </div>
       </div>
     </section>

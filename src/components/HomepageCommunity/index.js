@@ -5,7 +5,7 @@ export default function HomepageCommunity () {
   return (
     <div className={styles.community}>
       <img rel="preload" src={'img/gradient-6.svg'} className={clsx(styles.gradient, styles.gradient6)}/>
-      <img rel="preload" src={'img/gradient-6-tablet.svg'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
+      <img rel="preload" src={'img/gradient-6-tablet.png'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
       <a href="/docs/tempo/md-install" className={clsx("container", styles.community__container)}>
         <div className={clsx("flex", styles.community__wrapperMain)}>
           <div className={styles.community__wrapper}>

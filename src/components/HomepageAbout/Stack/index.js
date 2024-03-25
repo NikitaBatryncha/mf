@@ -33,7 +33,7 @@ export default function Stack ({ openModal }) {
                     <img rel="preload" src={'img/return.svg'} />
                   </a>
                 </div>
-                <img rel="preload" src="img/div.early-access-image-holder-2.webp" alt="" className={clsx(styles.stack__img, styles.stack__img370)}/>
+                <img rel="preload" src="img/div.early-access-image-holder-2.png" alt="" className={clsx(styles.stack__img, styles.stack__img370)}/>
               </div>
             </div>
           </div>

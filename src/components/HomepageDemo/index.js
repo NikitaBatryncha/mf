@@ -16,7 +16,7 @@ export default function HomepageDemo({ openModal, setModalImageUrl }) {
   };
 
   return (
-    <section className={clsx(styles.demo, "demo_src-components-HomepageDemo-styles-module")}>
+    <section className={styles.demo}>
       <img rel="preload" src={'img/ellipse-5.png'} className={clsx(styles.ellipse, styles.ellipse5)}/>
       <img rel="preload" src={'img/ellipse-5-tablet.png'} className={clsx(styles.ellipse, styles.ellipse5, styles.ellipse5Tablet)}/>
       <img rel="preload" src={'img/ellipse-6.png'} className={clsx(styles.ellipse, styles.ellipse6)}/>
@@ -81,7 +81,7 @@ export default function HomepageDemo({ openModal, setModalImageUrl }) {
               {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-                clickable: true
+                clickable: false,
               }
             }
             modules={[EffectCards, Pagination, Navigation]}
