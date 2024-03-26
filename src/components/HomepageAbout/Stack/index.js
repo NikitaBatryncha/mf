@@ -18,9 +18,9 @@ export default function Stack ({ openModal }) {
           <div className={clsx("flex", styles.about__wrapper, styles.about__wrapper2)} style={{opacity: isVisible ? 1 : 0}}>
             <LazyLoad height={'auto'} offset={2700}>
               <>
-                <img g  rel="preload" src={'img/ellipse-3.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Desktop)}/>
-                <img g  rel="preload" src={'img/ellipse-3-tablet.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Tablet)}/>
-                <img g  rel="preload" src={'img/ellipse-3-mobile.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Mobile)}/>
+                <img rel="preload" src={'img/ellipse-3.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Desktop)}/>
+                <img rel="preload" src={'img/ellipse-3-tablet.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Tablet)}/>
+                <img rel="preload" src={'img/ellipse-3-mobile.png'} className={clsx(styles.ellipse, styles.ellipse3, styles.ellipse3Mobile)}/>
               </>
             </LazyLoad>
             <div className={styles.stack}>
@@ -28,7 +28,7 @@ export default function Stack ({ openModal }) {
                 <div className={clsx(styles.stack__wrapper, isVisible ? styles.animate2 : '')}>
                   <h2 className={styles.stack__title}><span>Технологический</span> стек</h2>
                   <LazyLoad height={'auto'} offset={2700}>
-                    <img g  src="/img/div.early-access-image-holder-768.png" alt="" className={clsx(styles.stack__img, styles.stack__img768)}/>
+                    <img src="/img/div.early-access-image-holder-768.png" alt="" className={clsx(styles.stack__img, styles.stack__img768)}/>
                   </LazyLoad>
                   <ul className={clsx(styles.list, styles.stack__list)}>
                     <li className={clsx('li', styles.stack__li)}>Сделан на&nbsp;Python и&nbsp;PostgreSQL</li>
@@ -38,11 +38,11 @@ export default function Stack ({ openModal }) {
                   </ul>
                   <a href="" className={clsx("linkButton", styles.stack__link)} onClick={(e) => {e.preventDefault(); openModal()}}>
                     Подключить бесплатно
-                    <img g  src={'img/return.svg'} />
+                    <img  src={'img/return.svg'} />
                   </a>
                 </div>
                 <LazyLoad height={'auto'} offset={2700}>
-                  <img g  src="img/div.early-access-image-holder-2.png" alt="" className={clsx(styles.stack__img, styles.stack__img370)}/>
+                  <img src="img/div.early-access-image-holder-2.png" alt="" className={clsx(styles.stack__img, styles.stack__img370)}/>
                 </LazyLoad>
               </div>
             </div>

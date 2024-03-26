@@ -96,13 +96,13 @@ export default function HomepageFeatures() {
         >
         <SwiperSlide className={clsx("swiper__slide", "swiper__slide1")}>
           <div className="item">
-            <img g  src="img/grid_item_2.svg" className={styles.item__img}/>
+            <img src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[0].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
@@ -120,7 +120,7 @@ export default function HomepageFeatures() {
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", "swiper__slide3", styles.item)}>
           <div className="item">
-            <img g  src="img/grid_item_3.svg" className={styles.item__img}/>
+            <img src="img/grid_item_3.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[2].title}
             </h3>
@@ -129,37 +129,37 @@ export default function HomepageFeatures() {
             </p>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", styles.item)}>
           <div className="item">
-            <img g  src="img/grid_item_4.svg" className={styles.item__img}/>
+            <img src="img/grid_item_4.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[3].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", styles.item)}>
           <div className="item">
-            <img g  src="img/grid_item_5.svg" className={styles.item__img}/>
+            <img src="img/grid_item_5.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[4].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", styles.item)}>
           <div className="item">
-            <img g  src="img/grid_item_6.svg" className={styles.item__img}/>
+            <img src="img/grid_item_6.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[5].title}
             </h3>
@@ -171,13 +171,13 @@ export default function HomepageFeatures() {
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", "swiper__slideLast", styles.item)}>
           <div className="item">
-            <img g  src="img/grid_item_7.svg" className={styles.item__img}/>
+            <img src="img/grid_item_7.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[6].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
@@ -186,11 +186,11 @@ export default function HomepageFeatures() {
         <div className="swiper-pagination"></div>
       </Swiper>
       <div className={styles.grid__container}>
-        <img g  src={'img/ellipse-4.png'} className={clsx(styles.ellipse, styles.ellipse4)}/>
-        <img g  src={'img/ellipse-4-tablet.png'} className={clsx(styles.ellipse, styles.ellipse4, styles.ellipse4Tablet)}/>
+        <img src={'img/ellipse-4.png'} className={clsx(styles.ellipse, styles.ellipse4)}/>
+        <img src={'img/ellipse-4-tablet.png'} className={clsx(styles.ellipse, styles.ellipse4, styles.ellipse4Tablet)}/>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item1, isVisible ? styles.animate : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img g  src="img/grid_item_1.svg" className={styles.item__img}/>
+            <img src="img/grid_item_1.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[0].title}
             </h3>
@@ -199,25 +199,25 @@ export default function HomepageFeatures() {
             </p>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item2, isVisible ? styles.animate1 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img g  src="img/grid_item_2.svg" className={styles.item__img}/>
+            <img src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
             {FeatureList[1].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item3, isVisible ? styles.animate2 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img g  src="img/grid_item_3.svg" className={styles.item__img}/>
+            <img src="img/grid_item_3.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[2].title}
             </h3>
@@ -274,7 +274,7 @@ export default function HomepageFeatures() {
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
