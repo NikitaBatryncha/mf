@@ -1,3 +1,5 @@
+import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import clsx from 'clsx';
 import styles from './styles.module.sass';
 import {useState} from 'react'
@@ -68,8 +70,10 @@ export default function HomepageFeatures() {
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
     <section className={clsx(styles.features, "features_src-components-HomepageFeatures-styles-module")} style={{opacity: isVisible ? 1 : 0}}>
-      <img rel="preload" src={'/img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
-      <img rel="preload" src={'img/gradient-4.png'} className={clsx(styles.gradient, styles.gradient4)}/>
+      <LazyLoad height={'auto'} offset={1700} >
+        <img loading={"lazy"} src={'/img/gradient-3.svg'} className={clsx(styles.ellipse, styles.gradient3)}/>
+        <img loading={"lazy"} src={'img/gradient-4.png'} className={clsx(styles.gradient, styles.gradient4)}/>
+      </LazyLoad>
       <div className={clsx("container", "column", styles.features__container)}>
         <h2 className={clsx("title", styles.features__title, isVisible ? styles.animate : '')}>
           Функциональные<br/><span>возможности</span>
@@ -92,19 +96,19 @@ export default function HomepageFeatures() {
         >
         <SwiperSlide className={clsx("swiper__slide", "swiper__slide1")}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_2.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[0].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", "swiper__slide2", styles.item)}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_2.svg" className={styles.item__img}/>
+            <img src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[1].title}
             </h3>
@@ -116,7 +120,7 @@ export default function HomepageFeatures() {
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", "swiper__slide3", styles.item)}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_3.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_3.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[2].title}
             </h3>
@@ -125,37 +129,37 @@ export default function HomepageFeatures() {
             </p>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", styles.item)}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_4.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_4.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[3].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", styles.item)}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_5.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_5.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[4].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", styles.item)}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_6.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_6.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[5].title}
             </h3>
@@ -167,13 +171,13 @@ export default function HomepageFeatures() {
         </SwiperSlide>
         <SwiperSlide className={clsx("swiper__slide", "swiper__slideLast", styles.item)}>
           <div className="item">
-            <img rel="preload" src="img/grid_item_7.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_7.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[6].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </SwiperSlide>
@@ -182,11 +186,11 @@ export default function HomepageFeatures() {
         <div className="swiper-pagination"></div>
       </Swiper>
       <div className={styles.grid__container}>
-        <img rel="preload" src={'img/ellipse-4.png'} className={clsx(styles.ellipse, styles.ellipse4)}/>
-        <img rel="preload" src={'img/ellipse-4-tablet.png'} className={clsx(styles.ellipse, styles.ellipse4, styles.ellipse4Tablet)}/>
+        <img g  src={'img/ellipse-4.png'} className={clsx(styles.ellipse, styles.ellipse4)}/>
+        <img g  src={'img/ellipse-4-tablet.png'} className={clsx(styles.ellipse, styles.ellipse4, styles.ellipse4Tablet)}/>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item1, isVisible ? styles.animate : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_1.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_1.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[0].title}
             </h3>
@@ -195,25 +199,25 @@ export default function HomepageFeatures() {
             </p>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item2, isVisible ? styles.animate1 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_2.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_2.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
             {FeatureList[1].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item3, isVisible ? styles.animate2 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_3.svg" className={styles.item__img}/>
+            <img g  src="img/grid_item_3.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[2].title}
             </h3>
@@ -222,55 +226,55 @@ export default function HomepageFeatures() {
             </p>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate3 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_4.svg" className={styles.item__img}/>
+            <img loading={"lazy"} src="img/grid_item_4.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[3].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate4 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_5.svg" className={styles.item__img}/>
+            <img loading={"lazy"}src="img/grid_item_5.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[4].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate5 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_6.svg" className={styles.item__img}/>
+            <img loading={"lazy"} src="img/grid_item_6.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
               {FeatureList[5].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>
         <a href="/docs/tempo/md-install" className={clsx(styles.item, styles.item__mini, isVisible ? styles.animate6 : '')}>
           <div className={clsx(styles.item__wrapper, "flex", "column")}>
-            <img rel="preload" src="img/grid_item_7.svg" className={styles.item__img}/>
+            <img loading={"lazy"} src="img/grid_item_7.svg" className={styles.item__img}/>
             <h3 className={styles.item__title}>
             {FeatureList[6].title}
             </h3>
             <span className={clsx(styles.item__link, "flex")}>
               Документация
-              <img rel="preload" src="img/features-arrow.svg" className={styles.item__linkItem} />
+              <img g  src="img/features-arrow.svg" className={styles.item__linkItem} />
             </span>
           </div>
         </a>

@@ -14,15 +14,15 @@ export default function HomepageHeader ({ openBurger, closeBurger, openModal }) 
           </div>
           <a href="" className={clsx("linkButton", styles.header__linkButton)} onClick={(e)=> {e.preventDefault(); openModal();}}>
             Подключить бесплатно
-            <img rel="preload" src={'img/return.svg'} />
+            <img src={'img/return.svg'} />
           </a>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper2, "flex", 'nav__wrapper2_src-components-HomepageHeader-styles-module')}>
             <a href="#" className={clsx(styles.nav__link, styles.logo)}>
-              <img rel="preload" src="/img/logo.svg" alt="logo" className={styles.header__logo} />
+              <img src="/img/logo.svg" alt="logo" className={styles.header__logo} />
             </a>
             <a href="#" className={clsx(styles.nav__link, styles.nav__linkMini, 'flex')}>
               Подключить
-              <img rel="preload" src={'img/return-mini.svg'} />
+              <img src={'img/return-mini.svg'} />
             </a>
             <button className={styles.burger__button}onClick={(e) => {e.preventDefault(); closeBurger()}}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

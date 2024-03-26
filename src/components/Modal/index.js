@@ -46,6 +46,6 @@ export default function Modal ({active, setActive}) {
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   )
 }

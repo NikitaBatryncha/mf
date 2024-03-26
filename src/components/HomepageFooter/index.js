@@ -1,3 +1,5 @@
+import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import clsx from 'clsx';
 import styles from './styles.module.sass';
 
@@ -7,12 +9,12 @@ export default function HomepageFooter () {
       <div className={clsx("container", "column", styles.footer__container)}>
         <div className={clsx("flex", styles.footer, "footer_src-components-HomepageFooter-styles-module")}>
           <a href="#" className={clsx(styles.link, styles.logo__link)}>
-            <img rel="preload" src="img/footer-logo.svg" alt="logo" className={clsx(styles.logo, styles.footer__logo)} />
+            <img src="img/footer-logo.svg" alt="logo" className={clsx(styles.logo, styles.footer__logo)} />
           </a>
           <div className={styles.author}>
             <a href="https://multifactor.ru" target="_blank" className={clsx(styles.link, styles.author__link)}>
-              <img rel="preload" src="img/creator.svg" alt="" className={clsx(styles.author__img, styles.author__imgDesktop)} />
-              <img rel="preload" src="img/author-mobile.svg" alt="" className={styles.author__imgMobile} />
+              <img src="img/creator.svg" alt="" className={clsx(styles.author__img, styles.author__imgDesktop)} />
+              <img src="img/author-mobile.svg" alt="" className={styles.author__imgMobile} />
             </a>
           </div>
           <div className={clsx(styles.footer__socials)}>
@@ -59,12 +61,12 @@ export default function HomepageFooter () {
           </div>
           <div className={clsx("flex", "column", styles.footer__wrapper, styles.footer__wrapper1)}>
             <a href="#" className={clsx(styles.link, styles.logo__link, styles.logo__linkTablet)}>
-              <img rel="preload" src="img/footer-logo.svg" alt="logo" className={clsx(styles.logo, styles.footer__logo)} />
+              <img  src="img/footer-logo.svg" alt="logo" className={clsx(styles.logo, styles.footer__logo)} />
             </a>
             <div className={clsx(styles.author, styles.author__Tablet)}>
               <a href="https://multifactor.ru" target="_blank" className={clsx(styles.link, styles.author__link)}>
-                <img rel="preload" src="img/creator.svg" alt="" className={clsx(styles.author__img, styles.author__imgDesktop)} />
-                <img rel="preload" src="img/author-mobile.svg" alt="" className={styles.author__imgMobile} />
+                <img  src="img/creator.svg" alt="" className={clsx(styles.author__img, styles.author__imgDesktop)} />
+                <img  src="img/author-mobile.svg" alt="" className={styles.author__imgMobile} />
               </a>
             </div>
             <div className={clsx(styles.footer__socials, styles.footer__socialsTablet)}>

@@ -1,11 +1,13 @@
+import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import clsx from 'clsx';
 import styles from './styles.module.sass';
 
 export default function HomepageCommunity () {
   return (
     <div className={styles.community}>
-      <img rel="preload" src={'img/gradient-6.svg'} className={clsx(styles.gradient, styles.gradient6)}/>
-      <img rel="preload" src={'img/gradient-6-tablet.png'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
+      <img src={'img/gradient-6.svg'} className={clsx(styles.gradient, styles.gradient6)}/>
+      <img src={'img/gradient-6-tablet.png'} className={clsx(styles.gradient, styles.gradient6, styles.gradient6Tablet)}/>
       <a href="/docs/tempo/md-install" className={clsx("container", styles.community__container)}>
         <div className={clsx("flex", styles.community__wrapperMain)}>
           <div className={styles.community__wrapper}>
@@ -16,11 +18,11 @@ export default function HomepageCommunity () {
               Группа для обсуждения и&nbsp;совместного улучшения первого российского мультиплатформенного LDAP-каталога.
             </p>
             <span className={clsx("flex", styles.community__link)}>
-              <img src="/img/tg-icon.svg" />
+                <img src="/img/tg-icon.svg" />
               Подписаться
             </span>
           </div>
-          <img rel="preload" src="img/qr.svg" alt="qr" className={styles.community__qr}/>
+            <img src="img/qr.svg" alt="qr" className={styles.community__qr}/>
         </div>
       </a>
     </div>
