@@ -33,8 +33,8 @@ export default function HomepageHeader ({ openBurger, closeBurger, openModal }) 
             </button>
           </div>
           <div className={clsx(styles.nav__wrapper, styles.nav__wrapper3, 'flex', 'nav__wrapper3_src-components-HomepageHeader-styles-module')}>
-            <a href="telegramm" className={clsx(styles.nav__link, styles.nav__linkTg)}>Подписаться</a>
-            <button className={styles.nav__btn}>Загрузить последнюю версию</button>
+            <a href="https://t.me/multidirectory_community" className={clsx(styles.nav__link, styles.nav__linkTg)}>Подписаться</a>
+            <a href="https://github.com/MultifactorLab/MultiDirectory-CI" className={styles.nav__btn}>Загрузить последнюю версию</a>
           </div>
           <button className={clsx("column", styles.burger )} onClick={(e) => {e.preventDefault(); openBurger()}}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

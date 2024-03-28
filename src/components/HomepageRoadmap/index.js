@@ -34,7 +34,7 @@ export default function HomepageRoadmap ({ openModal }) {
             Дорожная карта
           </h2>
           <div className={clsx("flex", "column", styles.roadmap__wrapperMini)}>
-            <Link name="Заказать функционал"/>
+            <Link name="Заказать функционал" callback={(e) => {e.preventDefault(); openModal()}}/>
             <p className={styles.roadmap__descr}>
               Продукт создается и развивается по текущим потребностям рынка с учетом замечаний и пожеланий от заказчиков, как с платной,<br/> так и с бесплатной версий.
             </p>

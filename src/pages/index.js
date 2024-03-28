@@ -1,5 +1,4 @@
-import React, {useState, useEffect, lazy, Suspense} from 'react'
-import clsx from 'clsx';
+import React, {useState, lazy, Suspense} from 'react'
 import styles from './index.module.sass';
 import VisibilitySensor from 'react-visibility-sensor';
 import HomepageHeader from '../components/HomepageHeader';
